@@ -1,4 +1,4 @@
-﻿namespace WorldLib.Structs.Worlds;
+﻿namespace WorldLib.Models.Options;
 
 // ReSharper disable InconsistentNaming
 public sealed class WorldSetSpeedOptions
@@ -6,8 +6,6 @@ public sealed class WorldSetSpeedOptions
     public enum WorldSpeeds
     {
         Pause,
-
-
         Slow_Mo, // underscore is necessary!!
         X1,
         X2,

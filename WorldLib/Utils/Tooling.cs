@@ -7,25 +7,46 @@ namespace WorldLib.Utils;
 public static class Tooling
 {
     private static readonly ConcurrentDictionary<Type,
-        ConcurrentDictionary<string, Lazy<object>>> Memos = new();
+        ConcurrentDictionary<string, Lazy<object?>>> Memos = new();
 
-    public static T Memoized<T>(string id, Func<T> getter)
+    public static T? Memoized<T>(
+        string id,
+        Func<T?> getter,
+        bool cacheNull = true)
     {
-        var typeDict = Memos.GetOrAdd(
+        ConcurrentDictionary<string, Lazy<object?>> typeDict = Memos.GetOrAdd(
             typeof(T),
-            _ => new ConcurrentDictionary<string, Lazy<object>>());
+            _ => new ConcurrentDictionary<string, Lazy<object?>>());
 
-        var lazy = typeDict.GetOrAdd(
+        if (cacheNull)
+        {
+            Lazy<object?>? lazy = typeDict.GetOrAdd(
+                id,
+                _ => new Lazy<object?>(
+                    () => getter(),
+                    LazyThreadSafetyMode.ExecutionAndPublication));
+
+            return (T?)lazy.Value;
+        }
+
+        Lazy<object?>? lazyNonNullOnly = typeDict.GetOrAdd(
             id,
-            _ => new Lazy<object>(() => getter()!,
+            _ => new Lazy<object?>(
+                () => getter(),
                 LazyThreadSafetyMode.ExecutionAndPublication));
 
-        return (T)lazy.Value;
+        object? value = lazyNonNullOnly.Value;
+
+        if (value == null)
+            typeDict.TryRemove(id, out _);
+
+        return (T?)value;
     }
 
     public static bool MemoClear<T>(string id)
     {
-        return Memos.TryGetValue(typeof(T), out var typeDict) && typeDict.TryRemove(id, out _);
+        return Memos.TryGetValue(typeof(T), out ConcurrentDictionary<string, Lazy<object?>>? typeDict) &&
+               typeDict.TryRemove(id, out _);
     }
 
     public static bool MemoClear<T>()
@@ -36,5 +57,11 @@ public static class Tooling
     public static void MemoClearAll()
     {
         Memos.Clear();
+    }
+
+    public static bool TryRun<T>(Func<T> getter, out T result)
+    {
+        result = getter();
+        return result != null;
     }
 }

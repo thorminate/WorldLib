@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WorldLib.Structs.Worlds;
+namespace WorldLib.Models.Options;
 
 public class WorldCreationOptions
 {

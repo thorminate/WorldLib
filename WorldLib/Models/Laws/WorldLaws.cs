@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using System.Reflection;
 using WorldLib.Utils;
 
-namespace WorldLib.Structs.Worlds;
+namespace WorldLib.Models.Laws;
 
 extern alias GameAsm;
 
+/// <summary>
+///     Provides access to the game's world law system.
+/// </summary>
+/// <remarks>
+///     Changes to properties immediately propagate to the underlying game engine state,
+///     so external caching or copying is generally unnecessary.
+/// </remarks>
 public sealed class WorldLaws
     : AbstractionOf<GameAsm::WorldLaws>
 {
     private static readonly Type LawLibraryType = typeof(GameAsm::WorldLawLibrary);
     private static readonly Dictionary<string, FieldInfo> LawLibraryFieldCache = new();
 
-    internal WorldLaws() : base(GameAsm::World.world.world_laws)
+    internal WorldLaws() : base(() => GameAsm::World.world.world_laws)
     {
     }
 
     #region Other
 
-    /**
-     * Monoliths can evolve and mutate nearby creatures.
-     */
+    /// <summary>
+    ///     Allows monoliths to evolve and mutate nearby creatures.
+    /// </summary>
     public bool EvolutionEvents
     {
         get => Get("world_law_evolution_events");
@@ -30,19 +37,40 @@ public sealed class WorldLaws
 
     #endregion
 
-    private bool Get(string k)
+    /// <summary>
+    ///     Retrieves the value of a world law using its internal key.
+    /// </summary>
+    /// <param name="key">The internal world law identifier.</param>
+    /// <returns>
+    ///     <see langword="true" /> if the law is enabled; otherwise <see langword="false" />.
+    /// </returns>
+    /// <exception cref="KeyNotFoundException">
+    ///     Thrown if the specified world law key does not exist.
+    /// </exception>
+    private bool Get(string key)
     {
-        return Base.dict.TryGetValue(k, out var option)
+        return Base.dict.TryGetValue(key, out var option)
             ? option.boolVal
-            : throw new KeyNotFoundException($"World law '{k}' not found.");
+            : throw new KeyNotFoundException($"World law '{key}' not found.");
     }
 
-    private void Set(string k, bool value)
+    /// <summary>
+    ///     Sets the value of a world law using its internal key.
+    /// </summary>
+    /// <param name="key">The internal world law identifier.</param>
+    /// <param name="value">
+    ///     <see langword="true" /> to enable the law;
+    ///     <see langword="false" /> to disable it.
+    /// </param>
+    /// <exception cref="KeyNotFoundException">
+    ///     Thrown if the specified world law key does not exist.
+    /// </exception>
+    private void Set(string key, bool value)
     {
-        if (!Base.dict.TryGetValue(k, out var option))
-            throw new KeyNotFoundException($"World law '{k}' not found.");
+        if (!Base.dict.TryGetValue(key, out var option))
+            throw new KeyNotFoundException($"World law '{key}' not found.");
 
-        var lastValue = option.boolVal;
+        bool lastValue = option.boolVal;
         if (value == lastValue)
             return;
 
@@ -50,7 +78,7 @@ public sealed class WorldLaws
 
         if (value)
         {
-            var asset = GetAsset(k);
+            var asset = GetAsset(key);
             asset.on_state_enabled?.Invoke(option);
         }
 
@@ -87,18 +115,18 @@ public sealed class WorldLaws
 
     #region Harmony
 
-    /**
-     * Limit maximum population in settlements to 100
-     */
+    /// <summary>
+    ///     Limits the maximum population in settlements to 100 inhabitants.
+    /// </summary>
     public bool OneHundredPeople
     {
         get => Get("world_law_civ_limit_population_100");
         set => Set("world_law_civ_limit_population_100", value);
     }
 
-    /**
-     * Damage to world from explosions, fires and disasters is disabled.
-     */
+    /// <summary>
+    ///     Prevents environmental destruction from explosions, fires, and disasters.
+    /// </summary>
     public bool GaiasCovenant
     {
         get => Get("world_law_gaias_covenant");
@@ -109,36 +137,36 @@ public sealed class WorldLaws
 
     #region Diplomacy
 
-    /**
-     * Alliances forged, betrayals planned, and wars will erupt.
-     */
+    /// <summary>
+    ///     Alliances forged, betrayals planned, and wars will erupt.
+    /// </summary>
     public bool Diplomacy
     {
         get => Get("world_law_diplomacy");
         set => Set("world_law_diplomacy", value);
     }
 
-    /**
-     * Clan members can start rites based on their religion.
-     */
+    /// <summary>
+    ///     Clan members can start rites based on their religion.
+    /// </summary>
     public bool Rites
     {
         get => Get("world_law_rites");
         set => Set("world_law_rites", value);
     }
 
-    /**
-     * Cities can rebel when they have low loyalty. Only works if diplomacy is enabled.
-     */
+    /// <summary>
+    ///     Cities can rebel when they have low loyalty. Only works if diplomacy is enabled.
+    /// </summary>
     public bool Rebellions
     {
         get => Get("world_law_rebellions");
         set => Set("world_law_rebellions", value);
     }
 
-    /**
-     * Rulers can steal the borders of other cities.
-     */
+    /// <summary>
+    ///     Rulers can steal the borders of other cities.
+    /// </summary>
     public bool BorderStealing
     {
         get => Get("world_law_border_stealing");
@@ -149,63 +177,63 @@ public sealed class WorldLaws
 
     #region Civilisations
 
-    /**
-     * Religions, languages and cultures go off the rails with random traits.
-     */
+    /// <summary>
+    ///     Religions, languages and cultures go off the rails with random traits.
+    /// </summary>
     public bool GlitchedNoosphere
     {
         get => Get("world_law_glitched_noosphere");
         set => Set("world_law_glitched_noosphere", value);
     }
 
-    /**
-     * Structures spread their species' natural biome over time.
-     */
+    /// <summary>
+    ///     Structures spread their species' natural biome over time.
+    /// </summary>
     public bool Terramorphing
     {
         get => Get("world_law_terramorphing");
         set => Set("world_law_terramorphing", value);
     }
 
-    /**
-     * Kingdoms will send settlers to establish new villagers.
-     */
+    /// <summary>
+    ///     Kingdoms will send settlers to establish new villagers.
+    /// </summary>
     public bool KingdomExpansion
     {
         get => Get("world_law_kingdom_expansion");
         set => Set("world_law_kingdom_expansion", value);
     }
 
-    /**
-     * Villagers will also participate in same-race wars.
-     */
+    /// <summary>
+    ///     Villagers will also participate in same-race wars.
+    /// </summary>
     public bool AngryVillagers
     {
         get => Get("world_law_angry_civilians");
         set => Set("world_law_angry_civilians", value);
     }
 
-    /**
-     * Children will be born in villages.
-     */
+    /// <summary>
+    ///     Children will be born in villages.
+    /// </summary>
     public bool CivBabies
     {
         get => Get("world_law_civ_babies");
         set => Set("world_law_civ_babies", value);
     }
 
-    /**
-     * Unreasonably attractive migrants may appear near bonfires when the population drops.
-     */
+    /// <summary>
+    ///     Unreasonably attractive migrants may appear near bonfires when the population drops.
+    /// </summary>
     public bool HandsomeMigrants
     {
         get => Get("world_law_civ_migrants");
         set => Set("world_law_civ_migrants", value);
     }
 
-    /**
-     * Civilisations have armies.
-     */
+    /// <summary>
+    ///     Civilisations have armies.
+    /// </summary>
     public bool Armies
     {
         get => Get("world_law_civ_army");
@@ -216,36 +244,36 @@ public sealed class WorldLaws
 
     #region Units
 
-    /**
-     * New subspecies are born with a tangled mess of random genes.
-     */
+    /// <summary>
+    ///     New subspecies are born with a tangled mess of random genes.
+    /// </summary>
     public bool GeneSpaghetti
     {
         get => Get("world_law_gene_spaghetti");
         set => Set("world_law_gene_spaghetti", value);
     }
 
-    /**
-     * New subspecies are created with a mix of random traits.
-     */
+    /// <summary>
+    ///     New subspecies are created with a mix of random traits.
+    /// </summary>
     public bool MutantBox
     {
         get => Get("world_law_mutant_box");
         set => Set("world_law_mutant_box", value);
     }
 
-    /**
-     * Everyone needs food to live.
-     */
+    /// <summary>
+    ///     Everyone needs food to live.
+    /// </summary>
     public bool Hunger
     {
         get => Get("world_law_hunger");
         set => Set("world_law_hunger", value);
     }
 
-    /**
-     * Creatures can die from old age.
-     */
+    /// <summary>
+    ///     Creatures can die from old age.
+    /// </summary>
     public bool OldAge
     {
         get => Get("world_law_old_age");
@@ -256,27 +284,27 @@ public sealed class WorldLaws
 
     #region Mobs
 
-    /**
-     * Animals and other creatures will not attack anyone.
-     */
+    /// <summary>
+    ///     Animals and other creatures will not attack anyone.
+    /// </summary>
     public bool PeacefulMonsters
     {
         get => Get("world_law_peaceful_monsters");
         set => Set("world_law_peaceful_monsters", value);
     }
 
-    /**
-     * Baby animals will be born.
-     */
+    /// <summary>
+    ///     Baby animals will be born.
+    /// </summary>
     public bool AnimalBabies
     {
         get => Get("world_law_animals_babies");
         set => Set("world_law_animals_babies", value);
     }
 
-    /**
-     * Creep tiles like tumor, pumpkin, biomass, etc - will stay even after base structure is gone.
-     */
+    /// <summary>
+    ///     Creep tiles like tumor, pumpkin, biomass, etc - will stay even after base structure is gone.
+    /// </summary>
     public bool ForeverCreep
     {
         get => Get("world_law_forever_tumor_creep");
@@ -287,27 +315,27 @@ public sealed class WorldLaws
 
     #region Spawn
 
-    /**
-     * Sapient beings now fall gently via the Clouds of Life.
-     */
+    /// <summary>
+    ///     Sapient beings now fall gently via the Clouds of Life.
+    /// </summary>
     public bool DropOfThoughts
     {
         get => Get("world_law_drop_of_thoughts");
         set => Set("world_law_drop_of_thoughts", value);
     }
 
-    /**
-     * Animals can randomly appear in your world.
-     */
+    /// <summary>
+    ///     Animals can randomly appear in your world.
+    /// </summary>
     public bool AnimalSpawn
     {
         get => Get("world_law_animals_spawn");
         set => Set("world_law_animals_spawn", value);
     }
 
-    /**
-     * Clouds carry pollen, spores and aeroplankton, seeding life across the land.
-     */
+    /// <summary>
+    ///     Clouds carry pollen, spores and aeroplankton, seeding life across the land.
+    /// </summary>
     public bool CloudsOfLife
     {
         get => Get("world_law_clouds");
@@ -318,45 +346,45 @@ public sealed class WorldLaws
 
     #region Nature
 
-    /**
-     * The world is densely packed with trees, plants and fungi.
-     */
+    /// <summary>
+    ///     The world is densely packed with trees, plants and fungi.
+    /// </summary>
     public bool HighFloraDensity
     {
         get => Get("world_law_spread_density_high");
         set => Set("world_law_spread_density_high", value);
     }
 
-    /**
-     * Trees and plants will appear randomly in biomes.
-     */
+    /// <summary>
+    ///     Trees and plants will appear randomly in biomes.
+    /// </summary>
     public bool RandomSeeds
     {
         get => Get("world_law_vegetation_random_seeds");
         set => Set("world_law_vegetation_random_seeds", value);
     }
 
-    /**
-     * Plants and trees can spread in any biome.
-     */
+    /// <summary>
+    ///     Plants and trees can spread in any biome.
+    /// </summary>
     public bool RootsWithoutBorders
     {
         get => Get("world_law_roots_without_borders");
         set => Set("world_law_roots_without_borders", value);
     }
 
-    /**
-     * Minerals will spawn in biomes randomly from the underground.
-     */
+    /// <summary>
+    ///     Minerals will spawn in biomes randomly from the underground.
+    /// </summary>
     public bool Minerals
     {
         get => Get("world_law_grow_minerals");
         set => Set("world_law_grow_minerals", value);
     }
 
-    /**
-     * Tiles have a chance to turn into sand when near water.
-     */
+    /// <summary>
+    ///     Tiles have a chance to turn into sand when near water.
+    /// </summary>
     public bool Erosion
     {
         get => Get("world_law_erosion");
@@ -367,36 +395,36 @@ public sealed class WorldLaws
 
     #region Trees
 
-    /**
-     * Allow trees to naturally grow and spread.
-     */
+    /// <summary>
+    ///     Allow trees to naturally grow and spread.
+    /// </summary>
     public bool TreeGrowth
     {
         get => Get("world_law_spread_trees");
         set => Set("world_law_spread_trees", value);
     }
 
-    /**
-     * Trees grow and spread at increased speeds.
-     */
+    /// <summary>
+    ///     Trees grow and spread at increased speeds.
+    /// </summary>
     public bool FastTreeGrowth
     {
         get => Get("world_law_spread_fast_trees");
         set => Set("world_law_spread_fast_trees", value);
     }
 
-    /**
-     * Trees reduce the movement speed of nearby creatures.
-     */
+    /// <summary>
+    ///     Trees reduce the movement speed of nearby creatures.
+    /// </summary>
     public bool Entanglewood
     {
         get => Get("world_law_entanglewood");
         set => Set("world_law_entanglewood", value);
     }
 
-    /**
-     * Trees have a change to retaliate when damaged.
-     */
+    /// <summary>
+    ///     Trees have a change to retaliate when damaged.
+    /// </summary>
     public bool BarkBitesBack
     {
         get => Get("world_law_bark_bites_back");
@@ -407,45 +435,45 @@ public sealed class WorldLaws
 
     #region Plants
 
-    /**
-     * Allow plants to naturally grow and spread.
-     */
+    /// <summary>
+    ///     Allow plants to naturally grow and spread.
+    /// </summary>
     public bool PlantGrowth
     {
         get => Get("world_law_spread_plants");
         set => Set("world_law_spread_plants", value);
     }
 
-    /**
-     * Plants multiply and expand at maximum speed.
-     */
+    /// <summary>
+    ///     Plants multiply and expand at maximum speed.
+    /// </summary>
     public bool FastPlantGrowth
     {
         get => Get("world_law_spread_fast_plants");
         set => Set("world_law_spread_fast_plants", value);
     }
 
-    /**
-     * Plants will irritate or distract nearby creatures.
-     */
+    /// <summary>
+    ///     Plants will irritate or distract nearby creatures.
+    /// </summary>
     public bool PlantsTickles
     {
         get => Get("world_law_plants_tickles");
         set => Set("world_law_plants_tickles", value);
     }
 
-    /**
-     * Roots occasionally trip passing creatures.
-     */
+    /// <summary>
+    ///     Roots occasionally trip passing creatures.
+    /// </summary>
     public bool RootPranks
     {
         get => Get("world_law_root_pranks");
         set => Set("world_law_root_pranks", value);
     }
 
-    /**
-     * Flowers release sleep-inducing pollen when disturbed.
-     */
+    /// <summary>
+    ///     Flowers release sleep-inducing pollen when disturbed.
+    /// </summary>
     public bool NectarNap
     {
         get => Get("world_law_nectar_nap");
@@ -456,27 +484,27 @@ public sealed class WorldLaws
 
     #region Fungi
 
-    /**
-     * Allow fungal growth in this world
-     */
+    /// <summary>
+    ///     Allow fungal growth in this world
+    /// </summary>
     public bool FungiGrowth
     {
         get => Get("world_law_spread_fungi");
         set => Set("world_law_spread_fungi", value);
     }
 
-    /**
-     * Fungi grow at an incredible rate.
-     */
+    /// <summary>
+    ///     Fungi grow at an incredible rate.
+    /// </summary>
     public bool FastFungiGrowth
     {
         get => Get("world_law_spread_fast_fungi");
         set => Set("world_law_spread_fast_fungi", value);
     }
 
-    /**
-     * Mushrooms explode when disturbed.
-     */
+    /// <summary>
+    ///     Mushrooms explode when disturbed.
+    /// </summary>
     public bool ExplodingMushrooms
     {
         get => Get("world_law_exploding_mushrooms");
@@ -487,18 +515,18 @@ public sealed class WorldLaws
 
     #region Biomes
 
-    /**
-     * Grass will grow by itself.
-     */
+    /// <summary>
+    ///     Grass will grow by itself.
+    /// </summary>
     public bool GrowGrass
     {
         get => Get("world_law_grow_grass");
         set => Set("world_law_grow_grass", value);
     }
 
-    /**
-     * Biomes will try to overgrow other biomes.
-     */
+    /// <summary>
+    ///     Biomes will try to overgrow other biomes.
+    /// </summary>
     public bool BiomeOvergrowth
     {
         get => Get("world_law_biome_overgrowth");
@@ -509,18 +537,18 @@ public sealed class WorldLaws
 
     #region Weather
 
-    /**
-     * Lava stays forever and does not cool off into rock.
-     */
+    /// <summary>
+    ///     Lava stays forever and does not cool off into rock.
+    /// </summary>
     public bool EternalLava
     {
         get => Get("world_law_forever_lava");
         set => Set("world_law_forever_lava", value);
     }
 
-    /**
-     * Ice and snow stay forever and do not melt.
-     */
+    /// <summary>
+    ///     Ice and snow stay forever and do not melt.
+    /// </summary>
     public bool ForeverCold
     {
         get => Get("world_law_forever_cold");
@@ -531,27 +559,27 @@ public sealed class WorldLaws
 
     #region Disasters
 
-    /**
-     * Natural disasters will happen randomly from time to time.
-     */
+    /// <summary>
+    ///     Natural disasters will happen randomly from time to time.
+    /// </summary>
     public bool NaturalDisasters
     {
         get => Get("world_law_disasters_nature");
         set => Set("world_law_disasters_nature", value);
     }
 
-    /**
-     * Invasions and other fun stuff may happen randomly from time to time.
-     */
+    /// <summary>
+    ///     Invasions and other fun stuff may happen randomly from time to time.
+    /// </summary>
     public bool OtherDisasters
     {
         get => Get("world_law_disasters_other");
         set => Set("world_law_disasters_other", value);
     }
 
-    /**
-     * A swarm of rats can spark a devastating plague.
-     */
+    /// <summary>
+    ///     A swarm of rats can spark a devastating plague.
+    /// </summary>
     public bool RatKing
     {
         get => Get("world_law_rat_plague");

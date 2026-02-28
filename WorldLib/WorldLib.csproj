@@ -4,17 +4,26 @@
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
         <RootNamespace>WorldLib</RootNamespace>
+        <Configuration>Release</Configuration>
         <AssemblyName>WorldLib</AssemblyName>
         <LangVersion>12</LangVersion>
         <Nullable>enable</Nullable>
         <Authors>Thorminate</Authors>
         <Version>0.0.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <!-- Modify these to your own download location -->
         <WorldBoxData>C:\Program Files (x86)\Steam\steamapps\common\worldbox\worldbox_Data</WorldBoxData>
         <BepInExCore>C:\Program Files (x86)\Steam\steamapps\common\worldbox\BepInEx\core</BepInExCore>
+        <!-- End -->
         <PackageId>WorldLib</PackageId>
+        <!-- REMOVE THIS IF YOU ARE CONTRUBUTING -->
         <PackageOutputPath>C:\dev\LocalNuget</PackageOutputPath>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <!-- End -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\Release\net472\WorldLib.xml</DocumentationFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NoWarn>CS1591</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -60,9 +69,12 @@
         <Publicize Include="Assembly-CSharp"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
     <Target Name="PostBuildDeploy" AfterTargets="Build">
         <PropertyGroup>
-            <SteamGameId>1206560</SteamGameId>
             <GameModsDir>C:\Program Files (x86)\Steam\steamapps\common\worldbox\BepInEx\plugins</GameModsDir>
         </PropertyGroup>
 

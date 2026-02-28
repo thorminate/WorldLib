@@ -1,5 +1,5 @@
 ﻿using System;
-using WorldLib.Structs.Events;
+using WorldLib.Models.Events.History;
 
 namespace WorldLib.Core;
 

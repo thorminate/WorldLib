@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using HarmonyLib;
 using WorldLib.Core;
-using WorldLib.Structs.Events;
+using WorldLib.Models.Events.History;
 
 namespace WorldLib.Patches;
 
@@ -23,7 +23,7 @@ public static class HistoryHudPatch
 
         if (asset.random_ids > 0)
         {
-            var pIndex = pMessage.timestamp % asset.random_ids + 1;
+            int pIndex = pMessage.timestamp % asset.random_ids + 1;
             localeId = asset.getLocaleID(pIndex);
         }
         else
@@ -31,7 +31,7 @@ public static class HistoryHudPatch
             localeId = asset.getLocaleID();
         }
 
-        var messageText = GameAsm::LocalizedTextManager.getText(localeId, pForceEnglish: true);
+        string? messageText = GameAsm::LocalizedTextManager.getText(localeId, pForceEnglish: true);
         asset.text_replacer?.Invoke(pMessage, ref messageText);
 
         messageText = Regex.Replace(messageText, "<.*?>", string.Empty);

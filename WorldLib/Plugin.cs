@@ -2,11 +2,14 @@
 using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
+using WorldLib.Core;
 using static WorldLib.Info;
 
 namespace WorldLib;
 
-[BepInPlugin(GUID, Name, Version)]
+extern alias GameAsm;
+
+[BepInPlugin(Guid, Name, Version)]
 public class Plugin : BaseUnityPlugin
 {
     internal static Plugin Instance { get; set; } = null!;
@@ -26,6 +29,8 @@ public class Plugin : BaseUnityPlugin
         gameObject.hideFlags = HideFlags.HideAndDontSave;
 
         Patch();
+
+        Events.GameStarted += () => { World.Laws().EvolutionEvents = true; };
     }
 
     #endregion
