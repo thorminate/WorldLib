@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WorldHistory | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WorldHistory | WorldLib ">
+      
+      <meta name="description" content="Provides a high-level abstraction over the game&#39;s WorldLog system, allowing for reading recent world events and logging new events such as kings, clans, cities, wars, alliances, and disasters.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/thorminate/WorldLib/new/main/apiSpec/new?filename=WorldLib_Models_History_WorldHistory.md&amp;value=---%0Auid%3A%20WorldLib.Models.History.WorldHistory%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.History.WorldHistory">
+
+
+
+  <h1 id="WorldLib_Models_History_WorldHistory" data-uid="WorldLib.Models.History.WorldHistory" class="text-break">
+Class WorldHistory  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.History.html">History</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a high-level abstraction over the game's WorldLog system,
+allowing for reading recent world events and logging new events such as kings, clans, cities,
+wars, alliances, and disasters.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WorldHistory : AbstractionOf&lt;WorldLog&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">WorldLog</span>&gt;</div>
+      <div><span class="xref">WorldHistory</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogAllianceCreated_" data-uid="WorldLib.Models.History.WorldHistory.LogAllianceCreated*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogAllianceCreated_Alliance_" data-uid="WorldLib.Models.History.WorldHistory.LogAllianceCreated(Alliance)">
+  LogAllianceCreated(Alliance)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the creation of an alliance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogAllianceCreated(Alliance alliance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alliance</code> <span class="xref">Alliance</span></dt>
+    <dd><p>The alliance being created.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogAllianceDissolved_" data-uid="WorldLib.Models.History.WorldHistory.LogAllianceDissolved*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogAllianceDissolved_Alliance_" data-uid="WorldLib.Models.History.WorldHistory.LogAllianceDissolved(Alliance)">
+  LogAllianceDissolved(Alliance)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the dissolution of an alliance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogAllianceDissolved(Alliance alliance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alliance</code> <span class="xref">Alliance</span></dt>
+    <dd><p>The alliance being dissolved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogChangedRoyalClan_" data-uid="WorldLib.Models.History.WorldHistory.LogChangedRoyalClan*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogChangedRoyalClan_Kingdom_Clan_Clan_" data-uid="WorldLib.Models.History.WorldHistory.LogChangedRoyalClan(Kingdom,Clan,Clan)">
+  LogChangedRoyalClan(Kingdom, Clan, Clan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a royal clan changing within a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogChangedRoyalClan(Kingdom kingdom, Clan oldClan, Clan newClan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom where the clan change occurs.</p>
+</dd>
+    <dt><code>oldClan</code> <span class="xref">Clan</span></dt>
+    <dd><p>The previous clan.</p>
+</dd>
+    <dt><code>newClan</code> <span class="xref">Clan</span></dt>
+    <dd><p>The new clan replacing it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogCityDestroyed_" data-uid="WorldLib.Models.History.WorldHistory.LogCityDestroyed*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogCityDestroyed_City_" data-uid="WorldLib.Models.History.WorldHistory.LogCityDestroyed(City)">
+  LogCityDestroyed(City)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the destruction of a city.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogCityDestroyed(City city)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>city</code> <span class="xref">City</span></dt>
+    <dd><p>The city being destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogCityRevolt_" data-uid="WorldLib.Models.History.WorldHistory.LogCityRevolt*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogCityRevolt_City_" data-uid="WorldLib.Models.History.WorldHistory.LogCityRevolt(City)">
+  LogCityRevolt(City)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a city revolt event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogCityRevolt(City city)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>city</code> <span class="xref">City</span></dt>
+    <dd><p>The city undergoing revolt.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogDisaster_" data-uid="WorldLib.Models.History.WorldHistory.LogDisaster*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogDisaster_DisasterAsset_WorldTile_System_String_City_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogDisaster(DisasterAsset,WorldTile,System.String,City,Actor)">
+  LogDisaster(DisasterAsset, WorldTile, string?, City?, Actor?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a disaster event occurring at a world tile, optionally linked to a city or unit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogDisaster(DisasterAsset asset, WorldTile tile, string? name, City? city, Actor? unit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asset</code> <span class="xref">DisasterAsset</span></dt>
+    <dd><p>The disaster asset responsible for the event.</p>
+</dd>
+    <dt><code>tile</code> <span class="xref">WorldTile</span></dt>
+    <dd><p>The tile where the disaster occurs.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional custom name for the disaster.</p>
+</dd>
+    <dt><code>city</code> <span class="xref">City</span></dt>
+    <dd><p>Optional city affected by the disaster.</p>
+</dd>
+    <dt><code>unit</code> <span class="xref">Actor</span></dt>
+    <dd><p>Optional unit affected by the disaster.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogFavouriteDead_" data-uid="WorldLib.Models.History.WorldHistory.LogFavouriteDead*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogFavouriteDead_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogFavouriteDead(Actor)">
+  LogFavouriteDead(Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a favorite actor has died.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogFavouriteDead(Actor favourite)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>favourite</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who died.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogFavouriteMurder_" data-uid="WorldLib.Models.History.WorldHistory.LogFavouriteMurder*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogFavouriteMurder_Actor_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogFavouriteMurder(Actor,Actor)">
+  LogFavouriteMurder(Actor, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a favorite actor was murdered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogFavouriteMurder(Actor favourite, Actor attacker)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>favourite</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who was killed.</p>
+</dd>
+    <dt><code>attacker</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who performed the murder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingDead_" data-uid="WorldLib.Models.History.WorldHistory.LogKingDead*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingDead_Kingdom_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogKingDead(Kingdom,Actor)">
+  LogKingDead(Kingdom, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a king has died naturally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingDead(Kingdom kingdom, Actor king)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom of the king.</p>
+</dd>
+    <dt><code>king</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who died.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingFledCapital_" data-uid="WorldLib.Models.History.WorldHistory.LogKingFledCapital*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingFledCapital_Kingdom_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogKingFledCapital(Kingdom,Actor)">
+  LogKingFledCapital(Kingdom, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a king has fled the capital.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingFledCapital(Kingdom kingdom, Actor king)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom of the king.</p>
+</dd>
+    <dt><code>king</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who fled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingFledCity_" data-uid="WorldLib.Models.History.WorldHistory.LogKingFledCity*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingFledCity_Kingdom_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogKingFledCity(Kingdom,Actor)">
+  LogKingFledCity(Kingdom, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a king has fled their city.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingFledCity(Kingdom kingdom, Actor king)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom of the king.</p>
+</dd>
+    <dt><code>king</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who fled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingLeft_" data-uid="WorldLib.Models.History.WorldHistory.LogKingLeft*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingLeft_Kingdom_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogKingLeft(Kingdom,Actor)">
+  LogKingLeft(Kingdom, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a king has left the kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingLeft(Kingdom kingdom, Actor king)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom of the king.</p>
+</dd>
+    <dt><code>king</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who left.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingMurder_" data-uid="WorldLib.Models.History.WorldHistory.LogKingMurder*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingMurder_Kingdom_Actor_Actor_" data-uid="WorldLib.Models.History.WorldHistory.LogKingMurder(Kingdom,Actor,Actor)">
+  LogKingMurder(Kingdom, Actor, Actor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a king was murdered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingMurder(Kingdom kingdom, Actor king, Actor attacker)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom of the king.</p>
+</dd>
+    <dt><code>king</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who was killed.</p>
+</dd>
+    <dt><code>attacker</code> <span class="xref">Actor</span></dt>
+    <dd><p>The actor who performed the murder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogKingdomDestroyed_" data-uid="WorldLib.Models.History.WorldHistory.LogKingdomDestroyed*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogKingdomDestroyed_Kingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogKingdomDestroyed(Kingdom)">
+  LogKingdomDestroyed(Kingdom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the destruction of a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogKingdomDestroyed(Kingdom kingdom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom being destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewCity_" data-uid="WorldLib.Models.History.WorldHistory.LogNewCity*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewCity_City_" data-uid="WorldLib.Models.History.WorldHistory.LogNewCity(City)">
+  LogNewCity(City)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the creation of a new city.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewCity(City city)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>city</code> <span class="xref">City</span></dt>
+    <dd><p>The city being created.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewKing_" data-uid="WorldLib.Models.History.WorldHistory.LogNewKing*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewKing_Kingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogNewKing(Kingdom)">
+  LogNewKing(Kingdom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the creation of a new king in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewKing(Kingdom kingdom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom the new king belongs to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewKingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogNewKingdom*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewKingdom_Kingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogNewKingdom(Kingdom)">
+  LogNewKingdom(Kingdom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the creation of a new kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewKingdom(Kingdom kingdom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom being created.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewRoyalClan_" data-uid="WorldLib.Models.History.WorldHistory.LogNewRoyalClan*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewRoyalClan_Kingdom_Clan_" data-uid="WorldLib.Models.History.WorldHistory.LogNewRoyalClan(Kingdom,Clan)">
+  LogNewRoyalClan(Kingdom, Clan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the creation of a new royal clan in a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewRoyalClan(Kingdom kingdom, Clan clan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom where the clan belongs.</p>
+</dd>
+    <dt><code>clan</code> <span class="xref">Clan</span></dt>
+    <dd><p>The new royal clan.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewTotalWar_" data-uid="WorldLib.Models.History.WorldHistory.LogNewTotalWar*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewTotalWar_Kingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogNewTotalWar(Kingdom)">
+  LogNewTotalWar(Kingdom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the declaration of a total war for a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewTotalWar(Kingdom kingdom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom declaring total war.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogNewWar_" data-uid="WorldLib.Models.History.WorldHistory.LogNewWar*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogNewWar_Kingdom_Kingdom_" data-uid="WorldLib.Models.History.WorldHistory.LogNewWar(Kingdom,Kingdom)">
+  LogNewWar(Kingdom, Kingdom)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the start of a new war between two kingdoms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogNewWar(Kingdom kingdom1, Kingdom kingdom2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom1</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The first kingdom.</p>
+</dd>
+    <dt><code>kingdom2</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The second kingdom.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogRoyalClanDestroyed_" data-uid="WorldLib.Models.History.WorldHistory.LogRoyalClanDestroyed*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogRoyalClanDestroyed_Kingdom_Clan_" data-uid="WorldLib.Models.History.WorldHistory.LogRoyalClanDestroyed(Kingdom,Clan)">
+  LogRoyalClanDestroyed(Kingdom, Clan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs that a royal clan has been destroyed in a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogRoyalClanDestroyed(Kingdom kingdom, Clan clan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kingdom</code> <span class="xref">Kingdom</span></dt>
+    <dd><p>The kingdom affected.</p>
+</dd>
+    <dt><code>clan</code> <span class="xref">Clan</span></dt>
+    <dd><p>The clan being destroyed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_LogWarEnded_" data-uid="WorldLib.Models.History.WorldHistory.LogWarEnded*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_LogWarEnded_War_" data-uid="WorldLib.Models.History.WorldHistory.LogWarEnded(War)">
+  LogWarEnded(War)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs the end of a war.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogWarEnded(War war)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>war</code> <span class="xref">War</span></dt>
+    <dd><p>The war that ended.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistory_Messages_" data-uid="WorldLib.Models.History.WorldHistory.Messages*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistory_Messages" data-uid="WorldLib.Models.History.WorldHistory.Messages">
+  Messages()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides the last 2000 world logs in the form of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;WorldHistoryEntry&gt; Messages()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="WorldLib.Models.History.WorldHistoryEntry.html">WorldHistoryEntry</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a> containing the last 2000 world logs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="WorldLib_Models_History_WorldHistory_Messages_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Fetching world logs involves querying the SQL database, so this operation can be <a class="xref" href="WorldLib.Utils.Slow.html">Slow</a>!</p>
+<p>Only the last 2000 entries are retrieved at a time.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistory.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
