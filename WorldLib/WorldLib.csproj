@@ -11,10 +11,6 @@
         <Authors>Thorminate</Authors>
         <Version>0.0.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <!-- Modify these to your own download location -->
-        <WorldBoxData>C:\Program Files (x86)\Steam\steamapps\common\worldbox\worldbox_Data</WorldBoxData>
-        <BepInExCore>C:\Program Files (x86)\Steam\steamapps\common\worldbox\BepInEx\core</BepInExCore>
-        <!-- End -->
         <PackageId>WorldLib</PackageId>
         <!-- REMOVE THIS IF YOU ARE CONTRUBUTING -->
         <PackageOutputPath>C:\dev\LocalNuget</PackageOutputPath>
@@ -28,28 +24,28 @@
 
     <ItemGroup>
         <Reference Include="0Harmony">
-            <HintPath>$(BepInExCore)\0Harmony.dll</HintPath>
+            <HintPath>..\assemblies\0Harmony.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        
+        <Reference Include="BepInEx">
+            <HintPath>..\assemblies\BepInEx.dll</HintPath>
             <Private>false</Private>
         </Reference>
 
         <Reference Include="Assembly-CSharp">
-            <HintPath>$(WorldBoxData)\Managed\Assembly-CSharp.dll</HintPath>
+            <HintPath>..\assemblies\Assembly-CSharp.dll</HintPath>
             <Private>false</Private>
             <Aliases>GameAsm</Aliases>
         </Reference>
 
-        <Reference Include="BepInEx">
-            <HintPath>$(BepInExCore)\BepInEx.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-
         <Reference Include="Newtonsoft.Json">
-            <HintPath>$(WorldBoxData)\Managed\Newtonsoft.Json.dll</HintPath>
+            <HintPath>..\assemblies\Newtonsoft.Json.dll</HintPath>
             <Private>false</Private>
         </Reference>
 
         <Reference Include="UnityEngine.UI">
-            <HintPath>$(WorldBoxData)\Managed\UnityEngine.UI.dll</HintPath>
+            <HintPath>..\assemblies\UnityEngine.UI.dll</HintPath>
             <Private>false</Private>
         </Reference>
     </ItemGroup>
