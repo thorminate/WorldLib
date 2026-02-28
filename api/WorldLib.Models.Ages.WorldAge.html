@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WorldAge | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WorldAge | WorldLib ">
+      
+      <meta name="description" content="Represents an age in World Box. Everything is fully mutable and will reflect internally.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/thorminate/WorldLib/new/main/apiSpec/new?filename=WorldLib_Models_Ages_WorldAge.md&amp;value=---%0Auid%3A%20WorldLib.Models.Ages.WorldAge%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.Ages.WorldAge">
+
+
+
+  <h1 id="WorldLib_Models_Ages_WorldAge" data-uid="WorldLib.Models.Ages.WorldAge" class="text-break">
+Class WorldAge  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Ages.html">Ages</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an age in World Box. Everything is fully mutable and will reflect internally.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WorldAge : AbstractionOf&lt;WorldAgeAsset&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">WorldAgeAsset</span>&gt;</div>
+      <div><span class="xref">WorldAge</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_Background_" data-uid="WorldLib.Models.Ages.WorldAge.Background*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_Background" data-uid="WorldLib.Models.Ages.WorldAge.Background">
+  Background
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A sprite ascertaining to the ages background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite Background { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_Biomes_" data-uid="WorldLib.Models.Ages.WorldAge.Biomes*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_Biomes" data-uid="WorldLib.Models.Ages.WorldAge.Biomes">
+  Biomes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional biomes that can randomly spawn in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HashSet&lt;string&gt; Biomes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_BonusBiomesGrowth_" data-uid="WorldLib.Models.Ages.WorldAge.BonusBiomesGrowth*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_BonusBiomesGrowth" data-uid="WorldLib.Models.Ages.WorldAge.BonusBiomesGrowth">
+  BonusBiomesGrowth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides all biomes of the world a bonus in growth. Can be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BonusBiomesGrowth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_BonusLoyalty_" data-uid="WorldLib.Models.Ages.WorldAge.BonusLoyalty*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_BonusLoyalty" data-uid="WorldLib.Models.Ages.WorldAge.BonusLoyalty">
+  BonusLoyalty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides all actors of the world a loyalty bonus. Can be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BonusLoyalty { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_BonusOpinion_" data-uid="WorldLib.Models.Ages.WorldAge.BonusOpinion*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_BonusOpinion" data-uid="WorldLib.Models.Ages.WorldAge.BonusOpinion">
+  BonusOpinion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides all actors of the world a bonus in opinion. Can be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BonusOpinion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_CloudInterval_" data-uid="WorldLib.Models.Ages.WorldAge.CloudInterval*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_CloudInterval" data-uid="WorldLib.Models.Ages.WorldAge.CloudInterval">
+  CloudInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How often clouds appear. Lower is faster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CloudInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_Clouds_" data-uid="WorldLib.Models.Ages.WorldAge.Clouds*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_Clouds" data-uid="WorldLib.Models.Ages.WorldAge.Clouds">
+  Clouds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of cloud ids, signifies the types of clouds that appear in this age. If this is left empty, no clouds spawn
+in this age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Clouds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_DefaultSlots_" data-uid="WorldLib.Models.Ages.WorldAge.DefaultSlots*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_DefaultSlots" data-uid="WorldLib.Models.Ages.WorldAge.DefaultSlots">
+  DefaultSlots
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L508"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of slots this age can occupy upon reshuffle (like world creation or <a class="xref" href="WorldLib.Models.Ages.WorldAges.html#WorldLib_Models_Ages_WorldAges_SetDefaults">SetDefaults()</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonitoredList&lt;int&gt; DefaultSlots { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.MonitoredList-1.html">MonitoredList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraDisasterFireElementalSpawnOnFire_" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterFireElementalSpawnOnFire*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraDisasterFireElementalSpawnOnFire" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterFireElementalSpawnOnFire">
+  EraDisasterFireElementalSpawnOnFire
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fire elementals spawn on tiles with fire when they fizzle out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EraDisasterFireElementalSpawnOnFire { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraDisasterRageBringsDemons_" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterRageBringsDemons*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraDisasterRageBringsDemons" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterRageBringsDemons">
+  EraDisasterRageBringsDemons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actors can turn into demons if they have the rage status effect and kill someone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EraDisasterRageBringsDemons { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="WorldLib_Models_Ages_WorldAge_EraDisasterRageBringsDemons_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Other disasters have to be enabled, the actor has to be demonizable, they cannot be blessed and must not be
+favorited by the player for an actor to be converted.</p>
+</div>
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraDisasterSnowTurnsBabiesIntoIceOnes_" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterSnowTurnsBabiesIntoIceOnes*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraDisasterSnowTurnsBabiesIntoIceOnes" data-uid="WorldLib.Models.Ages.WorldAge.EraDisasterSnowTurnsBabiesIntoIceOnes">
+  EraDisasterSnowTurnsBabiesIntoIceOnes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Babies become an ice one upon coming into contact with snow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EraDisasterSnowTurnsBabiesIntoIceOnes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraEffectLightAlphaGame_" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectLightAlphaGame*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraEffectLightAlphaGame" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectLightAlphaGame">
+  EraEffectLightAlphaGame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Affects actors' alpha value (transparency). Should be between 0 and 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EraEffectLightAlphaGame { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraEffectLightAlphaMinimap_" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectLightAlphaMinimap*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraEffectLightAlphaMinimap" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectLightAlphaMinimap">
+  EraEffectLightAlphaMinimap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Affects actors' alpha value (transparency) when in minimap mode (zoomed out). Should be between 0 and 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EraEffectLightAlphaMinimap { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_EraEffectOverlayAlpha_" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectOverlayAlpha*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_EraEffectOverlayAlpha" data-uid="WorldLib.Models.Ages.WorldAge.EraEffectOverlayAlpha">
+  EraEffectOverlayAlpha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Affects the world overlay effect alpha value (transparency). Should be between 0 and 1. This value is also used in
+conjunction with the player option age_overlay_effect by multiplying the 2 values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EraEffectOverlayAlpha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FireElementalSpawnChance_" data-uid="WorldLib.Models.Ages.WorldAge.FireElementalSpawnChance*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FireElementalSpawnChance" data-uid="WorldLib.Models.Ages.WorldAge.FireElementalSpawnChance">
+  FireElementalSpawnChance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chance for fire elementals to spawn on every frame. Should be between 0 and 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FireElementalSpawnChance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FireSpreadRateBonus_" data-uid="WorldLib.Models.Ages.WorldAge.FireSpreadRateBonus*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FireSpreadRateBonus" data-uid="WorldLib.Models.Ages.WorldAge.FireSpreadRateBonus">
+  FireSpreadRateBonus
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bonus multiplier to fire spread rate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FireSpreadRateBonus { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagChaos_" data-uid="WorldLib.Models.Ages.WorldAge.FlagChaos*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagChaos" data-uid="WorldLib.Models.Ages.WorldAge.FlagChaos">
+  FlagChaos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flags to the game that this age is a chaos age. This only affects the sleeping patterns of actors who
+posses the &quot;chaos driven&quot; trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagChaos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagCropsGrow_" data-uid="WorldLib.Models.Ages.WorldAge.FlagCropsGrow*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagCropsGrow" data-uid="WorldLib.Models.Ages.WorldAge.FlagCropsGrow">
+  FlagCropsGrow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Crops grow in this age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagCropsGrow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagLightAge_" data-uid="WorldLib.Models.Ages.WorldAge.FlagLightAge*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagLightAge" data-uid="WorldLib.Models.Ages.WorldAge.FlagLightAge">
+  FlagLightAge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flags to the game that this age is a light age. This only affects the sleeping patterns of actors who
+posses the &quot;circadian rhythm&quot; trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagLightAge { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagLightDamage_" data-uid="WorldLib.Models.Ages.WorldAge.FlagLightDamage*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagLightDamage" data-uid="WorldLib.Models.Ages.WorldAge.FlagLightDamage">
+  FlagLightDamage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables the heliophobia trait effect. Damaging actors who posses said trait in bright areas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagLightDamage { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagMoon_" data-uid="WorldLib.Models.Ages.WorldAge.FlagMoon*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagMoon" data-uid="WorldLib.Models.Ages.WorldAge.FlagMoon">
+  FlagMoon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flags to the game that this age is a moon age. This affects traits that can only be active during a moon age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagMoon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagNight_" data-uid="WorldLib.Models.Ages.WorldAge.FlagNight*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagNight" data-uid="WorldLib.Models.Ages.WorldAge.FlagNight">
+  FlagNight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flags to the game that this age is a night age. This disables the effects of the subspecies trait &quot;photosynthetic
+skin&quot;, removes the &quot;sunblessed&quot; effect, and affects the sleeping patterns of actors who posses &quot;nocturnal dormancy&quot;
+trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagNight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_FlagWinter_" data-uid="WorldLib.Models.Ages.WorldAge.FlagWinter*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_FlagWinter" data-uid="WorldLib.Models.Ages.WorldAge.FlagWinter">
+  FlagWinter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flags to the game that this age is a winter age. This affects the sleeping pattern of actors who posses the &quot;winter
+slumberers&quot; trait and halts biome growth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagWinter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_GlobalFreezeWorld_" data-uid="WorldLib.Models.Ages.WorldAge.GlobalFreezeWorld*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_GlobalFreezeWorld" data-uid="WorldLib.Models.Ages.WorldAge.GlobalFreezeWorld">
+  GlobalFreezeWorld
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Covers the entire world in a layer of snow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GlobalFreezeWorld { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_GlobalUnfreezeWorld_" data-uid="WorldLib.Models.Ages.WorldAge.GlobalUnfreezeWorld*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_GlobalUnfreezeWorld" data-uid="WorldLib.Models.Ages.WorldAge.GlobalUnfreezeWorld">
+  GlobalUnfreezeWorld
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Melts all snow on the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GlobalUnfreezeWorld { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_GlobalUnfreezeWorldMountains_" data-uid="WorldLib.Models.Ages.WorldAge.GlobalUnfreezeWorldMountains*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_GlobalUnfreezeWorldMountains" data-uid="WorldLib.Models.Ages.WorldAge.GlobalUnfreezeWorldMountains">
+  GlobalUnfreezeWorldMountains
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Melts snow that would otherwise appear on mountain tops.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GlobalUnfreezeWorldMountains { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_Icon_" data-uid="WorldLib.Models.Ages.WorldAge.Icon*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_Icon" data-uid="WorldLib.Models.Ages.WorldAge.Icon">
+  Icon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A sprite ascertaining to the ages icon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite Icon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_Id_" data-uid="WorldLib.Models.Ages.WorldAge.Id*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_Id" data-uid="WorldLib.Models.Ages.WorldAge.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal identifier of the age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_LightColor_" data-uid="WorldLib.Models.Ages.WorldAge.LightColor*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_LightColor" data-uid="WorldLib.Models.Ages.WorldAge.LightColor">
+  LightColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The color of light while the age is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color LightColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_LinkDefaultSlots_" data-uid="WorldLib.Models.Ages.WorldAge.LinkDefaultSlots*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_LinkDefaultSlots" data-uid="WorldLib.Models.Ages.WorldAge.LinkDefaultSlots">
+  LinkDefaultSlots
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows this age to occupy all its default slots in sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LinkDefaultSlots { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_MaxLength_" data-uid="WorldLib.Models.Ages.WorldAge.MaxLength*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_MaxLength" data-uid="WorldLib.Models.Ages.WorldAge.MaxLength">
+  MaxLength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum length of this age, specified in years.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_MinLength_" data-uid="WorldLib.Models.Ages.WorldAge.MinLength*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_MinLength" data-uid="WorldLib.Models.Ages.WorldAge.MinLength">
+  MinLength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The minimum length of this age, specified in years.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayAsh_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayAsh*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayAsh" data-uid="WorldLib.Models.Ages.WorldAge.OverlayAsh">
+  OverlayAsh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a grayish brown tint. Uses the default sprite material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayAsh { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayChaos_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayChaos*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayChaos" data-uid="WorldLib.Models.Ages.WorldAge.OverlayChaos">
+  OverlayChaos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a red tint. Uses a color multiplication material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayChaos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayDarkness_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayDarkness*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayDarkness" data-uid="WorldLib.Models.Ages.WorldAge.OverlayDarkness">
+  OverlayDarkness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables a darkness overlay for this age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayDarkness { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayMagic_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayMagic*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayMagic" data-uid="WorldLib.Models.Ages.WorldAge.OverlayMagic">
+  OverlayMagic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a pinkish magenta tint. Uses an additive material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayMagic { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayMoon_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayMoon*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayMoon" data-uid="WorldLib.Models.Ages.WorldAge.OverlayMoon">
+  OverlayMoon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a cyan tint. Uses a color multiplication material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayMoon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayNight_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayNight*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayNight" data-uid="WorldLib.Models.Ages.WorldAge.OverlayNight">
+  OverlayNight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a dark blue tint. Uses a color multiplication material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayNight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayRain_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayRain*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayRain" data-uid="WorldLib.Models.Ages.WorldAge.OverlayRain">
+  OverlayRain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a blue tint. Uses the default sprite material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayRain { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayRainDarkness_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayRainDarkness*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayRainDarkness" data-uid="WorldLib.Models.Ages.WorldAge.OverlayRainDarkness">
+  OverlayRainDarkness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a dark purple tint. Uses a color multiplication material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayRainDarkness { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlaySun_" data-uid="WorldLib.Models.Ages.WorldAge.OverlaySun*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlaySun" data-uid="WorldLib.Models.Ages.WorldAge.OverlaySun">
+  OverlaySun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overlays a bright yellow tint. Uses an additive material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlaySun { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_OverlayWinter_" data-uid="WorldLib.Models.Ages.WorldAge.OverlayWinter*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_OverlayWinter" data-uid="WorldLib.Models.Ages.WorldAge.OverlayWinter">
+  OverlayWinter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Does nothing, the sprite renderer it refers to is blank.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverlayWinter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ParticlesAsh_" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesAsh*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ParticlesAsh" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesAsh">
+  ParticlesAsh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables ash particle effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParticlesAsh { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ParticlesMagic_" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesMagic*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ParticlesMagic" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesMagic">
+  ParticlesMagic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables magical particle effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParticlesMagic { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ParticlesRain_" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesRain*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ParticlesRain" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesRain">
+  ParticlesRain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables rainfall particle effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParticlesRain { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ParticlesSnow_" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesSnow*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ParticlesSnow" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesSnow">
+  ParticlesSnow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables snowfall particle effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParticlesSnow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ParticlesSun_" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesSun*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ParticlesSun" data-uid="WorldLib.Models.Ages.WorldAge.ParticlesSun">
+  ParticlesSun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enables sunray and sun-blob particle effects</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParticlesSun { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_PathBackground_" data-uid="WorldLib.Models.Ages.WorldAge.PathBackground*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_PathBackground" data-uid="WorldLib.Models.Ages.WorldAge.PathBackground">
+  PathBackground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The unity asset path to this age's background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PathBackground { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_PathIcon_" data-uid="WorldLib.Models.Ages.WorldAge.PathIcon*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_PathIcon" data-uid="WorldLib.Models.Ages.WorldAge.PathIcon">
+  PathIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The unity asset path to this age's icon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PathIcon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_RangeWeaponsMultiplier_" data-uid="WorldLib.Models.Ages.WorldAge.RangeWeaponsMultiplier*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_RangeWeaponsMultiplier" data-uid="WorldLib.Models.Ages.WorldAge.RangeWeaponsMultiplier">
+  RangeWeaponsMultiplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Increases actor range when it is using ranged weapons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RangeWeaponsMultiplier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_SpecialEffectInterval_" data-uid="WorldLib.Models.Ages.WorldAge.SpecialEffectInterval*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_SpecialEffectInterval" data-uid="WorldLib.Models.Ages.WorldAge.SpecialEffectInterval">
+  SpecialEffectInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interval at which the special effect action is executed. A lower value results in more frequent execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SpecialEffectInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_AddSpecialEffect_WorldLib_Models_Ages_WorldAgeAction_">AddSpecialEffect(WorldAgeAction)</a></div>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_ClearSpecialEffects">ClearSpecialEffects()</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_TemperatureDamageBonus_" data-uid="WorldLib.Models.Ages.WorldAge.TemperatureDamageBonus*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_TemperatureDamageBonus" data-uid="WorldLib.Models.Ages.WorldAge.TemperatureDamageBonus">
+  TemperatureDamageBonus
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Increases damage to temperature related things. Can be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TemperatureDamageBonus { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_TitleColor_" data-uid="WorldLib.Models.Ages.WorldAge.TitleColor*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_TitleColor" data-uid="WorldLib.Models.Ages.WorldAge.TitleColor">
+  TitleColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The color of the age title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color TitleColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_AddSpecialEffect_" data-uid="WorldLib.Models.Ages.WorldAge.AddSpecialEffect*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_AddSpecialEffect_WorldLib_Models_Ages_WorldAgeAction_" data-uid="WorldLib.Models.Ages.WorldAge.AddSpecialEffect(WorldLib.Models.Ages.WorldAgeAction)">
+  AddSpecialEffect(WorldAgeAction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a custom action that runs at a fixed interval while the age is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSpecialEffect(WorldAgeAction action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="WorldLib.Models.Ages.WorldAgeAction.html">WorldAgeAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_SpecialEffectInterval">SpecialEffectInterval</a></div>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_ClearSpecialEffects">ClearSpecialEffects()</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_Ages_WorldAge_ClearSpecialEffects_" data-uid="WorldLib.Models.Ages.WorldAge.ClearSpecialEffects*"></a>
+
+  <h3 id="WorldLib_Models_Ages_WorldAge_ClearSpecialEffects" data-uid="WorldLib.Models.Ages.WorldAge.ClearSpecialEffects">
+  ClearSpecialEffects()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all special actions ascertaining to this age.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearSpecialEffects()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_AddSpecialEffect_WorldLib_Models_Ages_WorldAgeAction_">AddSpecialEffect(WorldAgeAction)</a></div>
+    <div><a class="xref" href="WorldLib.Models.Ages.WorldAge.html#WorldLib_Models_Ages_WorldAge_SpecialEffectInterval">SpecialEffectInterval</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/WorldAge.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

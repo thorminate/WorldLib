@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WorldHistoryEntry | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WorldHistoryEntry | WorldLib ">
+      
+      <meta name="description" content="Represents a single entry in the world history log, providing read-only access to the underlying  data.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/thorminate/WorldLib/new/main/apiSpec/new?filename=WorldLib_Models_History_WorldHistoryEntry.md&amp;value=---%0Auid%3A%20WorldLib.Models.History.WorldHistoryEntry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.History.WorldHistoryEntry">
+
+
+
+  <h1 id="WorldLib_Models_History_WorldHistoryEntry" data-uid="WorldLib.Models.History.WorldHistoryEntry" class="text-break">
+Class WorldHistoryEntry  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.History.html">History</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a single entry in the world history log, providing read-only access
+to the underlying <span class="xref">WorldLogMessage</span> data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WorldHistoryEntry : AbstractionOf&lt;WorldLogMessage&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">WorldLogMessage</span>&gt;</div>
+      <div><span class="xref">WorldHistoryEntry</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Actor_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Actor*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Actor" data-uid="WorldLib.Models.History.WorldHistoryEntry.Actor">
+  Actor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the actor associated with this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Actor? Actor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Actor</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial1_" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial1*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial1" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial1">
+  ColorSpecial1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the color for the first special field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ColorSpecial1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.History.WorldHistoryEntry.html#WorldLib_Models_History_WorldHistoryEntry_Special1">Special1</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial2_" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial2*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial2" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial2">
+  ColorSpecial2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the color for the second special field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ColorSpecial2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.History.WorldHistoryEntry.html#WorldLib_Models_History_WorldHistoryEntry_Special2">Special2</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial3_" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial3*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_ColorSpecial3" data-uid="WorldLib.Models.History.WorldHistoryEntry.ColorSpecial3">
+  ColorSpecial3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the color for the third special field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ColorSpecial3 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.History.WorldHistoryEntry.html#WorldLib_Models_History_WorldHistoryEntry_Special3">Special3</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_HasActor_" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasActor*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_HasActor" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasActor">
+  HasActor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this log entry is associated with a unit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasActor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_HasKingdom_" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasKingdom*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_HasKingdom" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasKingdom">
+  HasKingdom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this log entry is associated with a kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasKingdom { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_HasLocation_" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasLocation*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_HasLocation" data-uid="WorldLib.Models.History.WorldHistoryEntry.HasLocation">
+  HasLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this log entry has a valid location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasLocation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Kingdom_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Kingdom*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Kingdom" data-uid="WorldLib.Models.History.WorldHistoryEntry.Kingdom">
+  Kingdom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the kingdom associated with this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Kingdom? Kingdom { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Kingdom</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Location_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Location*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Location" data-uid="WorldLib.Models.History.WorldHistoryEntry.Location">
+  Location
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the location associated with this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2? Location { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Special1_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special1*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Special1" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special1">
+  Special1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first custom special string associated with the log entry.
+This is usually used for names and places.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Special1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Special2_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special2*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Special2" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special2">
+  Special2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the second custom special string associated with the log entry.
+This is usually used for names and places.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Special2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Special3_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special3*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Special3" data-uid="WorldLib.Models.History.WorldHistoryEntry.Special3">
+  Special3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the third custom special string associated with the log entry.
+This is usually used for names and places.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Special3 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_History_WorldHistoryEntry_Timestamp_" data-uid="WorldLib.Models.History.WorldHistoryEntry.Timestamp*"></a>
+
+  <h3 id="WorldLib_Models_History_WorldHistoryEntry_Timestamp" data-uid="WorldLib.Models.History.WorldHistoryEntry.Timestamp">
+  Timestamp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the timestamp of when this event occurred.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Timestamp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/History/WorldHistoryEntry.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
