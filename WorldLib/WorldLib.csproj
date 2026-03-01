@@ -19,7 +19,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DocumentationFile>bin\Release\net472\WorldLib.xml</DocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <NoWarn>CS1591</NoWarn>
+        <!-- <NoWarn>CS1591</NoWarn> -->
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +27,7 @@
             <HintPath>..\assemblies\0Harmony.dll</HintPath>
             <Private>false</Private>
         </Reference>
-        
+
         <Reference Include="BepInEx">
             <HintPath>..\assemblies\BepInEx.dll</HintPath>
             <Private>false</Private>

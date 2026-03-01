@@ -10,9 +10,9 @@ extern alias GameAsm;
 /// <summary>
 ///     Provides access to all world ages in the game.
 /// </summary>
-public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
+public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
 {
-    internal WorldAges() : base(() => GameAsm::World.world.era_manager)
+    internal Ages() : base(() => GameAsm::World.world.era_manager)
     {
     }
 
@@ -26,17 +26,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Hope era.
+    ///     A <see cref="Age" /> representing the Hope era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Hope => GetAge(Keys.Hope);
+    public static Age Hope => GetAge(Keys.Hope);
 
     /// <summary>
     ///     Represents the Age of Sun.
@@ -48,17 +48,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Sun era.
+    ///     A <see cref="Age" /> representing the Sun era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Sun => GetAge(Keys.Sun);
+    public static Age Sun => GetAge(Keys.Sun);
 
     /// <summary>
     ///     Represents the Age of Dark.
@@ -70,17 +70,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Dark era.
+    ///     A <see cref="Age" /> representing the Dark era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Dark => GetAge(Keys.Dark);
+    public static Age Dark => GetAge(Keys.Dark);
 
     /// <summary>
     ///     Represents the Age of Tears.
@@ -92,17 +92,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Tears era.
+    ///     A <see cref="Age" /> representing the Tears era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Tears => GetAge(Keys.Tears);
+    public static Age Tears => GetAge(Keys.Tears);
 
     /// <summary>
     ///     Represents the Age of Moon.
@@ -114,17 +114,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Moon era.
+    ///     A <see cref="Age" /> representing the Moon era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Moon => GetAge(Keys.Moon);
+    public static Age Moon => GetAge(Keys.Moon);
 
     /// <summary>
     ///     Represents the Age of Chaos.
@@ -136,17 +136,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Chaos era.
+    ///     A <see cref="Age" /> representing the Chaos era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Chaos => GetAge(Keys.Chaos);
+    public static Age Chaos => GetAge(Keys.Chaos);
 
     /// <summary>
     ///     Represents the Age of Wonders.
@@ -158,17 +158,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Wonders era.
+    ///     A <see cref="Age" /> representing the Wonders era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Wonders => GetAge(Keys.Wonders);
+    public static Age Wonders => GetAge(Keys.Wonders);
 
     /// <summary>
     ///     Represents the Age of Ice.
@@ -180,17 +180,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Ice era.
+    ///     A <see cref="Age" /> representing the Ice era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Ice => GetAge(Keys.Ice);
+    public static Age Ice => GetAge(Keys.Ice);
 
     /// <summary>
     ///     Represents the Age of Ash.
@@ -202,17 +202,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Ash era.
+    ///     A <see cref="Age" /> representing the Ash era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Ash => GetAge(Keys.Ash);
+    public static Age Ash => GetAge(Keys.Ash);
 
     /// <summary>
     ///     Represents the Age of Despair.
@@ -225,17 +225,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the Despair era.
+    ///     A <see cref="Age" /> representing the Despair era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Despair => GetAge(Keys.Despair);
+    public static Age Despair => GetAge(Keys.Despair);
 
     /// <summary>
     ///     Represents an unknown or undiscovered age.
@@ -247,17 +247,17 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     ///     <para>
     ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="WorldAge" /> as the generic type
+    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
     ///         argument.
     ///     </para>
     /// </remarks>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing an unspecified era.
+    ///     A <see cref="Age" /> representing an unspecified era.
     /// </value>
     /// <exception cref="InvalidOperationException">
     ///     If you access this before the age gets initialized.
     /// </exception>
-    public static WorldAge Unknown => GetAge(Keys.Unknown);
+    public static Age Unknown => GetAge(Keys.Unknown);
 
     /// <summary>
     ///     Gets the index of the upcoming age slot.
@@ -273,24 +273,24 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
 
 
     /// <summary>
-    ///     Gets the upcoming <see cref="WorldAge" />.
+    ///     Gets the upcoming <see cref="Age" />.
     /// </summary>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the next scheduled age.
+    ///     A <see cref="Age" /> representing the next scheduled age.
     /// </value>
-    public WorldAge NextAge
+    public Age NextAge
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get => new(Base.getNextAge());
     }
 
     /// <summary>
-    ///     Gets the currently active <see cref="WorldAge" />.
+    ///     Gets the currently active <see cref="Age" />.
     /// </summary>
     /// <value>
-    ///     A <see cref="WorldAge" /> representing the active age.
+    ///     A <see cref="Age" /> representing the active age.
     /// </value>
-    public WorldAge CurrentAge
+    public Age CurrentAge
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get => new(Base.getCurrentAge());
@@ -380,24 +380,24 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
 
 
     /// <summary>
-    ///     Returns the <see cref="WorldAge" /> associated with a given slot index.
+    ///     Returns the <see cref="Age" /> associated with a given slot index.
     /// </summary>
     /// <param name="slot">The zero-based slot index.</param>
-    /// <returns>The <see cref="WorldAge" /> in that slot.</returns>
+    /// <returns>The <see cref="Age" /> in that slot.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public WorldAge AgeFromSlot(int slot)
+    public Age AgeFromSlot(int slot)
     {
-        return new WorldAge(Base.getAgeFromSlot(slot));
+        return new Age(Base.getAgeFromSlot(slot));
     }
 
     /// <summary>
-    ///     Returns the slot index for a given <see cref="WorldAge" />, if it exists.
+    ///     Returns the slot index for a given <see cref="Age" />, if it exists.
     /// </summary>
-    /// <param name="age">The <see cref="WorldAge" /> to search for.</param>
+    /// <param name="age">The <see cref="Age" /> to search for.</param>
     /// <returns>
     ///     The zero-based slot index, or <see langword="null" /> if no slot contains the age.
     /// </returns>
-    public int? SlotFromAge(WorldAge age)
+    public int? SlotFromAge(Age age)
     {
         int firstHitIdx = Array.FindIndex(GameAsm::WorldAgeManager._map_stats.world_ages_slots, str => str == age.Id);
         if (firstHitIdx == -1) return null;
@@ -405,7 +405,7 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     }
 
     /// <summary>
-    ///     Assigns a specific <see cref="WorldAge" /> to a given slot index.
+    ///     Assigns a specific <see cref="Age" /> to a given slot index.
     /// </summary>
     /// <remarks>
     ///     <para>
@@ -414,9 +414,9 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///         Use this when you want to rearrange or predefine age slots.
     ///     </para>
     /// </remarks>
-    /// <param name="age">The <see cref="WorldAge" /> to assign to the slot.</param>
+    /// <param name="age">The <see cref="Age" /> to assign to the slot.</param>
     /// <param name="slotIndex">The zero-based index of the slot to set the age for.</param>
-    public void SetAgeToSlot(WorldAge age, int slotIndex)
+    public void SetAgeToSlot(Age age, int slotIndex)
     {
         Base.setAgeToSlot(age.Base, slotIndex);
         RefreshUI();
@@ -454,7 +454,7 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     }
 
     /// <summary>
-    ///     Sets the active <see cref="WorldAge" />.
+    ///     Sets the active <see cref="Age" />.
     /// </summary>
     /// <remarks>
     ///     When <paramref name="doSlotFinding" /> is enabled, the system attempts to locate
@@ -469,12 +469,12 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     ///     </para>
     /// </remarks>
     /// <param name="age">
-    ///     The <see cref="WorldAge" /> that should become the active age.
+    ///     The <see cref="Age" /> that should become the active age.
     /// </param>
     /// <param name="doSlotFinding">
     ///     Whether to attempt locating and synchronizing a matching slot for the age.
     /// </param>
-    public void SetAge(WorldAge age, bool doSlotFinding = true)
+    public void SetAge(Age age, bool doSlotFinding = true)
     {
         Base.setCurrentAge(age.Base);
 
@@ -504,7 +504,7 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     /// </summary>
     /// <remarks>
     ///     <para>
-    ///         Uses <see cref="WorldAge.DefaultSlots" /> and <see cref="WorldAge.LinkDefaultSlots" /> to build a new set of
+    ///         Uses <see cref="Age.DefaultSlots" /> and <see cref="Age.LinkDefaultSlots" /> to build a new set of
     ///         ages in the slots.
     ///     </para>
     /// </remarks>
@@ -521,10 +521,10 @@ public sealed class WorldAges : AbstractionOf<GameAsm::WorldAgeManager>
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private static WorldAge GetAge(string key)
+    private static Age GetAge(string key)
     {
         return Tooling.Memoized(key, () =>
-            new WorldAge(
+            new Age(
                 GameAsm::AssetManager.era_library.get(key)
                 ?? throw new InvalidOperationException("World ages have not been initialized.")
             ), false)!;

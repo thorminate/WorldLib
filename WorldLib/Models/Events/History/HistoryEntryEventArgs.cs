@@ -11,7 +11,7 @@ extern alias GameAsm;
 public class HistoryEntryEventArgs(string text, GameAsm::WorldLogMessage message) : EventArgs
 {
     /// <summary>
-    ///     A cleansed text derived from the message contents.
+    ///     A cleansed text derived from the message contents. Is localized.
     /// </summary>
     public string Text { get; } = text;
 

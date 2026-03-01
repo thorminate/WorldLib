@@ -1,4 +1,4 @@
 ﻿namespace WorldLib.Models.Ages;
 
 /// <inheritdoc />
-public delegate void WorldAgeAction();
+public delegate void AgeAction();

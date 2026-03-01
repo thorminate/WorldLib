@@ -13,9 +13,9 @@ extern alias GameAsm;
 ///     allowing for reading recent world events and logging new events such as kings, clans, cities,
 ///     wars, alliances, and disasters.
 /// </summary>
-public class WorldHistory : AbstractionOf<GameAsm::WorldLog>
+public class History : AbstractionOf<GameAsm::WorldLog>
 {
-    internal WorldHistory() : base(GameAsm::WorldLog.instance)
+    internal History() : base(GameAsm::WorldLog.instance)
     {
     }
 
@@ -23,17 +23,17 @@ public class WorldHistory : AbstractionOf<GameAsm::WorldLog>
     ///     Provides the last 2000 world logs in the form of a <see cref="IReadOnlyList{WorldLogMessage}" />.
     /// </summary>
     /// <remarks>
-    ///     <para>Fetching world logs involves querying the SQL database, so this operation can be <see cref="Slow" />!</para>
+    ///     <para>Fetching world logs involves querying the SQL database, so this operation can be Slow!</para>
     ///     <para>Only the last 2000 entries are retrieved at a time.</para>
     /// </remarks>
     /// <returns>
     ///     A <see cref="IReadOnlyList{WorldLogMessage}" /> containing the last 2000 world logs.
     /// </returns>
-    public IReadOnlyList<WorldHistoryEntry> Messages()
+    public IReadOnlyList<HistoryEntry> Messages()
     {
         return DBGetter
             .getWorldLogMessages()
-            .Select(entry => new WorldHistoryEntry(entry))
+            .Select(entry => new HistoryEntry(entry))
             .ToList();
     }
 

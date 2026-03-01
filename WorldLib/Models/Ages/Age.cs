@@ -10,11 +10,11 @@ extern alias GameAsm;
 /// <summary>
 ///     Represents an age in World Box. Everything is fully mutable and will reflect internally.
 /// </summary>
-public sealed class WorldAge : AbstractionOf<GameAsm::WorldAgeAsset>
+public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
 {
-    /// <inheritdoc cref="WorldAge" />
+    /// <inheritdoc cref="Age" />
     /// <param name="asset">The world age asset to wrap.</param>
-    internal WorldAge(GameAsm::WorldAgeAsset asset) : base(asset)
+    internal Age(GameAsm::WorldAgeAsset asset) : base(asset)
     {
     }
 
@@ -23,7 +23,7 @@ public sealed class WorldAge : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     /// <seealso cref="SpecialEffectInterval" />
     /// <seealso cref="ClearSpecialEffects" />
-    public void AddSpecialEffect(WorldAgeAction action)
+    public void AddSpecialEffect(AgeAction action)
     {
         Base.special_effect_action += action.Invoke;
     }
@@ -503,7 +503,7 @@ public sealed class WorldAge : AbstractionOf<GameAsm::WorldAgeAsset>
 
 
     /// <summary>
-    ///     A list of slots this age can occupy upon reshuffle (like world creation or <see cref="WorldAges.SetDefaults" />).
+    ///     A list of slots this age can occupy upon reshuffle (like world creation or <see cref="Ages.SetDefaults" />).
     /// </summary>
     public MonitoredList<int> DefaultSlots
     {
@@ -516,19 +516,19 @@ public sealed class WorldAge : AbstractionOf<GameAsm::WorldAgeAsset>
                 Base.default_slots,
                 UpdateDefaultSlotsCache);
 
-            UpdateDefaultSlotsCache();
+            UpdateDefaultSlotsCache(Base.default_slots);
         }
     }
 
     private MonitoredList<int>? _defaultSlots;
 
-    private void UpdateDefaultSlotsCache()
+    private void UpdateDefaultSlotsCache(List<int> slots)
     {
         Dictionary<int, List<GameAsm::WorldAgeAsset>>? pool = GameAsm::AssetManager.era_library.pool_by_slots;
 
         foreach (KeyValuePair<int, List<GameAsm::WorldAgeAsset>> kvp in pool) kvp.Value.Remove(Base);
 
-        foreach (int slot in Base.default_slots)
+        foreach (int slot in slots)
         {
             if (!pool.TryGetValue(slot, out List<GameAsm::WorldAgeAsset>? list))
             {

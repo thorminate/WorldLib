@@ -4,17 +4,16 @@ using System.Collections.Generic;
 
 namespace WorldLib.Utils;
 
-/// <inheritdoc />
-/// Every mutation runs the onChanged event.
+/// <summary>
+///     Wraps an existing <see cref="List{T}" /> and invokes a callback
+///     whenever the collection is structurally modified.
+/// </summary>
 public sealed class MonitoredList<T> : IList<T>
 {
     private readonly List<T> _inner;
-    private readonly Action _onChanged;
+    private readonly Action<List<T>> _onChanged;
 
-    /// <summary>
-    ///     Wraps an existing <see cref="List{T}" /> and invokes a callback
-    ///     whenever the collection is structurally modified.
-    /// </summary>
+    /// <inheritdoc cref="MonitoredList{T}" />
     /// <param name="inner">
     ///     The underlying list to wrap. Mutations performed through this wrapper
     ///     operate directly on this instance.
@@ -25,7 +24,7 @@ public sealed class MonitoredList<T> : IList<T>
     /// <exception cref="ArgumentNullException">
     ///     Thrown if <paramref name="onChanged" /> or <paramref name="inner" /> is <see langword="null" />.
     /// </exception>
-    public MonitoredList(List<T> inner, Action onChanged)
+    public MonitoredList(List<T> inner, Action<List<T>> onChanged)
     {
         _inner = inner ?? throw new ArgumentNullException(nameof(inner));
         _onChanged = onChanged ?? throw new ArgumentNullException(nameof(onChanged));
@@ -35,14 +34,14 @@ public sealed class MonitoredList<T> : IList<T>
     public void Add(T item)
     {
         _inner.Add(item);
-        _onChanged();
+        _onChanged(_inner);
     }
 
     /// <inheritdoc />
     public bool Remove(T item)
     {
         bool result = _inner.Remove(item);
-        if (result) _onChanged();
+        if (result) _onChanged(_inner);
         return result;
     }
 
@@ -53,7 +52,7 @@ public sealed class MonitoredList<T> : IList<T>
         set
         {
             _inner[index] = value;
-            _onChanged();
+            _onChanged(_inner);
         }
     }
 
@@ -67,7 +66,7 @@ public sealed class MonitoredList<T> : IList<T>
     public void Clear()
     {
         _inner.Clear();
-        _onChanged();
+        _onChanged(_inner);
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -79,7 +78,7 @@ public sealed class MonitoredList<T> : IList<T>
     public void RemoveAt(int index)
     {
         _inner.RemoveAt(index);
-        _onChanged();
+        _onChanged(_inner);
     }
 
     /// <inheritdoc cref="List{T}.Contains(T)" />
@@ -110,6 +109,6 @@ public sealed class MonitoredList<T> : IList<T>
     public void Insert(int index, T item)
     {
         _inner.Insert(index, item);
-        _onChanged();
+        _onChanged(_inner);
     }
 }

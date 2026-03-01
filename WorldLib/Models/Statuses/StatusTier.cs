@@ -1,7 +1,7 @@
 ﻿extern alias GameAsm;
 using System;
 
-namespace WorldLib.Models.Status;
+namespace WorldLib.Models.Statuses;
 
 public enum StatusTier
 {

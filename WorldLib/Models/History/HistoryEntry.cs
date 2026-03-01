@@ -9,9 +9,9 @@ extern alias GameAsm;
 ///     Represents a single entry in the world history log, providing read-only access
 ///     to the underlying <see cref="GameAsm::WorldLogMessage" /> data.
 /// </summary>
-public sealed class WorldHistoryEntry : AbstractionOf<GameAsm::WorldLogMessage>
+public sealed class HistoryEntry : AbstractionOf<GameAsm::WorldLogMessage>
 {
-    internal WorldHistoryEntry(GameAsm::WorldLogMessage store) : base(store)
+    internal HistoryEntry(GameAsm::WorldLogMessage store) : base(store)
     {
     }
 

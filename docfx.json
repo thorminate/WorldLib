@@ -20,7 +20,8 @@
           "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "README.md"
         ]
       }
     ],
@@ -37,6 +38,7 @@
       "modern"
     ],
     "globalMetadata": {
+      "_appLogoPath": "images/icon.png",
       "_appName": "WorldLib",
       "_appTitle": "WorldLib",
       "_enableSearch": true,

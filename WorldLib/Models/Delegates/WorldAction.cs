@@ -1,6 +1,6 @@
 ﻿using WorldLib.Models.Generic;
 
-namespace WorldLib.Models.Actions;
+namespace WorldLib.Models.Delegates;
 
 extern alias GameAsm;
 

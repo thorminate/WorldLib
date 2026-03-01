@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using WorldLib.Models.Ages;
+﻿using WorldLib.Models.Ages;
 using WorldLib.Models.History;
 using WorldLib.Models.Laws;
 using WorldLib.Models.Options;
@@ -16,10 +15,6 @@ public static class World
         GameAsm::Config.customMapSize = options.Size.ToString().ToLower();
 
         var values = GameAsm::MapGenerator.template.values;
-
-        Plugin.Logger.LogInfo("Creating world...");
-        Plugin.Logger.LogInfo(JsonConvert.SerializeObject(values, Formatting.Indented));
-        Plugin.Logger.LogInfo(JsonConvert.SerializeObject(options, Formatting.Indented));
 
         values.perlin_scale_stage_1 = options.MainNoise;
         values.perlin_scale_stage_2 = options.DetailNoise;
@@ -43,25 +38,29 @@ public static class World
         GameAsm::MapBox.instance.clickGenerateNewMap();
     }
 
-    public static void SetSpeed(WorldSetSpeedOptions options)
+    /// <summary>
+    ///     Sets the world speed or pauses the world.
+    /// </summary>
+    /// <param name="speed">The speed to set to.</param>
+    public static void SetSpeed(WorldSpeeds speed)
     {
-        if (options.Speed == WorldSetSpeedOptions.WorldSpeeds.Pause)
+        if (speed == WorldSpeeds.Pause)
         {
             GameAsm::Config.paused = true;
             return;
         }
 
         GameAsm::Config.paused = false;
-        GameAsm::Config.setWorldSpeed(options.Speed.ToString().ToLower());
+        GameAsm::Config.setWorldSpeed(speed.ToString().ToLower());
     }
 
     /// <summary>
     ///     Saves the game into a slot as if you
     /// </summary>
-    /// <param name="options"></param>
-    public static void Save(WorldSavingOptions options)
+    /// <param name="slot">The slot to save into</param>
+    public static void Save(int slot)
     {
-        GameAsm::SaveManager.setCurrentSlot(options.Slot);
+        GameAsm::SaveManager.setCurrentSlot(slot);
 
         GameAsm::SaveManager.saveWorldToDirectory(GameAsm::SaveManager.currentSavePath);
     }
@@ -70,31 +69,31 @@ public static class World
     /// <returns>
     ///     A <see cref="WorldLaws" /> instance.
     /// </returns>
-    public static WorldLaws Laws()
+    public static Laws Laws()
     {
-        return new WorldLaws();
+        return new Laws();
     }
 
     /// <summary>
     ///     Provides access to all world ages in the game.
     /// </summary>
     /// <returns>
-    ///     A <see cref="WorldAges" /> instance.
+    ///     A <see cref="Models.Ages.Ages" /> instance.
     /// </returns>
-    public static WorldAges Ages()
+    public static Ages Ages()
     {
-        return new WorldAges();
+        return new Ages();
     }
 
     /// <summary>
     ///     Provides access to the history log of the game (otherwise known as the WorldLog)
     /// </summary>
     /// <returns>
-    ///     A <see cref="WorldHistory" /> instance.
+    ///     A <see cref="Models.History.History" /> instance.
     /// </returns>
-    public static WorldHistory History()
+    public static History History()
     {
-        return new WorldHistory();
+        return new History();
     }
 
     #region Info

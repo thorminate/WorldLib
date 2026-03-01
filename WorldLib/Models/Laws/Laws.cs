@@ -14,13 +14,13 @@ extern alias GameAsm;
 ///     Changes to properties immediately propagate to the underlying game engine state,
 ///     so external caching or copying is generally unnecessary.
 /// </remarks>
-public sealed class WorldLaws
+public sealed class Laws
     : AbstractionOf<GameAsm::WorldLaws>
 {
     private static readonly Type LawLibraryType = typeof(GameAsm::WorldLawLibrary);
     private static readonly Dictionary<string, FieldInfo> LawLibraryFieldCache = new();
 
-    internal WorldLaws() : base(() => GameAsm::World.world.world_laws)
+    internal Laws() : base(() => GameAsm::World.world.world_laws)
     {
     }
 
