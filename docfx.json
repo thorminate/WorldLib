@@ -39,6 +39,12 @@
     ],
     "globalMetadata": {
       "_appLogoPath": "images/icon.png",
+      "_appFaviconPath": "images/icon.png",
+      "_gitContribute": {
+        "repo": "https://github.com/Thorminate/WorldLib",
+        "branch": "main",
+        "apiSpecFolder": "docs/"
+      },
       "_appName": "WorldLib",
       "_appTitle": "WorldLib",
       "_enableSearch": true,

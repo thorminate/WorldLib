@@ -65,9 +65,9 @@ public static class World
         GameAsm::SaveManager.saveWorldToDirectory(GameAsm::SaveManager.currentSavePath);
     }
 
-    /// <inheritdoc cref="WorldLaws" />
+    /// <inheritdoc cref="Laws" />
     /// <returns>
-    ///     A <see cref="WorldLaws" /> instance.
+    ///     A <see cref="Laws" /> instance.
     /// </returns>
     public static Laws Laws()
     {

@@ -20,14 +20,14 @@ public class History : AbstractionOf<GameAsm::WorldLog>
     }
 
     /// <summary>
-    ///     Provides the last 2000 world logs in the form of a <see cref="IReadOnlyList{WorldLogMessage}" />.
+    ///     Provides the last 2000 world logs in the form of a <see cref="IReadOnlyList{HistoryEntry}" />.
     /// </summary>
     /// <remarks>
     ///     <para>Fetching world logs involves querying the SQL database, so this operation can be Slow!</para>
     ///     <para>Only the last 2000 entries are retrieved at a time.</para>
     /// </remarks>
     /// <returns>
-    ///     A <see cref="IReadOnlyList{WorldLogMessage}" /> containing the last 2000 world logs.
+    ///     A <see cref="IReadOnlyList{HistoryEntry}" /> containing the last 2000 world logs.
     /// </returns>
     public IReadOnlyList<HistoryEntry> Messages()
     {
