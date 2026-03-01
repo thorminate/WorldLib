@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DelegateBridge&lt;TPublic, TGame&gt; | WorldLib ">
       
-      
+      <meta name="description" content="Wraps a delegate to allow adding extra calls while also wrapping inner types for convenience.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/thorminate/WorldLib/new/main/apiSpec/new?filename=WorldLib_Models_Generic_DelegateBridge_2.md&amp;value=---%0Auid%3A%20WorldLib.Models.Generic.DelegateBridge%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/thorminate/WorldLib/new/main/apiSpec/new?filename=WorldLib_Utils_DelegateBridge_2.md&amp;value=---%0Auid%3A%20WorldLib.Utils.DelegateBridge%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -44,7 +44,7 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="WorldLib">
+            <img id="logo" class="svg" src="../images/icon.png" alt="WorldLib">
             WorldLib
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,20 +84,21 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Models.Generic.DelegateBridge`2">
+        <article data-uid="WorldLib.Utils.DelegateBridge`2">
 
 
 
-  <h1 id="WorldLib_Models_Generic_DelegateBridge_2" data-uid="WorldLib.Models.Generic.DelegateBridge`2" class="text-break">
-Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_Utils_DelegateBridge_2" data-uid="WorldLib.Utils.DelegateBridge`2" class="text-break">
+Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Generic.html">Generic</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Utils.html">Utils</a></dd></dl>
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Wraps a delegate to allow adding extra calls while also wrapping inner types for convenience.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -109,9 +110,11 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TPublic</code></dt>
-    <dd></dd>
+    <dd><p>Type of the public-facing wrapper.</p>
+</dd>
     <dt><code>TGame</code></dt>
-    <dd></dd>
+    <dd><p>Type of the game-compatible internal delegate.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -156,14 +159,15 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 </h2>
 
 
-  <a id="WorldLib_Models_Generic_DelegateBridge_2__ctor_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.#ctor*"></a>
+  <a id="WorldLib_Utils_DelegateBridge_2__ctor_" data-uid="WorldLib.Utils.DelegateBridge`2.#ctor*"></a>
 
-  <h3 id="WorldLib_Models_Generic_DelegateBridge_2__ctor_System_Func__0__1__System_Action__1__System_Action__1__" data-uid="WorldLib.Models.Generic.DelegateBridge`2.#ctor(System.Func{`0,`1},System.Action{`1},System.Action{`1})">
+  <h3 id="WorldLib_Utils_DelegateBridge_2__ctor_System_Func__0__1__System_Action__1__System_Action__1__" data-uid="WorldLib.Utils.DelegateBridge`2.#ctor(System.Func{`0,`1},System.Action{`1},System.Action{`1})">
   DelegateBridge(Func&lt;TPublic, TGame&gt;, Action&lt;TGame&gt;, Action&lt;TGame&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Wraps a delegate to allow adding extra calls while also wrapping inner types for convenience.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -173,11 +177,14 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>wrapToGame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPublic, TGame&gt;</dt>
-    <dd></dd>
+    <dd><p>Function for converting the public-facing wrapper to a game-compatible format.</p>
+</dd>
     <dt><code>gameAdd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TGame&gt;</dt>
-    <dd></dd>
+    <dd><p>Function to add a new invocation to the original delegate.</p>
+</dd>
     <dt><code>gameRemove</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TGame&gt;</dt>
-    <dd></dd>
+    <dd><p>Function to remove an invocation from the original delegate.</p>
+</dd>
   </dl>
 
 
@@ -195,14 +202,15 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 </h2>
 
 
-  <a id="WorldLib_Models_Generic_DelegateBridge_2_Add_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Add*"></a>
+  <a id="WorldLib_Utils_DelegateBridge_2_Add_" data-uid="WorldLib.Utils.DelegateBridge`2.Add*"></a>
 
-  <h3 id="WorldLib_Models_Generic_DelegateBridge_2_Add__0_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Add(`0)">
+  <h3 id="WorldLib_Utils_DelegateBridge_2_Add__0_" data-uid="WorldLib.Utils.DelegateBridge`2.Add(`0)">
   Add(TPublic?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new invocation to the invocation list of the underlying delegate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -212,7 +220,8 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>handler</code> <span class="xref">TPublic</span></dt>
-    <dd></dd>
+    <dd><p>The new handler to add to the delegate.</p>
+</dd>
   </dl>
 
 
@@ -226,14 +235,15 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
 
 
-  <a id="WorldLib_Models_Generic_DelegateBridge_2_Clear_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Clear*"></a>
+  <a id="WorldLib_Utils_DelegateBridge_2_Clear_" data-uid="WorldLib.Utils.DelegateBridge`2.Clear*"></a>
 
-  <h3 id="WorldLib_Models_Generic_DelegateBridge_2_Clear" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Clear">
+  <h3 id="WorldLib_Utils_DelegateBridge_2_Clear" data-uid="WorldLib.Utils.DelegateBridge`2.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all delegates applied through this delegate bridge.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -252,14 +262,15 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
 
 
-  <a id="WorldLib_Models_Generic_DelegateBridge_2_Remove_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Remove*"></a>
+  <a id="WorldLib_Utils_DelegateBridge_2_Remove_" data-uid="WorldLib.Utils.DelegateBridge`2.Remove*"></a>
 
-  <h3 id="WorldLib_Models_Generic_DelegateBridge_2_Remove__0_" data-uid="WorldLib.Models.Generic.DelegateBridge`2.Remove(`0)">
+  <h3 id="WorldLib_Utils_DelegateBridge_2_Remove__0_" data-uid="WorldLib.Utils.DelegateBridge`2.Remove(`0)">
   Remove(TPublic?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes an invocation from the invocation list of the underlying delegate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -269,7 +280,8 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>handler</code> <span class="xref">TPublic</span></dt>
-    <dd></dd>
+    <dd><p>The handler to remove from the delegate.</p>
+</dd>
   </dl>
 
 
@@ -287,7 +299,7 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/DelegateBridge.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 
