@@ -31,7 +31,7 @@ public static class World
         values.add_mountain_edges = options.AddMountainEdges;
         values.random_biomes = options.RandomBiomes;
         values.remove_mountains = options.RemoveMountains;
-        values.forbidden_knowledge_start = options.ForbiddenKnowledgeStart;
+        values.forbidden_knowledge_start = options.StartWithForbiddenKnowledge;
         values.low_ground = options.LowGround;
         values.high_ground = options.HighGround;
 

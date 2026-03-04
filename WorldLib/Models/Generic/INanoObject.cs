@@ -1,8 +1,10 @@
-﻿namespace WorldLib.Models.Generic;
+﻿using System;
+
+namespace WorldLib.Models.Generic;
 
 extern alias GameAsm;
 
-public interface INanoObject
+public interface INanoObject : IEquatable<INanoObject>
 {
     bool Alive { get; set; }
     bool Exists { get; set; }

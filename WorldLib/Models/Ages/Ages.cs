@@ -268,7 +268,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public int NextSlot
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => Base.getNextSlotIndex();
+        get => Raw.getNextSlotIndex();
     }
 
 
@@ -281,7 +281,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public Age NextAge
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => new(Base.getNextAge());
+        get => new(Raw.getNextAge());
     }
 
     /// <summary>
@@ -293,7 +293,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public Age CurrentAge
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => new(Base.getCurrentAge());
+        get => new(Raw.getCurrentAge());
     }
 
     /// <summary>
@@ -305,7 +305,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public int CurrentSlot
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => Base.getCurrentSlotIndex();
+        get => Raw.getCurrentSlotIndex();
     }
 
     /// <summary>
@@ -315,7 +315,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public float TimeTillNextAge
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => Base.getTimeTillNextAge();
+        get => Raw.getTimeTillNextAge();
     }
 
     /// <summary>
@@ -324,7 +324,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public bool IsPaused
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => Base.isPaused();
+        get => Raw.isPaused();
     }
 
     /// <summary>
@@ -334,7 +334,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     public int RemainingMoons
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => Base.calculateMoonsLeft();
+        get => Raw.calculateMoonsLeft();
     }
 
     /// <summary>
@@ -387,7 +387,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public Age AgeFromSlot(int slot)
     {
-        return new Age(Base.getAgeFromSlot(slot));
+        return new Age(Raw.getAgeFromSlot(slot));
     }
 
     /// <summary>
@@ -418,7 +418,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// <param name="slotIndex">The zero-based index of the slot to set the age for.</param>
     public void SetAgeToSlot(Age age, int slotIndex)
     {
-        Base.setAgeToSlot(age.Base, slotIndex);
+        Raw.setAgeToSlot(age.Raw, slotIndex);
         RefreshUI();
     }
 
@@ -428,7 +428,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// <param name="shouldPause"><c>true</c> to pause, <c>false</c> to resume.</param>
     public void TogglePaused(bool shouldPause)
     {
-        Base.togglePlay(!shouldPause);
+        Raw.togglePlay(!shouldPause);
         RefreshUI();
     }
 
@@ -437,7 +437,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// </summary>
     public void SetSpeedMultiplier(float speedMultiplier)
     {
-        Base.setAgesSpeedMultiplier(speedMultiplier);
+        Raw.setAgesSpeedMultiplier(speedMultiplier);
         RefreshUI();
     }
 
@@ -449,7 +449,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// </param>
     public void StartNextAge(float startProgress = 0f)
     {
-        Base.startNextAge(startProgress);
+        Raw.startNextAge(startProgress);
         RefreshUI();
     }
 
@@ -476,14 +476,14 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// </param>
     public void SetAge(Age age, bool doSlotFinding = true)
     {
-        Base.setCurrentAge(age.Base);
+        Raw.setCurrentAge(age.Raw);
 
         if (doSlotFinding)
         {
             if (Tooling.TryRun(() => SlotFromAge(age), out int? result) && result.HasValue)
-                Base.setCurrentSlotIndex(result.Value);
+                Raw.setCurrentSlotIndex(result.Value);
             else
-                Base.setAgeToSlot(age.Base, CurrentSlot);
+                Raw.setAgeToSlot(age.Raw, CurrentSlot);
         }
 
         RefreshUI();
@@ -495,7 +495,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// <param name="slotIndex">The zero-based slot index to activate.</param>
     public void SetAge(int slotIndex)
     {
-        Base.setCurrentSlotIndex(slotIndex);
+        Raw.setCurrentSlotIndex(slotIndex);
         RefreshUI();
     }
 
@@ -510,7 +510,7 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     /// </remarks>
     public void SetDefaults()
     {
-        Base.setDefaultAges();
+        Raw.setDefaultAges();
         RefreshUI();
     }
 

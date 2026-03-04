@@ -1,48 +1,30 @@
 ﻿using BepInEx;
-using BepInEx.Logging;
-using HarmonyLib;
-using UnityEngine;
-using WorldLib.Core;
+using WorldLib.Utils;
 using static WorldLib.Info;
 
 namespace WorldLib;
 
 extern alias GameAsm;
 
+/// <summary>
+///     The main entrypoint of WorldLib.
+/// </summary>
 [BepInPlugin(Guid, Name, Version)]
-public class Plugin : BaseUnityPlugin
+public class Plugin : WorldBoxMod<Plugin>
 {
-    internal static Plugin Instance { get; set; } = null!;
-    internal new static ManualLogSource Logger => Instance._logger;
-    private Harmony? Harmony { get; set; }
-
-    // ReSharper disable once InconsistentNaming
-    private ManualLogSource _logger => base.Logger;
-
-    #region Unity
-
-    private void Awake()
+    /// <inheritdoc />
+    protected override string GetGuid()
     {
-        Instance = this;
-
-        gameObject.transform.parent = null;
-        gameObject.hideFlags = HideFlags.HideAndDontSave;
-
-        Patch();
-
-        Events.GameStarted += () => { World.Laws().EvolutionEvents = true; };
+        return Guid;
     }
 
-    #endregion
-
-    #region Harmony
-
-    private void Patch()
+    /// <inheritdoc />
+    protected override void Begin()
     {
-        Harmony ??= new Harmony(Info.Metadata.GUID);
-
-        Harmony.PatchAll();
     }
 
-    #endregion
+    /// <inheritdoc />
+    protected override void Declaration()
+    {
+    }
 }

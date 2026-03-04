@@ -1,25 +1,27 @@
 ﻿extern alias GameAsm;
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace WorldLib.Registries;
+
 /// <summary>
-///     Provides centralized management for materials in the global <see cref="GameAsm::LibraryMaterials"/> cache.
+///     Provides centralized management for materials in the global <see cref="GameAsm::LibraryMaterials" /> cache.
 ///     This ensures that materials are consistently registered and prevents accidental overwrites
 ///     of existing materials with the same name.
 /// </summary>
-public static class MaterialRegistry
+public static class Materials
 {
-    private static Dictionary<string, Material> dict => GameAsm::LibraryMaterials.instance.dict;
+    private static Dictionary<string, Material> Dict => GameAsm::LibraryMaterials.instance.dict;
+
     /// <summary>
     ///     Registers a material in the global library if it does not already exist.
     ///     If a material with the same name already exists, it validates that the existing material
     ///     is identical to the one being registered.
     /// </summary>
-    /// <param name="material">The <see cref="Material"/> to register.</param>
+    /// <param name="material">The <see cref="Material" /> to register.</param>
     /// <exception cref="ArgumentNullException">
-    ///     Thrown if <paramref name="material"/> is <c>null</c>.
+    ///     Thrown if <paramref name="material" /> is <c>null</c>.
     /// </exception>
     /// <exception cref="InvalidOperationException">
     ///     Thrown if a material with the same name already exists in the library,
@@ -35,18 +37,16 @@ public static class MaterialRegistry
         if (material == null)
             throw new ArgumentNullException(nameof(material));
 
-        if (dict.TryGetValue(material.name, out var existing))
+        if (Dict.TryGetValue(material.name, out var existing))
         {
             if (!existing!.Equals(material))
-            {
                 throw new InvalidOperationException(
                     $"Material '{material.name}' already exists as a different material. " +
                     "Use a different name.");
-            }
         }
         else
         {
-            dict.Add(material.name, material);
+            Dict.Add(material.name, material);
         }
     }
 
@@ -59,11 +59,11 @@ public static class MaterialRegistry
     /// </returns>
     /// <remarks>
     ///     Use this method before registering a material if you want to avoid exceptions
-    ///     from <see cref="Register(Material)"/> due to name conflicts.
+    ///     from <see cref="Register(Material)" /> due to name conflicts.
     /// </remarks>
     public static bool Exists(string materialName)
     {
         return !string.IsNullOrWhiteSpace(materialName) &&
-               dict.ContainsKey(materialName);
+               Dict.ContainsKey(materialName);
     }
 }

@@ -13,7 +13,6 @@ public class WorldTime
 {
     internal readonly Func<double> Getter;
 
-    /// <inheritdoc cref="WorldTime" />
     /// <param name="value">The week <see langword="double" /> ascertaining to the timepoint.</param>
     public WorldTime(double value)
     {

@@ -3,9 +3,9 @@ using WorldLib.Models.Generic;
 
 namespace WorldLib.Models.Actor;
 
-public class WorldActor : SimObject
+public class Actor : SimObject
 {
-    internal WorldActor(GameAsm::Actor actor) : base(actor)
+    internal Actor(GameAsm::Actor actor) : base(actor)
     {
     }
 }

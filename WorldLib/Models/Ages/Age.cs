@@ -25,7 +25,7 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// <seealso cref="ClearSpecialEffects" />
     public void AddSpecialEffect(AgeAction action)
     {
-        Base.special_effect_action += action.Invoke;
+        Raw.special_effect_action += action.Invoke;
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// <seealso cref="SpecialEffectInterval" />
     public void ClearSpecialEffects()
     {
-        Base.special_effect_action = null;
+        Raw.special_effect_action = null;
     }
 
     #region Int
@@ -45,8 +45,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int MinLength
     {
-        get => Base.years_min;
-        set => Base.years_min = value;
+        get => Raw.years_min;
+        set => Raw.years_min = value;
     }
 
     /// <summary>
@@ -54,8 +54,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int MaxLength
     {
-        get => Base.years_max;
-        set => Base.years_max = value;
+        get => Raw.years_max;
+        set => Raw.years_max = value;
     }
 
     /// <summary>
@@ -63,8 +63,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int BonusLoyalty
     {
-        get => Base.bonus_loyalty;
-        set => Base.bonus_loyalty = value;
+        get => Raw.bonus_loyalty;
+        set => Raw.bonus_loyalty = value;
     }
 
     /// <summary>
@@ -72,8 +72,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int BonusOpinion
     {
-        get => Base.bonus_opinion;
-        set => Base.bonus_opinion = value;
+        get => Raw.bonus_opinion;
+        set => Raw.bonus_opinion = value;
     }
 
     /// <summary>
@@ -81,8 +81,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int BonusBiomesGrowth
     {
-        get => Base.bonus_biomes_growth;
-        set => Base.bonus_biomes_growth = value;
+        get => Raw.bonus_biomes_growth;
+        set => Raw.bonus_biomes_growth = value;
     }
 
     /// <summary>
@@ -90,8 +90,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public int TemperatureDamageBonus
     {
-        get => Base.temperature_damage_bonus;
-        set => Base.temperature_damage_bonus = value;
+        get => Raw.temperature_damage_bonus;
+        set => Raw.temperature_damage_bonus = value;
     }
 
     #endregion
@@ -104,8 +104,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float EraEffectOverlayAlpha
     {
-        get => Base.era_effect_overlay_alpha;
-        set => Base.era_effect_overlay_alpha = value;
+        get => Raw.era_effect_overlay_alpha;
+        set => Raw.era_effect_overlay_alpha = value;
     }
 
     /// <summary>
@@ -113,8 +113,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float EraEffectLightAlphaGame
     {
-        get => Base.era_effect_light_alpha_game;
-        set => Base.era_effect_light_alpha_game = value;
+        get => Raw.era_effect_light_alpha_game;
+        set => Raw.era_effect_light_alpha_game = value;
     }
 
     /// <summary>
@@ -122,8 +122,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float EraEffectLightAlphaMinimap
     {
-        get => Base.era_effect_light_alpha_minimap;
-        set => Base.era_effect_light_alpha_minimap = value;
+        get => Raw.era_effect_light_alpha_minimap;
+        set => Raw.era_effect_light_alpha_minimap = value;
     }
 
     /// <summary>
@@ -131,8 +131,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float CloudInterval
     {
-        get => Base.cloud_interval;
-        set => Base.cloud_interval = value;
+        get => Raw.cloud_interval;
+        set => Raw.cloud_interval = value;
     }
 
     /// <summary>
@@ -140,8 +140,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float RangeWeaponsMultiplier
     {
-        get => Base.range_weapons_multiplier;
-        set => Base.range_weapons_multiplier = value;
+        get => Raw.range_weapons_multiplier;
+        set => Raw.range_weapons_multiplier = value;
     }
 
     /// <summary>
@@ -149,8 +149,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float FireElementalSpawnChance
     {
-        get => Base.fire_elemental_spawn_chance;
-        set => Base.fire_elemental_spawn_chance = value;
+        get => Raw.fire_elemental_spawn_chance;
+        set => Raw.fire_elemental_spawn_chance = value;
     }
 
     /// <summary>
@@ -158,8 +158,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public float FireSpreadRateBonus
     {
-        get => Base.fire_spread_rate_bonus;
-        set => Base.fire_spread_rate_bonus = value;
+        get => Raw.fire_spread_rate_bonus;
+        set => Raw.fire_spread_rate_bonus = value;
     }
 
     /// <summary>
@@ -169,8 +169,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// <seealso cref="ClearSpecialEffects" />
     public float SpecialEffectInterval
     {
-        get => Base.special_effect_interval;
-        set => Base.special_effect_interval = value;
+        get => Raw.special_effect_interval;
+        set => Raw.special_effect_interval = value;
     }
 
     #endregion
@@ -182,8 +182,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayDarkness
     {
-        get => Base.overlay_darkness;
-        set => Base.overlay_darkness = value;
+        get => Raw.overlay_darkness;
+        set => Raw.overlay_darkness = value;
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool ParticlesSnow
     {
-        get => Base.particles_snow;
-        set => Base.particles_snow = value;
+        get => Raw.particles_snow;
+        set => Raw.particles_snow = value;
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool ParticlesRain
     {
-        get => Base.particles_rain;
-        set => Base.particles_rain = value;
+        get => Raw.particles_rain;
+        set => Raw.particles_rain = value;
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool ParticlesMagic
     {
-        get => Base.particles_magic;
-        set => Base.particles_magic = value;
+        get => Raw.particles_magic;
+        set => Raw.particles_magic = value;
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool ParticlesAsh
     {
-        get => Base.particles_ash;
-        set => Base.particles_ash = value;
+        get => Raw.particles_ash;
+        set => Raw.particles_ash = value;
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool ParticlesSun
     {
-        get => Base.particles_sun;
-        set => Base.particles_sun = value;
+        get => Raw.particles_sun;
+        set => Raw.particles_sun = value;
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool GlobalFreezeWorld
     {
-        get => Base.global_freeze_world;
-        set => Base.global_freeze_world = value;
+        get => Raw.global_freeze_world;
+        set => Raw.global_freeze_world = value;
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool GlobalUnfreezeWorld
     {
-        get => Base.global_unfreeze_world;
-        set => Base.global_unfreeze_world = value;
+        get => Raw.global_unfreeze_world;
+        set => Raw.global_unfreeze_world = value;
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool GlobalUnfreezeWorldMountains
     {
-        get => Base.global_unfreeze_world_mountains;
-        set => Base.global_unfreeze_world_mountains = value;
+        get => Raw.global_unfreeze_world_mountains;
+        set => Raw.global_unfreeze_world_mountains = value;
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayMagic
     {
-        get => Base.overlay_magic;
-        set => Base.overlay_magic = value;
+        get => Raw.overlay_magic;
+        set => Raw.overlay_magic = value;
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayRainDarkness
     {
-        get => Base.overlay_rain_darkness;
-        set => Base.overlay_rain_darkness = value;
+        get => Raw.overlay_rain_darkness;
+        set => Raw.overlay_rain_darkness = value;
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayWinter
     {
-        get => Base.overlay_winter;
-        set => Base.overlay_winter = value;
+        get => Raw.overlay_winter;
+        set => Raw.overlay_winter = value;
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayChaos
     {
-        get => Base.overlay_chaos;
-        set => Base.overlay_chaos = value;
+        get => Raw.overlay_chaos;
+        set => Raw.overlay_chaos = value;
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayMoon
     {
-        get => Base.overlay_moon;
-        set => Base.overlay_moon = value;
+        get => Raw.overlay_moon;
+        set => Raw.overlay_moon = value;
     }
 
     /// <summary>
@@ -308,8 +308,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlaySun
     {
-        get => Base.overlay_sun;
-        set => Base.overlay_sun = value;
+        get => Raw.overlay_sun;
+        set => Raw.overlay_sun = value;
     }
 
     /// <summary>
@@ -317,8 +317,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayAsh
     {
-        get => Base.overlay_ash;
-        set => Base.overlay_ash = value;
+        get => Raw.overlay_ash;
+        set => Raw.overlay_ash = value;
     }
 
     /// <summary>
@@ -326,8 +326,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayNight
     {
-        get => Base.overlay_night;
-        set => Base.overlay_night = value;
+        get => Raw.overlay_night;
+        set => Raw.overlay_night = value;
     }
 
     /// <summary>
@@ -335,8 +335,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool OverlayRain
     {
-        get => Base.overlay_rain;
-        set => Base.overlay_rain = value;
+        get => Raw.overlay_rain;
+        set => Raw.overlay_rain = value;
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagCropsGrow
     {
-        get => Base.flag_crops_grow;
-        set => Base.flag_crops_grow = value;
+        get => Raw.flag_crops_grow;
+        set => Raw.flag_crops_grow = value;
     }
 
     /// <summary>
@@ -353,8 +353,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool EraDisasterSnowTurnsBabiesIntoIceOnes
     {
-        get => Base.era_disaster_snow_turns_babies_into_ice_ones;
-        set => Base.era_disaster_snow_turns_babies_into_ice_ones = value;
+        get => Raw.era_disaster_snow_turns_babies_into_ice_ones;
+        set => Raw.era_disaster_snow_turns_babies_into_ice_ones = value;
     }
 
     /// <summary>
@@ -362,8 +362,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool EraDisasterFireElementalSpawnOnFire
     {
-        get => Base.era_disaster_fire_elemental_spawn_on_fire;
-        set => Base.era_disaster_fire_elemental_spawn_on_fire = value;
+        get => Raw.era_disaster_fire_elemental_spawn_on_fire;
+        set => Raw.era_disaster_fire_elemental_spawn_on_fire = value;
     }
 
     /// <summary>
@@ -375,8 +375,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </remarks>
     public bool EraDisasterRageBringsDemons
     {
-        get => Base.era_disaster_rage_brings_demons;
-        set => Base.era_disaster_rage_brings_demons = value;
+        get => Raw.era_disaster_rage_brings_demons;
+        set => Raw.era_disaster_rage_brings_demons = value;
     }
 
     /// <summary>
@@ -385,8 +385,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagLightAge
     {
-        get => Base.flag_light_age;
-        set => Base.flag_light_age = value;
+        get => Raw.flag_light_age;
+        set => Raw.flag_light_age = value;
     }
 
     /// <summary>
@@ -395,8 +395,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagChaos
     {
-        get => Base.flag_chaos;
-        set => Base.flag_chaos = value;
+        get => Raw.flag_chaos;
+        set => Raw.flag_chaos = value;
     }
 
     /// <summary>
@@ -405,8 +405,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagWinter
     {
-        get => Base.flag_winter;
-        set => Base.flag_winter = value;
+        get => Raw.flag_winter;
+        set => Raw.flag_winter = value;
     }
 
     /// <summary>
@@ -414,8 +414,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagMoon
     {
-        get => Base.flag_moon;
-        set => Base.flag_moon = value;
+        get => Raw.flag_moon;
+        set => Raw.flag_moon = value;
     }
 
     /// <summary>
@@ -425,8 +425,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagNight
     {
-        get => Base.flag_night;
-        set => Base.flag_night = value;
+        get => Raw.flag_night;
+        set => Raw.flag_night = value;
     }
 
     /// <summary>
@@ -434,8 +434,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool FlagLightDamage
     {
-        get => Base.flag_light_damage;
-        set => Base.flag_light_damage = value;
+        get => Raw.flag_light_damage;
+        set => Raw.flag_light_damage = value;
     }
 
     /// <summary>
@@ -443,8 +443,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public bool LinkDefaultSlots
     {
-        get => Base.link_default_slots;
-        set => Base.link_default_slots = value;
+        get => Raw.link_default_slots;
+        set => Raw.link_default_slots = value;
     }
 
     #endregion
@@ -456,8 +456,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public string Id
     {
-        get => Base.id;
-        set => Base.id = value;
+        get => Raw.id;
+        set => Raw.id = value;
     }
 
     /// <summary>
@@ -465,8 +465,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public string PathIcon
     {
-        get => Base.path_icon;
-        set => Base.path_icon = value;
+        get => Raw.path_icon;
+        set => Raw.path_icon = value;
     }
 
     /// <summary>
@@ -474,8 +474,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public string PathBackground
     {
-        get => Base.path_background;
-        set => Base.path_background = value;
+        get => Raw.path_background;
+        set => Raw.path_background = value;
     }
 
     #endregion
@@ -488,8 +488,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public List<string> Clouds
     {
-        get => Base.clouds;
-        set => Base.clouds = value;
+        get => Raw.clouds;
+        set => Raw.clouds = value;
     }
 
     /// <summary>
@@ -497,8 +497,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public HashSet<string> Biomes
     {
-        get => Base.biomes;
-        set => Base.biomes = value;
+        get => Raw.biomes;
+        set => Raw.biomes = value;
     }
 
 
@@ -507,16 +507,16 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public MonitoredList<int> DefaultSlots
     {
-        get => _defaultSlots ??= new MonitoredList<int>(Base.default_slots, UpdateDefaultSlotsCache);
+        get => _defaultSlots ??= new MonitoredList<int>(Raw.default_slots, UpdateDefaultSlotsCache);
         set
         {
-            Base.default_slots = value.ToList();
+            Raw.default_slots = value.ToList();
 
             _defaultSlots = new MonitoredList<int>(
-                Base.default_slots,
+                Raw.default_slots,
                 UpdateDefaultSlotsCache);
 
-            UpdateDefaultSlotsCache(Base.default_slots);
+            UpdateDefaultSlotsCache(Raw.default_slots);
         }
     }
 
@@ -526,7 +526,7 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     {
         Dictionary<int, List<GameAsm::WorldAgeAsset>>? pool = GameAsm::AssetManager.era_library.pool_by_slots;
 
-        foreach (KeyValuePair<int, List<GameAsm::WorldAgeAsset>> kvp in pool) kvp.Value.Remove(Base);
+        foreach (KeyValuePair<int, List<GameAsm::WorldAgeAsset>> kvp in pool) kvp.Value.Remove(Raw);
 
         foreach (int slot in slots)
         {
@@ -536,7 +536,7 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
                 pool[slot] = list;
             }
 
-            if (!list.Contains(Base)) list.Add(Base);
+            if (!list.Contains(Raw)) list.Add(Raw);
         }
     }
 
@@ -549,8 +549,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public Sprite Icon
     {
-        get => Base._cached_sprite;
-        set => Base._cached_sprite = value;
+        get => Raw._cached_sprite;
+        set => Raw._cached_sprite = value;
     }
 
     /// <summary>
@@ -558,8 +558,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public Sprite Background
     {
-        get => Base._cached_background;
-        set => Base._cached_background = value;
+        get => Raw._cached_background;
+        set => Raw._cached_background = value;
     }
 
     /// <summary>
@@ -567,8 +567,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public Color LightColor
     {
-        get => Base.light_color;
-        set => Base.light_color = value;
+        get => Raw.light_color;
+        set => Raw.light_color = value;
     }
 
     /// <summary>
@@ -576,8 +576,8 @@ public sealed class Age : AbstractionOf<GameAsm::WorldAgeAsset>
     /// </summary>
     public Color TitleColor
     {
-        get => Base.title_color;
-        set => Base.title_color = value;
+        get => Raw.title_color;
+        set => Raw.title_color = value;
     }
 
     #endregion

@@ -29,7 +29,15 @@ public abstract class AbstractionOf<TStore>
         _baseGetter = getter;
     }
 
-    internal TStore Base
+    /// <summary>
+    ///     <para>
+    ///         Raw access to the internal class that this is representing.
+    ///     </para>
+    ///     <para>
+    ///         For advanced users who need complete access to the game domain.
+    ///     </para>
+    /// </summary>
+    public TStore Raw
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get => _baseGetter();

@@ -1,6 +1,8 @@
-﻿using System;
+﻿extern alias GameAsm;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
+using GameAsm::strings;
 using WorldLib.Utils;
 
 namespace WorldLib.Models.Laws;
@@ -49,7 +51,7 @@ public sealed class Laws
     /// </exception>
     private bool Get(string key)
     {
-        return Base.dict.TryGetValue(key, out var option)
+        return Raw.dict.TryGetValue(key, out var option)
             ? option.boolVal
             : throw new KeyNotFoundException($"World law '{key}' not found.");
     }
@@ -67,7 +69,7 @@ public sealed class Laws
     /// </exception>
     private void Set(string key, bool value)
     {
-        if (!Base.dict.TryGetValue(key, out var option))
+        if (!Raw.dict.TryGetValue(key, out var option))
             throw new KeyNotFoundException($"World law '{key}' not found.");
 
         bool lastValue = option.boolVal;
@@ -82,7 +84,7 @@ public sealed class Laws
             asset.on_state_enabled?.Invoke(option);
         }
 
-        Base.updateCaches();
+        Raw.updateCaches();
         option.on_switch?.Invoke(option);
 
         var currentWindow = GameAsm::ScrollWindow.getCurrentWindow();
@@ -120,8 +122,8 @@ public sealed class Laws
     /// </summary>
     public bool OneHundredPeople
     {
-        get => Get("world_law_civ_limit_population_100");
-        set => Set("world_law_civ_limit_population_100", value);
+        get => Get(S_WorldLaw.world_law_civ_limit_population_100);
+        set => Set(S_WorldLaw.world_law_civ_limit_population_100, value);
     }
 
     /// <summary>
@@ -129,8 +131,8 @@ public sealed class Laws
     /// </summary>
     public bool GaiasCovenant
     {
-        get => Get("world_law_gaias_covenant");
-        set => Set("world_law_gaias_covenant", value);
+        get => Get(S_WorldLaw.world_law_gaias_covenant);
+        set => Set(S_WorldLaw.world_law_gaias_covenant, value);
     }
 
     #endregion
@@ -142,8 +144,8 @@ public sealed class Laws
     /// </summary>
     public bool Diplomacy
     {
-        get => Get("world_law_diplomacy");
-        set => Set("world_law_diplomacy", value);
+        get => Get(S_WorldLaw.world_law_diplomacy);
+        set => Set(S_WorldLaw.world_law_diplomacy, value);
     }
 
     /// <summary>
@@ -151,8 +153,8 @@ public sealed class Laws
     /// </summary>
     public bool Rites
     {
-        get => Get("world_law_rites");
-        set => Set("world_law_rites", value);
+        get => Get(S_WorldLaw.world_law_rites);
+        set => Set(S_WorldLaw.world_law_rites, value);
     }
 
     /// <summary>
@@ -160,8 +162,8 @@ public sealed class Laws
     /// </summary>
     public bool Rebellions
     {
-        get => Get("world_law_rebellions");
-        set => Set("world_law_rebellions", value);
+        get => Get(S_WorldLaw.world_law_rebellions);
+        set => Set(S_WorldLaw.world_law_rebellions, value);
     }
 
     /// <summary>
@@ -169,8 +171,8 @@ public sealed class Laws
     /// </summary>
     public bool BorderStealing
     {
-        get => Get("world_law_border_stealing");
-        set => Set("world_law_border_stealing", value);
+        get => Get(S_WorldLaw.world_law_border_stealing);
+        set => Set(S_WorldLaw.world_law_border_stealing, value);
     }
 
     #endregion
@@ -182,8 +184,8 @@ public sealed class Laws
     /// </summary>
     public bool GlitchedNoosphere
     {
-        get => Get("world_law_glitched_noosphere");
-        set => Set("world_law_glitched_noosphere", value);
+        get => Get(S_WorldLaw.world_law_glitched_noosphere);
+        set => Set(S_WorldLaw.world_law_glitched_noosphere, value);
     }
 
     /// <summary>
@@ -191,8 +193,8 @@ public sealed class Laws
     /// </summary>
     public bool Terramorphing
     {
-        get => Get("world_law_terramorphing");
-        set => Set("world_law_terramorphing", value);
+        get => Get(S_WorldLaw.world_law_terramorphing);
+        set => Set(S_WorldLaw.world_law_terramorphing, value);
     }
 
     /// <summary>
@@ -200,8 +202,8 @@ public sealed class Laws
     /// </summary>
     public bool KingdomExpansion
     {
-        get => Get("world_law_kingdom_expansion");
-        set => Set("world_law_kingdom_expansion", value);
+        get => Get(S_WorldLaw.world_law_kingdom_expansion);
+        set => Set(S_WorldLaw.world_law_kingdom_expansion, value);
     }
 
     /// <summary>
@@ -209,8 +211,8 @@ public sealed class Laws
     /// </summary>
     public bool AngryVillagers
     {
-        get => Get("world_law_angry_civilians");
-        set => Set("world_law_angry_civilians", value);
+        get => Get(S_WorldLaw.world_law_angry_civilians);
+        set => Set(S_WorldLaw.world_law_angry_civilians, value);
     }
 
     /// <summary>
@@ -218,8 +220,8 @@ public sealed class Laws
     /// </summary>
     public bool CivBabies
     {
-        get => Get("world_law_civ_babies");
-        set => Set("world_law_civ_babies", value);
+        get => Get(S_WorldLaw.world_law_civ_babies);
+        set => Set(S_WorldLaw.world_law_civ_babies, value);
     }
 
     /// <summary>
@@ -227,8 +229,8 @@ public sealed class Laws
     /// </summary>
     public bool HandsomeMigrants
     {
-        get => Get("world_law_civ_migrants");
-        set => Set("world_law_civ_migrants", value);
+        get => Get(S_WorldLaw.world_law_civ_migrants);
+        set => Set(S_WorldLaw.world_law_civ_migrants, value);
     }
 
     /// <summary>
@@ -236,8 +238,8 @@ public sealed class Laws
     /// </summary>
     public bool Armies
     {
-        get => Get("world_law_civ_army");
-        set => Set("world_law_civ_army", value);
+        get => Get(S_WorldLaw.world_law_civ_army);
+        set => Set(S_WorldLaw.world_law_civ_army, value);
     }
 
     #endregion
@@ -249,8 +251,8 @@ public sealed class Laws
     /// </summary>
     public bool GeneSpaghetti
     {
-        get => Get("world_law_gene_spaghetti");
-        set => Set("world_law_gene_spaghetti", value);
+        get => Get(S_WorldLaw.world_law_gene_spaghetti);
+        set => Set(S_WorldLaw.world_law_gene_spaghetti, value);
     }
 
     /// <summary>
@@ -258,8 +260,8 @@ public sealed class Laws
     /// </summary>
     public bool MutantBox
     {
-        get => Get("world_law_mutant_box");
-        set => Set("world_law_mutant_box", value);
+        get => Get(S_WorldLaw.world_law_mutant_box);
+        set => Set(S_WorldLaw.world_law_mutant_box, value);
     }
 
     /// <summary>
@@ -267,8 +269,8 @@ public sealed class Laws
     /// </summary>
     public bool Hunger
     {
-        get => Get("world_law_hunger");
-        set => Set("world_law_hunger", value);
+        get => Get(S_WorldLaw.world_law_hunger);
+        set => Set(S_WorldLaw.world_law_hunger, value);
     }
 
     /// <summary>
@@ -276,8 +278,8 @@ public sealed class Laws
     /// </summary>
     public bool OldAge
     {
-        get => Get("world_law_old_age");
-        set => Set("world_law_old_age", value);
+        get => Get(S_WorldLaw.world_law_old_age);
+        set => Set(S_WorldLaw.world_law_old_age, value);
     }
 
     #endregion
@@ -289,8 +291,8 @@ public sealed class Laws
     /// </summary>
     public bool PeacefulMonsters
     {
-        get => Get("world_law_peaceful_monsters");
-        set => Set("world_law_peaceful_monsters", value);
+        get => Get(S_WorldLaw.world_law_peaceful_monsters);
+        set => Set(S_WorldLaw.world_law_peaceful_monsters, value);
     }
 
     /// <summary>
@@ -298,8 +300,8 @@ public sealed class Laws
     /// </summary>
     public bool AnimalBabies
     {
-        get => Get("world_law_animals_babies");
-        set => Set("world_law_animals_babies", value);
+        get => Get(S_WorldLaw.world_law_animals_babies);
+        set => Set(S_WorldLaw.world_law_animals_babies, value);
     }
 
     /// <summary>
@@ -307,8 +309,8 @@ public sealed class Laws
     /// </summary>
     public bool ForeverCreep
     {
-        get => Get("world_law_forever_tumor_creep");
-        set => Set("world_law_forever_tumor_creep", value);
+        get => Get(S_WorldLaw.world_law_forever_tumor_creep);
+        set => Set(S_WorldLaw.world_law_forever_tumor_creep, value);
     }
 
     #endregion
@@ -320,8 +322,8 @@ public sealed class Laws
     /// </summary>
     public bool DropOfThoughts
     {
-        get => Get("world_law_drop_of_thoughts");
-        set => Set("world_law_drop_of_thoughts", value);
+        get => Get(S_WorldLaw.world_law_drop_of_thoughts);
+        set => Set(S_WorldLaw.world_law_drop_of_thoughts, value);
     }
 
     /// <summary>
@@ -329,8 +331,8 @@ public sealed class Laws
     /// </summary>
     public bool AnimalSpawn
     {
-        get => Get("world_law_animals_spawn");
-        set => Set("world_law_animals_spawn", value);
+        get => Get(S_WorldLaw.world_law_animals_spawn);
+        set => Set(S_WorldLaw.world_law_animals_spawn, value);
     }
 
     /// <summary>
@@ -338,8 +340,8 @@ public sealed class Laws
     /// </summary>
     public bool CloudsOfLife
     {
-        get => Get("world_law_clouds");
-        set => Set("world_law_clouds", value);
+        get => Get(S_WorldLaw.world_law_clouds);
+        set => Set(S_WorldLaw.world_law_clouds, value);
     }
 
     #endregion
@@ -351,8 +353,8 @@ public sealed class Laws
     /// </summary>
     public bool HighFloraDensity
     {
-        get => Get("world_law_spread_density_high");
-        set => Set("world_law_spread_density_high", value);
+        get => Get(S_WorldLaw.world_law_spread_density_high);
+        set => Set(S_WorldLaw.world_law_spread_density_high, value);
     }
 
     /// <summary>
@@ -360,8 +362,8 @@ public sealed class Laws
     /// </summary>
     public bool RandomSeeds
     {
-        get => Get("world_law_vegetation_random_seeds");
-        set => Set("world_law_vegetation_random_seeds", value);
+        get => Get(S_WorldLaw.world_law_vegetation_random_seeds);
+        set => Set(S_WorldLaw.world_law_vegetation_random_seeds, value);
     }
 
     /// <summary>
@@ -369,8 +371,8 @@ public sealed class Laws
     /// </summary>
     public bool RootsWithoutBorders
     {
-        get => Get("world_law_roots_without_borders");
-        set => Set("world_law_roots_without_borders", value);
+        get => Get(S_WorldLaw.world_law_roots_without_borders);
+        set => Set(S_WorldLaw.world_law_roots_without_borders, value);
     }
 
     /// <summary>
@@ -378,8 +380,8 @@ public sealed class Laws
     /// </summary>
     public bool Minerals
     {
-        get => Get("world_law_grow_minerals");
-        set => Set("world_law_grow_minerals", value);
+        get => Get(S_WorldLaw.world_law_grow_minerals);
+        set => Set(S_WorldLaw.world_law_grow_minerals, value);
     }
 
     /// <summary>
@@ -387,8 +389,8 @@ public sealed class Laws
     /// </summary>
     public bool Erosion
     {
-        get => Get("world_law_erosion");
-        set => Set("world_law_erosion", value);
+        get => Get(S_WorldLaw.world_law_erosion);
+        set => Set(S_WorldLaw.world_law_erosion, value);
     }
 
     #endregion
@@ -400,8 +402,8 @@ public sealed class Laws
     /// </summary>
     public bool TreeGrowth
     {
-        get => Get("world_law_spread_trees");
-        set => Set("world_law_spread_trees", value);
+        get => Get(S_WorldLaw.world_law_spread_trees);
+        set => Set(S_WorldLaw.world_law_spread_trees, value);
     }
 
     /// <summary>
@@ -409,8 +411,8 @@ public sealed class Laws
     /// </summary>
     public bool FastTreeGrowth
     {
-        get => Get("world_law_spread_fast_trees");
-        set => Set("world_law_spread_fast_trees", value);
+        get => Get(S_WorldLaw.world_law_spread_fast_trees);
+        set => Set(S_WorldLaw.world_law_spread_fast_trees, value);
     }
 
     /// <summary>
@@ -418,8 +420,8 @@ public sealed class Laws
     /// </summary>
     public bool Entanglewood
     {
-        get => Get("world_law_entanglewood");
-        set => Set("world_law_entanglewood", value);
+        get => Get(S_WorldLaw.world_law_entanglewood);
+        set => Set(S_WorldLaw.world_law_entanglewood, value);
     }
 
     /// <summary>
@@ -427,8 +429,8 @@ public sealed class Laws
     /// </summary>
     public bool BarkBitesBack
     {
-        get => Get("world_law_bark_bites_back");
-        set => Set("world_law_bark_bites_back", value);
+        get => Get(S_WorldLaw.world_law_bark_bites_back);
+        set => Set(S_WorldLaw.world_law_bark_bites_back, value);
     }
 
     #endregion
@@ -440,8 +442,8 @@ public sealed class Laws
     /// </summary>
     public bool PlantGrowth
     {
-        get => Get("world_law_spread_plants");
-        set => Set("world_law_spread_plants", value);
+        get => Get(S_WorldLaw.world_law_spread_plants);
+        set => Set(S_WorldLaw.world_law_spread_plants, value);
     }
 
     /// <summary>
@@ -449,8 +451,8 @@ public sealed class Laws
     /// </summary>
     public bool FastPlantGrowth
     {
-        get => Get("world_law_spread_fast_plants");
-        set => Set("world_law_spread_fast_plants", value);
+        get => Get(S_WorldLaw.world_law_spread_fast_plants);
+        set => Set(S_WorldLaw.world_law_spread_fast_plants, value);
     }
 
     /// <summary>
@@ -458,8 +460,8 @@ public sealed class Laws
     /// </summary>
     public bool PlantsTickles
     {
-        get => Get("world_law_plants_tickles");
-        set => Set("world_law_plants_tickles", value);
+        get => Get(S_WorldLaw.world_law_plants_tickles);
+        set => Set(S_WorldLaw.world_law_plants_tickles, value);
     }
 
     /// <summary>
@@ -467,8 +469,8 @@ public sealed class Laws
     /// </summary>
     public bool RootPranks
     {
-        get => Get("world_law_root_pranks");
-        set => Set("world_law_root_pranks", value);
+        get => Get(S_WorldLaw.world_law_root_pranks);
+        set => Set(S_WorldLaw.world_law_root_pranks, value);
     }
 
     /// <summary>
@@ -476,8 +478,8 @@ public sealed class Laws
     /// </summary>
     public bool NectarNap
     {
-        get => Get("world_law_nectar_nap");
-        set => Set("world_law_nectar_nap", value);
+        get => Get(S_WorldLaw.world_law_nectar_nap);
+        set => Set(S_WorldLaw.world_law_nectar_nap, value);
     }
 
     #endregion
@@ -489,8 +491,8 @@ public sealed class Laws
     /// </summary>
     public bool FungiGrowth
     {
-        get => Get("world_law_spread_fungi");
-        set => Set("world_law_spread_fungi", value);
+        get => Get(S_WorldLaw.world_law_spread_fungi);
+        set => Set(S_WorldLaw.world_law_spread_fungi, value);
     }
 
     /// <summary>
@@ -498,8 +500,8 @@ public sealed class Laws
     /// </summary>
     public bool FastFungiGrowth
     {
-        get => Get("world_law_spread_fast_fungi");
-        set => Set("world_law_spread_fast_fungi", value);
+        get => Get(S_WorldLaw.world_law_spread_fast_fungi);
+        set => Set(S_WorldLaw.world_law_spread_fast_fungi, value);
     }
 
     /// <summary>
@@ -507,8 +509,8 @@ public sealed class Laws
     /// </summary>
     public bool ExplodingMushrooms
     {
-        get => Get("world_law_exploding_mushrooms");
-        set => Set("world_law_exploding_mushrooms", value);
+        get => Get(S_WorldLaw.world_law_exploding_mushrooms);
+        set => Set(S_WorldLaw.world_law_exploding_mushrooms, value);
     }
 
     #endregion
@@ -520,8 +522,8 @@ public sealed class Laws
     /// </summary>
     public bool GrowGrass
     {
-        get => Get("world_law_grow_grass");
-        set => Set("world_law_grow_grass", value);
+        get => Get(S_WorldLaw.world_law_grow_grass);
+        set => Set(S_WorldLaw.world_law_grow_grass, value);
     }
 
     /// <summary>
@@ -529,8 +531,8 @@ public sealed class Laws
     /// </summary>
     public bool BiomeOvergrowth
     {
-        get => Get("world_law_biome_overgrowth");
-        set => Set("world_law_biome_overgrowth", value);
+        get => Get(S_WorldLaw.world_law_biome_overgrowth);
+        set => Set(S_WorldLaw.world_law_biome_overgrowth, value);
     }
 
     #endregion
@@ -542,8 +544,8 @@ public sealed class Laws
     /// </summary>
     public bool EternalLava
     {
-        get => Get("world_law_forever_lava");
-        set => Set("world_law_forever_lava", value);
+        get => Get(S_WorldLaw.world_law_forever_lava);
+        set => Set(S_WorldLaw.world_law_forever_lava, value);
     }
 
     /// <summary>
@@ -551,8 +553,8 @@ public sealed class Laws
     /// </summary>
     public bool ForeverCold
     {
-        get => Get("world_law_forever_cold");
-        set => Set("world_law_forever_cold", value);
+        get => Get(S_WorldLaw.world_law_forever_cold);
+        set => Set(S_WorldLaw.world_law_forever_cold, value);
     }
 
     #endregion
@@ -564,8 +566,8 @@ public sealed class Laws
     /// </summary>
     public bool NaturalDisasters
     {
-        get => Get("world_law_disasters_nature");
-        set => Set("world_law_disasters_nature", value);
+        get => Get(S_WorldLaw.world_law_disasters_nature);
+        set => Set(S_WorldLaw.world_law_disasters_nature, value);
     }
 
     /// <summary>
@@ -573,8 +575,8 @@ public sealed class Laws
     /// </summary>
     public bool OtherDisasters
     {
-        get => Get("world_law_disasters_other");
-        set => Set("world_law_disasters_other", value);
+        get => Get(S_WorldLaw.world_law_disasters_other);
+        set => Set(S_WorldLaw.world_law_disasters_other, value);
     }
 
     /// <summary>
@@ -582,8 +584,8 @@ public sealed class Laws
     /// </summary>
     public bool RatKing
     {
-        get => Get("world_law_rat_plague");
-        set => Set("world_law_rat_plague", value);
+        get => Get(S_WorldLaw.world_law_rat_plague);
+        set => Set(S_WorldLaw.world_law_rat_plague, value);
     }
 
     #endregion

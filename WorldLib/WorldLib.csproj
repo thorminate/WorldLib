@@ -44,6 +44,12 @@
             <Private>false</Private>
         </Reference>
 
+        <Reference Include="strings">
+            <HintPath>..\assemblies\strings.dll</HintPath>
+            <Private>false</Private>
+            <Aliases>GameAsm</Aliases>
+        </Reference>
+
         <Reference Include="UnityEngine.UI">
             <HintPath>..\assemblies\UnityEngine.UI.dll</HintPath>
             <Private>false</Private>

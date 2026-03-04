@@ -18,7 +18,7 @@ internal static class DelegateAdapter
 
     internal static WorldAction WorldActionToLib(GameAsm::WorldAction action)
     {
-        return (target, tile) => action(target?.Base, tile);
+        return (target, tile) => action(target?.Raw, tile);
     }
 
     internal static GameAsm::GetHitAction HitActionToGame(GetHitAction action)
@@ -36,7 +36,7 @@ internal static class DelegateAdapter
 
     internal static GetHitAction HitActionToLib(GameAsm::GetHitAction action)
     {
-        return (target, attacker, tile) => action(target?.Base, attacker?.Base, tile);
+        return (target, attacker, tile) => action(target?.Raw, attacker?.Raw, tile);
     }
 
     internal static GameAsm::GetEffectSprite GetEffectSpriteToGame(GetEffectSprite action)
@@ -48,7 +48,7 @@ internal static class DelegateAdapter
     internal static GetEffectSprite GetEffectSpriteToLib(GameAsm::GetEffectSprite action)
     {
         return (target, idx) =>
-            action(target?.Base, idx);
+            action(target?.Raw, idx);
     }
 
     internal static GameAsm::GetEffectSpriteUI GetEffectSpriteUIToGame(GetEffectSpriteUI action)
@@ -72,7 +72,7 @@ internal static class DelegateAdapter
     internal static GetEffectSpritePosition GetEffectSpritePositionToLib(GameAsm::GetEffectSpritePosition action)
     {
         return (target, idx) =>
-            action(target?.Base, idx);
+            action(target?.Raw, idx);
     }
 
     internal static GameAsm::GetEffectSpritePositionUI GetEffectSpritePositionUIToGame(GetEffectSpritePositionUI action)
@@ -96,7 +96,7 @@ internal static class DelegateAdapter
     internal static GetEffectSpriteRotationZ GetEffectSpriteRotationZToLib(GameAsm::GetEffectSpriteRotationZ action)
     {
         return (target, idx) =>
-            action(target?.Base, idx);
+            action(target?.Raw, idx);
     }
 
     // ReSharper disable InconsistentNaming

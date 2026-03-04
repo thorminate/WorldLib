@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using WorldLib.Models.Delegates;
 using WorldLib.Models.Generic;
+using WorldLib.Registries;
 using WorldLib.Utils;
 
 namespace WorldLib.Models.Statuses;
@@ -144,96 +145,96 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
 
     internal StatusAsset(GameAsm::StatusAsset asset) : base(asset)
     {
-        OnFinish = Tooling.Memoized(Base.id + "_on_finish", () =>
+        OnFinish = Tooling.Memoized(Raw.id + "_on_finish", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
-                wrapped => { Base.action_finish += wrapped; },
-                wrapped => { Base.action_finish -= wrapped; })
-        ) ?? throw new InvalidOperationException($"Failed to create OnFinish DelegateBridge for Base id {Base.id}");
+                wrapped => { Raw.action_finish += wrapped; },
+                wrapped => { Raw.action_finish -= wrapped; })
+        ) ?? throw new InvalidOperationException($"Failed to create OnFinish DelegateBridge for Base id {Raw.id}");
 
-        OnDeath = Tooling.Memoized(Base.id + "_on_death", () =>
+        OnDeath = Tooling.Memoized(Raw.id + "_on_death", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
-                wrapped => { Base.action_death += wrapped; },
-                wrapped => { Base.action_death -= wrapped; })
-        ) ?? throw new InvalidOperationException($"Failed to create OnDeath DelegateBridge for Base id {Base.id}");
+                wrapped => { Raw.action_death += wrapped; },
+                wrapped => { Raw.action_death -= wrapped; })
+        ) ?? throw new InvalidOperationException($"Failed to create OnDeath DelegateBridge for Base id {Raw.id}");
 
-        OnAction = Tooling.Memoized(Base.id + "_on_action", () =>
+        OnAction = Tooling.Memoized(Raw.id + "_on_action", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
-                wrapped => { Base.action += wrapped; },
-                wrapped => { Base.action -= wrapped; })
-        ) ?? throw new InvalidOperationException($"Failed to create OnAction DelegateBridge for Base id {Base.id}");
+                wrapped => { Raw.action += wrapped; },
+                wrapped => { Raw.action -= wrapped; })
+        ) ?? throw new InvalidOperationException($"Failed to create OnAction DelegateBridge for Base id {Raw.id}");
 
-        OnHit = Tooling.Memoized(Base.id + "_on_hit", () =>
+        OnHit = Tooling.Memoized(Raw.id + "_on_hit", () =>
             new DelegateBridge<GetHitAction, GameAsm::GetHitAction>(
                 DelegateAdapter.HitActionToGame,
-                wrapped => { Base.action_get_hit += wrapped; },
-                wrapped => { Base.action_get_hit -= wrapped; })
-        ) ?? throw new InvalidOperationException($"Failed to create OnHit DelegateBridge for Base id {Base.id}");
+                wrapped => { Raw.action_get_hit += wrapped; },
+                wrapped => { Raw.action_get_hit -= wrapped; })
+        ) ?? throw new InvalidOperationException($"Failed to create OnHit DelegateBridge for Base id {Raw.id}");
 
-        OnReceive = Tooling.Memoized(Base.id + "_on_receive", () =>
+        OnReceive = Tooling.Memoized(Raw.id + "_on_receive", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
-                wrapped => { Base.action_on_receive += wrapped; },
-                wrapped => { Base.action_on_receive -= wrapped; })
-        ) ?? throw new InvalidOperationException($"Failed to create OnReceive DelegateBridge for Base id {Base.id}");
+                wrapped => { Raw.action_on_receive += wrapped; },
+                wrapped => { Raw.action_on_receive -= wrapped; })
+        ) ?? throw new InvalidOperationException($"Failed to create OnReceive DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSprite = Tooling.Memoized(Base.id + "_get_override_sprite", () =>
+        GetOverrideSprite = Tooling.Memoized(Raw.id + "_get_override_sprite", () =>
             new DelegateBridge<GetEffectSprite, GameAsm::GetEffectSprite>(
                 DelegateAdapter.GetEffectSpriteToGame,
-                wrapped => { Base.get_override_sprite += wrapped; },
-                wrapped => { Base.get_override_sprite -= wrapped; })
+                wrapped => { Raw.get_override_sprite += wrapped; },
+                wrapped => { Raw.get_override_sprite -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSprite DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSprite DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSpriteUI = Tooling.Memoized(Base.id + "_get_override_sprite_ui", () =>
+        GetOverrideSpriteUI = Tooling.Memoized(Raw.id + "_get_override_sprite_ui", () =>
             new DelegateBridge<GetEffectSpriteUI, GameAsm::GetEffectSpriteUI>(
                 DelegateAdapter.GetEffectSpriteUIToGame,
-                wrapped => { Base.get_override_sprite_ui += wrapped; },
-                wrapped => { Base.get_override_sprite_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_ui += wrapped; },
+                wrapped => { Raw.get_override_sprite_ui -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSpriteUI DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSpriteUI DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSpritePosition = Tooling.Memoized(Base.id + "_get_override_sprite_position", () =>
+        GetOverrideSpritePosition = Tooling.Memoized(Raw.id + "_get_override_sprite_position", () =>
             new DelegateBridge<GetEffectSpritePosition, GameAsm::GetEffectSpritePosition>(
                 DelegateAdapter.GetEffectSpritePositionToGame,
-                wrapped => { Base.get_override_sprite_position += wrapped; },
-                wrapped => { Base.get_override_sprite_position -= wrapped; })
+                wrapped => { Raw.get_override_sprite_position += wrapped; },
+                wrapped => { Raw.get_override_sprite_position -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSpritePosition DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSpritePosition DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSpritePositionUI = Tooling.Memoized(Base.id + "_get_override_sprite_position_ui", () =>
+        GetOverrideSpritePositionUI = Tooling.Memoized(Raw.id + "_get_override_sprite_position_ui", () =>
             new DelegateBridge<GetEffectSpritePositionUI, GameAsm::GetEffectSpritePositionUI>(
                 DelegateAdapter.GetEffectSpritePositionUIToGame,
-                wrapped => { Base.get_override_sprite_position_ui += wrapped; },
-                wrapped => { Base.get_override_sprite_position_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_position_ui += wrapped; },
+                wrapped => { Raw.get_override_sprite_position_ui -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSpritePositionUI DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSpritePositionUI DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSpriteRotationZ = Tooling.Memoized(Base.id + "_get_override_sprite_rotation_z", () =>
+        GetOverrideSpriteRotationZ = Tooling.Memoized(Raw.id + "_get_override_sprite_rotation_z", () =>
             new DelegateBridge<GetEffectSpriteRotationZ, GameAsm::GetEffectSpriteRotationZ>(
                 DelegateAdapter.GetEffectSpriteRotationZToGame,
-                wrapped => { Base.get_override_sprite_rotation_z += wrapped; },
-                wrapped => { Base.get_override_sprite_rotation_z -= wrapped; })
+                wrapped => { Raw.get_override_sprite_rotation_z += wrapped; },
+                wrapped => { Raw.get_override_sprite_rotation_z -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSpriteRotationZ DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSpriteRotationZ DelegateBridge for Base id {Raw.id}");
 
-        GetOverrideSpriteRotationZUI = Tooling.Memoized(Base.id + "_get_override_sprite_rotation_z_ui", () =>
+        GetOverrideSpriteRotationZUI = Tooling.Memoized(Raw.id + "_get_override_sprite_rotation_z_ui", () =>
             new DelegateBridge<GetEffectSpriteRotationZUI, GameAsm::GetEffectSpriteRotationZUI>(
                 DelegateAdapter.GetEffectSpriteRotationZUIToGame,
-                wrapped => { Base.get_override_sprite_rotation_z_ui += wrapped; },
-                wrapped => { Base.get_override_sprite_rotation_z_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_rotation_z_ui += wrapped; },
+                wrapped => { Raw.get_override_sprite_rotation_z_ui -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create GetOverrideSpriteRotationZUI DelegateBridge for Base id {Base.id}");
+            $"Failed to create GetOverrideSpriteRotationZUI DelegateBridge for Base id {Raw.id}");
 
-        RenderCheck = Tooling.Memoized(Base.id + "_render_check", () =>
+        RenderCheck = Tooling.Memoized(Raw.id + "_render_check", () =>
             new DelegateBridge<RenderEffectCheck, GameAsm::RenderEffectCheck>(
                 DelegateAdapter.RenderEffectCheckToGame,
-                wrapped => { Base.render_check += wrapped; },
-                wrapped => { Base.render_check -= wrapped; })
+                wrapped => { Raw.render_check += wrapped; },
+                wrapped => { Raw.render_check -= wrapped; })
         ) ?? throw new InvalidOperationException(
-            $"Failed to create RenderCheck DelegateBridge for Base id {Base.id}");
+            $"Failed to create RenderCheck DelegateBridge for Base id {Raw.id}");
     }
 
     /// <summary>
@@ -241,8 +242,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float ActionInterval
     {
-        get => Base.action_interval;
-        set => Base.action_interval = value;
+        get => Raw.action_interval;
+        set => Raw.action_interval = value;
     }
 
     /// <summary>
@@ -250,8 +251,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public StatusTier Tier
     {
-        get => StatusTierHelper.FromGame(Base.tier);
-        set => Base.tier = StatusTierHelper.ToGame(value);
+        get => StatusTierHelper.FromGame(Raw.tier);
+        set => Raw.tier = StatusTierHelper.ToGame(value);
     }
 
     /// <summary>
@@ -259,8 +260,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool CanBeCured
     {
-        get => Base.can_be_cured;
-        set => Base.can_be_cured = value;
+        get => Raw.can_be_cured;
+        set => Raw.can_be_cured = value;
     }
 
     /// <summary>
@@ -268,8 +269,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float Duration
     {
-        get => Base.duration;
-        set => Base.duration = value;
+        get => Raw.duration;
+        set => Raw.duration = value;
     }
 
     /// <summary>
@@ -277,8 +278,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool AllowTimerReset
     {
-        get => Base.allow_timer_reset;
-        set => Base.allow_timer_reset = value;
+        get => Raw.allow_timer_reset;
+        set => Raw.allow_timer_reset = value;
     }
 
     /// <summary>
@@ -286,8 +287,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public string Texture
     {
-        get => Base.texture;
-        set => Base.texture = value;
+        get => Raw.texture;
+        set => Raw.texture = value;
     }
 
     /// <summary>
@@ -296,8 +297,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool RandomFrame
     {
-        get => Base.random_frame;
-        set => Base.random_frame = value;
+        get => Raw.random_frame;
+        set => Raw.random_frame = value;
     }
 
     /// <summary>
@@ -305,8 +306,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool CanBeFlipped
     {
-        get => Base.can_be_flipped;
-        set => Base.can_be_flipped = value;
+        get => Raw.can_be_flipped;
+        set => Raw.can_be_flipped = value;
     }
 
     /// <summary>
@@ -314,8 +315,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool Animated
     {
-        get => Base.animated;
-        set => Base.animated = value;
+        get => Raw.animated;
+        set => Raw.animated = value;
     }
 
     /// <summary>
@@ -323,8 +324,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool IsAnimatedInPause
     {
-        get => Base.is_animated_in_pause;
-        set => Base.is_animated_in_pause = value;
+        get => Raw.is_animated_in_pause;
+        set => Raw.is_animated_in_pause = value;
     }
 
     /// <summary>
@@ -332,8 +333,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool Loop
     {
-        get => Base.loop;
-        set => Base.loop = value;
+        get => Raw.loop;
+        set => Raw.loop = value;
     }
 
     /// <summary>
@@ -341,8 +342,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float AnimationSpeed
     {
-        get => Base.animation_speed;
-        set => Base.animation_speed = value;
+        get => Raw.animation_speed;
+        set => Raw.animation_speed = value;
     }
 
     /// <summary>
@@ -354,8 +355,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </example>
     public float AnimationSpeedRandom
     {
-        get => Base.animation_speed_random;
-        set => Base.animation_speed_random = value;
+        get => Raw.animation_speed_random;
+        set => Raw.animation_speed_random = value;
     }
 
     /// <summary>
@@ -363,8 +364,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float Scale
     {
-        get => Base.scale;
-        set => Base.scale = value;
+        get => Raw.scale;
+        set => Raw.scale = value;
     }
 
     /// <summary>
@@ -372,8 +373,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float OffsetX
     {
-        get => Base.offset_x;
-        set => Base.offset_x = value;
+        get => Raw.offset_x;
+        set => Raw.offset_x = value;
     }
 
     /// <summary>
@@ -381,8 +382,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float OffsetXUi
     {
-        get => Base.offset_x_ui;
-        set => Base.offset_x_ui = value;
+        get => Raw.offset_x_ui;
+        set => Raw.offset_x_ui = value;
     }
 
     /// <summary>
@@ -390,8 +391,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float OffsetY
     {
-        get => Base.offset_y;
-        set => Base.offset_y = value;
+        get => Raw.offset_y;
+        set => Raw.offset_y = value;
     }
 
     /// <summary>
@@ -399,8 +400,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float OffsetYUi
     {
-        get => Base.offset_y_ui;
-        set => Base.offset_y_ui = value;
+        get => Raw.offset_y_ui;
+        set => Raw.offset_y_ui = value;
     }
 
     /// <summary>
@@ -408,8 +409,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float RotationZ
     {
-        get => Base.rotation_z;
-        set => Base.rotation_z = value;
+        get => Raw.rotation_z;
+        set => Raw.rotation_z = value;
     }
 
     /// <summary>
@@ -417,8 +418,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool UseParentRotation
     {
-        get => Base.use_parent_rotation;
-        set => Base.use_parent_rotation = value;
+        get => Raw.use_parent_rotation;
+        set => Raw.use_parent_rotation = value;
     }
 
     /// <summary>
@@ -426,8 +427,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool RemovedOnDamage
     {
-        get => Base.removed_on_damage;
-        set => Base.removed_on_damage = value;
+        get => Raw.removed_on_damage;
+        set => Raw.removed_on_damage = value;
     }
 
     /// <summary>
@@ -435,8 +436,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public float PositionZ
     {
-        get => Base.position_z;
-        set => Base.position_z = value;
+        get => Raw.position_z;
+        set => Raw.position_z = value;
     }
 
     /// <summary>
@@ -444,8 +445,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool CancelActorJob
     {
-        get => Base.cancel_actor_job;
-        set => Base.cancel_actor_job = value;
+        get => Raw.cancel_actor_job;
+        set => Raw.cancel_actor_job = value;
     }
 
     /// <summary>
@@ -453,8 +454,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool AffectsMind
     {
-        get => Base.affects_mind;
-        set => Base.affects_mind = value;
+        get => Raw.affects_mind;
+        set => Raw.affects_mind = value;
     }
 
     /// <summary>
@@ -462,14 +463,20 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public Material Material
     {
-        get => Base.material;
+        get => Raw.material;
         set
         {
-            Base.material_id = value.name;
-            Base.material = value;
-            MaterialRegistry.Register(Base.material);
+            Raw.material_id = value.name;
+            Raw.material = value;
+            Materials.Register(Raw.material);
         }
     }
+
+    /// <summary>
+    ///     A decision asset to give an actor when they have this status effect active.
+    /// </summary>
+    //TODO: Abstract DecisionAsset
+    public GameAsm::DecisionAsset Decision => Raw.getDecisionAsset();
 
     /// <summary>
     ///     Whether to illuminate the surrounding area when the status effect is active.
@@ -477,8 +484,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <seealso cref="IlluminationSize" />
     public bool IlluminateArea
     {
-        get => Base.draw_light_area;
-        set => Base.draw_light_area = value;
+        get => Raw.draw_light_area;
+        set => Raw.draw_light_area = value;
     }
 
     /// <summary>
@@ -487,8 +494,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <seealso cref="IlluminateArea" />
     public float IlluminationSize
     {
-        get => Base.draw_light_size;
-        set => Base.draw_light_size = value;
+        get => Raw.draw_light_size;
+        set => Raw.draw_light_size = value;
     }
 
     /// <summary>
@@ -496,8 +503,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public GameAsm::BaseStats Stats
     {
-        get => Base.base_stats;
-        set => Base.base_stats = value;
+        get => Raw.base_stats;
+        set => Raw.base_stats = value;
     }
 
     /// <summary>
@@ -513,8 +520,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     // TODO: Abstract ActorTrait.
     public TransmutableList<string, GameAsm::ActorTrait> OppositeTraits =>
         _oppositeTraits ??= new TransmutableList<string, GameAsm::ActorTrait>(
-            () => Base.opposite_traits ?? Array.Empty<string>(),
-            v => Base.opposite_traits = v,
+            () => Raw.opposite_traits ?? Array.Empty<string>(),
+            v => Raw.opposite_traits = v,
             id => GameAsm::AssetManager.traits.dict.TryGetValue(id, out var trait)
                 ? trait
                 : throw new KeyNotFoundException(
@@ -531,8 +538,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </remarks>
     public string[] OppositeTags
     {
-        get => Base.opposite_tags;
-        set => Base.opposite_tags = value;
+        get => Raw.opposite_tags;
+        set => Raw.opposite_tags = value;
     }
 
     /// <summary>
@@ -546,8 +553,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </exception>
     public TransmutableList<string, GameAsm::StatusAsset> OppositeStatuses =>
         _oppositeStatuses ??= new TransmutableList<string, GameAsm::StatusAsset>(
-            () => Base.opposite_status ?? Array.Empty<string>(),
-            v => Base.opposite_status = v,
+            () => Raw.opposite_status ?? Array.Empty<string>(),
+            v => Raw.opposite_status = v,
             id => GameAsm::AssetManager.status.dict.TryGetValue(id, out var status)
                 ? status
                 : throw new KeyNotFoundException(
@@ -564,8 +571,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </exception>
     public TransmutableList<string, GameAsm::StatusAsset> RemoveStatuses =>
         _removeStatuses ??= new TransmutableList<string, GameAsm::StatusAsset>(
-            () => Base.remove_status ?? Array.Empty<string>(),
-            v => Base.remove_status = v,
+            () => Raw.remove_status ?? Array.Empty<string>(),
+            v => Raw.remove_status = v,
             id => GameAsm::AssetManager.status.dict.TryGetValue(id, out var value)
                 ? value
                 : throw new KeyNotFoundException(
@@ -576,22 +583,22 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <summary>
     ///     An array of sprites representing each frame of the animation.
     /// </summary>
-    public Sprite[] SpriteList => Base.sprite_list;
+    public Sprite[] SpriteList => Raw.sprite_list;
 
     /// <summary>
     ///     The static icon of the status effect.
     /// </summary>
-    public Sprite Icon => Base.getSprite();
+    public Sprite Icon => Raw.getSprite();
 
     /// <summary>
     ///     Represents the localized name of this status asset.
     /// </summary>
-    public string LocalizedName => GameAsm::StringExtension.Localize(Base.getLocaleID());
+    public string LocalizedName => GameAsm::StringExtension.Localize(Raw.getLocaleID());
 
     /// <summary>
     ///     Represents the localized description of this status asset.
     /// </summary>
-    public string LocalizedDescription => GameAsm::StringExtension.Localize(Base.getLocaleID());
+    public string LocalizedDescription => GameAsm::StringExtension.Localize(Raw.getLocaleID());
 
     /// <summary>
     ///     Whether to use the override sprite getter sprite instead of the animations for the sprite. Applies for both UI and
@@ -599,8 +606,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool HasOverrideSprite
     {
-        get => Base.has_override_sprite;
-        set => Base.has_override_sprite = value;
+        get => Raw.has_override_sprite;
+        set => Raw.has_override_sprite = value;
     }
 
     /// <summary>
@@ -609,8 +616,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool HasOverrideSpritePosition
     {
-        get => Base.has_override_sprite_position;
-        set => Base.has_override_sprite_position = value;
+        get => Raw.has_override_sprite_position;
+        set => Raw.has_override_sprite_position = value;
     }
 
     /// <summary>
@@ -619,21 +626,30 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// </summary>
     public bool HasOverrideSpriteRotationZ
     {
-        get => Base.has_override_sprite_rotation_z;
-        set => Base.has_override_sprite_rotation_z = value;
+        get => Raw.has_override_sprite_rotation_z;
+        set => Raw.has_override_sprite_rotation_z = value;
+    }
+
+    /// <summary>
+    ///     Whether to render the status effect at all.
+    /// </summary>
+    public bool DoVisualRender
+    {
+        get => Raw.need_visual_render;
+        set => Raw.need_visual_render = value;
     }
 
     /// <inheritdoc />
     public string Id
     {
-        get => Base.id;
-        set => Base.id = value;
+        get => Raw.id;
+        set => Raw.id = value;
     }
 
     /// <inheritdoc />
     public int Hash
     {
-        get => Base.GetHashCode();
-        set => Base.setHash(value);
+        get => Raw.GetHashCode();
+        set => Raw.setHash(value);
     }
 }
