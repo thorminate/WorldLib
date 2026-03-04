@@ -68,16 +68,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Actor.WorldActor.yml",
+      "source_relative_path": "api/WorldLib.Models.Actor.Actor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Models.Actor.WorldActor.html"
+          "relative_path": "api/WorldLib.Models.Actor.Actor.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Models.Actor.WorldActor",
+      "Title": "WorldLib.Models.Actor.Actor",
       "Summary": null
     },
     {
@@ -456,7 +456,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Options.WorldCreationOptions.WorldSize",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Options.WorldCreationOptions.WorldSize.yml\" sourcestartlinenumber=\"1\">Defines the overall size preset of the generated world.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -470,7 +470,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Options.WorldCreationOptions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Options.WorldCreationOptions.yml\" sourcestartlinenumber=\"1\">Represents a set of options used to configure procedural world generation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -484,7 +484,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Options.WorldSpeeds",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Options.WorldSpeeds.yml\" sourcestartlinenumber=\"1\">An enum for all normal game speeds in the game.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -527,6 +527,20 @@
       "IsMRef": true,
       "Title": "WorldLib.Models.Statuses.StatusTier",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Statuses.Statuses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Statuses.Statuses.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Statuses.Statuses",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Statuses.Statuses.yml\" sourcestartlinenumber=\"1\">A static class for easy access to the game's statuses.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -624,6 +638,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Plugin",
+      "Summary": "<p sourcefile=\"api/WorldLib.Plugin.yml\" sourcestartlinenumber=\"1\">The main entrypoint of WorldLib.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Registries.Materials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Registries.Materials.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Registries.Materials",
+      "Summary": "<p sourcefile=\"api/WorldLib.Registries.Materials.yml\" sourcestartlinenumber=\"1\">Provides centralized management for materials in the global <xref href=\"LibraryMaterials\" data-throw-if-not-resolved=\"false\"></xref> cache.\nThis ensures that materials are consistently registered and prevents accidental overwrites\nof existing materials with the same name.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Registries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Registries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Registries",
       "Summary": null
     },
     {
@@ -695,6 +737,20 @@
       "IsMRef": true,
       "Title": "WorldLib.Utils.TransmutableList<TStorage, TExposed>",
       "Summary": "<p sourcefile=\"api/WorldLib.Utils.TransmutableList-2.yml\" sourcestartlinenumber=\"1\">Represents a live, transmutable view over an underlying array of serialized items.\nEach element is transformed via a codec between the storage representation\n(<code class=\"typeparamref\">TStorage</code>) and the exposed runtime representation\n(<code class=\"typeparamref\">TExposed</code>).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Utils.WorldBoxMod-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Utils.WorldBoxMod-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Utils.WorldBoxMod<TSelf>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Utils.WorldBoxMod-1.yml\" sourcestartlinenumber=\"1\">A simple and opinionated way to instantiate a mod.\nYou must still apply your own BepInEx attributes above the plugin definition.</p>\n"
     },
     {
       "type": "ManagedReference",

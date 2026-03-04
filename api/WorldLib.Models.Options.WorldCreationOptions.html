@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class WorldCreationOptions | WorldLib </title>
+      <title>Struct WorldCreationOptions | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class WorldCreationOptions | WorldLib ">
+      <meta name="title" content="Struct WorldCreationOptions | WorldLib ">
       
-      
+      <meta name="description" content="Represents a set of options used to configure procedural world generation.">
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="WorldLib_Models_Options_WorldCreationOptions" data-uid="WorldLib.Models.Options.WorldCreationOptions" class="text-break">
-Class WorldCreationOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Struct WorldCreationOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,23 +97,17 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a set of options used to configure procedural world generation.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WorldCreationOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public struct WorldCreationOptions</code></pre>
   </div>
 
 
 
 
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">WorldCreationOptions</span></div>
-    </dd>
-  </dl>
 
 
 
@@ -121,10 +115,13 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
@@ -133,17 +130,50 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
 
+
+
+  <h2 id="WorldLib_Models_Options_WorldCreationOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class controls terrain shape, noise layers, biome behavior,
+environmental features, and initial world modifiers.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="WorldLib_Models_Options_WorldCreationOptions__ctor_" data-uid="WorldLib.Models.Options.WorldCreationOptions.#ctor*"></a>
+
+  <h3 id="WorldLib_Models_Options_WorldCreationOptions__ctor" data-uid="WorldLib.Models.Options.WorldCreationOptions.#ctor">
+  WorldCreationOptions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents a set of options used to configure procedural world generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WorldCreationOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="WorldLib_Models_Options_WorldCreationOptions__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This class controls terrain shape, noise layers, biome behavior,
+environmental features, and initial world modifiers.</p>
+</div>
 
 
 
@@ -156,14 +186,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_AddCenterGradientLand" data-uid="WorldLib.Models.Options.WorldCreationOptions.AddCenterGradientLand">
   AddCenterGradientLand
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether land elevation should gradually increase toward the center.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddCenterGradientLand { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddCenterGradientLand { readonly get; set; }</code></pre>
   </div>
 
 
@@ -187,14 +218,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_AddCenterLake" data-uid="WorldLib.Models.Options.WorldCreationOptions.AddCenterLake">
   AddCenterLake
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether a central lake should be generated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddCenterLake { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddCenterLake { readonly get; set; }</code></pre>
   </div>
 
 
@@ -218,14 +250,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_AddMountainEdges" data-uid="WorldLib.Models.Options.WorldCreationOptions.AddMountainEdges">
   AddMountainEdges
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether the edge of the map should have a border of mountains.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddMountainEdges { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddMountainEdges { readonly get; set; }</code></pre>
   </div>
 
 
@@ -249,14 +282,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_AddResources" data-uid="WorldLib.Models.Options.WorldCreationOptions.AddResources">
   AddResources
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether resources should be spawned across the world.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddResources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddResources { readonly get; set; }</code></pre>
   </div>
 
 
@@ -280,14 +314,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_AddVegetation" data-uid="WorldLib.Models.Options.WorldCreationOptions.AddVegetation">
   AddVegetation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether vegetation (such as trees and plants) should be generated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddVegetation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AddVegetation { readonly get; set; }</code></pre>
   </div>
 
 
@@ -311,10 +346,11 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_BonusNoise" data-uid="WorldLib.Models.Options.WorldCreationOptions.BonusNoise">
   BonusNoise
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the tertiary noise intensity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -334,7 +370,16 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
 
 
+  <h4 class="section" id="WorldLib_Models_Options_WorldCreationOptions_BonusNoise_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Used for minor terrain variations and subtle irregularities.</p>
+</div>
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the value is not between 0 and 30.</p>
+</dd>
+  </dl>
 
 
 
@@ -342,10 +387,11 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_DetailNoise" data-uid="WorldLib.Models.Options.WorldCreationOptions.DetailNoise">
   DetailNoise
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the secondary detail noise intensity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -365,38 +411,17 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
 
 
+  <h4 class="section" id="WorldLib_Models_Options_WorldCreationOptions_DetailNoise_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This layer adds medium-scale variation to terrain,
+refining the output of <a class="xref" href="WorldLib.Models.Options.WorldCreationOptions.html#WorldLib_Models_Options_WorldCreationOptions_MainNoise">MainNoise</a>.</p>
+</div>
 
-
-
-
-  <a id="WorldLib_Models_Options_WorldCreationOptions_ForbiddenKnowledgeStart_" data-uid="WorldLib.Models.Options.WorldCreationOptions.ForbiddenKnowledgeStart*"></a>
-
-  <h3 id="WorldLib_Models_Options_WorldCreationOptions_ForbiddenKnowledgeStart" data-uid="WorldLib.Models.Options.WorldCreationOptions.ForbiddenKnowledgeStart">
-  ForbiddenKnowledgeStart
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L88"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ForbiddenKnowledgeStart { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the value is not between 0 and 30.</p>
+</dd>
   </dl>
-
-
-
-
-
 
 
 
@@ -404,14 +429,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_GradientRoundEdges" data-uid="WorldLib.Models.Options.WorldCreationOptions.GradientRoundEdges">
   GradientRoundEdges
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether the world edges should be rounded and become circular.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GradientRoundEdges { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GradientRoundEdges { readonly get; set; }</code></pre>
   </div>
 
 
@@ -435,14 +461,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_HighGround" data-uid="WorldLib.Models.Options.WorldCreationOptions.HighGround">
   HighGround
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether the terrain should favor higher overall elevation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HighGround { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HighGround { readonly get; set; }</code></pre>
   </div>
 
 
@@ -466,14 +493,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_LowGround" data-uid="WorldLib.Models.Options.WorldCreationOptions.LowGround">
   LowGround
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether the terrain should favor lower overall elevation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool LowGround { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool LowGround { readonly get; set; }</code></pre>
   </div>
 
 
@@ -497,10 +525,11 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_MainNoise" data-uid="WorldLib.Models.Options.WorldCreationOptions.MainNoise">
   MainNoise
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the primary terrain noise intensity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -520,7 +549,17 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
 
 
+  <h4 class="section" id="WorldLib_Models_Options_WorldCreationOptions_MainNoise_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This layer typically defines large-scale elevation features such as
+continents and major landmasses.</p>
+</div>
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the value is not between 0 and 30.</p>
+</dd>
+  </dl>
 
 
 
@@ -528,14 +567,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_RandomBiomes" data-uid="WorldLib.Models.Options.WorldCreationOptions.RandomBiomes">
   RandomBiomes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether biomes should be distributed randomly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RandomBiomes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RandomBiomes { readonly get; set; }</code></pre>
   </div>
 
 
@@ -559,10 +599,11 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_RandomShapes" data-uid="WorldLib.Models.Options.WorldCreationOptions.RandomShapes">
   RandomShapes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the amount of random terrain shape variation applied during generation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -582,7 +623,16 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
 
 
+  <h4 class="section" id="WorldLib_Models_Options_WorldCreationOptions_RandomShapes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Higher values increase irregular terrain formations.</p>
+</div>
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the value is not between 0 and 40.</p>
+</dd>
+  </dl>
 
 
 
@@ -590,14 +640,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_RemoveMountains" data-uid="WorldLib.Models.Options.WorldCreationOptions.RemoveMountains">
   RemoveMountains
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether mountain generation should be disabled entirely.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RemoveMountains { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RemoveMountains { readonly get; set; }</code></pre>
   </div>
 
 
@@ -621,14 +672,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_RingTreeEffect" data-uid="WorldLib.Models.Options.WorldCreationOptions.RingTreeEffect">
   RingTreeEffect
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether a ring-shaped tree distribution effect should be applied.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RingTreeEffect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RingTreeEffect { readonly get; set; }</code></pre>
   </div>
 
 
@@ -652,14 +704,15 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_Size" data-uid="WorldLib.Models.Options.WorldCreationOptions.Size">
   Size
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the overall size preset of the world.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WorldCreationOptions.WorldSize Size { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public WorldCreationOptions.WorldSize Size { readonly get; set; }</code></pre>
   </div>
 
 
@@ -669,7 +722,8 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="WorldLib.Models.Options.WorldCreationOptions.html">WorldCreationOptions</a>.<a class="xref" href="WorldLib.Models.Options.WorldCreationOptions.WorldSize.html">WorldSize</a></dt>
-    <dd></dd>
+    <dd><p>The selected <a class="xref" href="WorldLib.Models.Options.WorldCreationOptions.WorldSize.html">WorldCreationOptions.WorldSize</a>. Defaults to <a class="xref" href="WorldLib.Models.Options.WorldCreationOptions.WorldSize.html#WorldLib_Models_Options_WorldCreationOptions_WorldSize_Standard">Standard</a>.</p>
+</dd>
   </dl>
 
 
@@ -683,14 +737,47 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 
   <h3 id="WorldLib_Models_Options_WorldCreationOptions_SquareEdges" data-uid="WorldLib.Models.Options.WorldCreationOptions.SquareEdges">
   SquareEdges
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets whether the world should have more square-shaped borders.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SquareEdges { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SquareEdges { readonly get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Options_WorldCreationOptions_StartWithForbiddenKnowledge_" data-uid="WorldLib.Models.Options.WorldCreationOptions.StartWithForbiddenKnowledge*"></a>
+
+  <h3 id="WorldLib_Models_Options_WorldCreationOptions_StartWithForbiddenKnowledge" data-uid="WorldLib.Models.Options.WorldCreationOptions.StartWithForbiddenKnowledge">
+  StartWithForbiddenKnowledge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether the world should start as cursed with forbidden knowledge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartWithForbiddenKnowledge { readonly get; set; }</code></pre>
   </div>
 
 
@@ -714,7 +801,7 @@ Class WorldCreationOptions  <a class="header-action link-secondary" title="View 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Options/WorldCreationOptions.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

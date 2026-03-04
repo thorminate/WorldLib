@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Plugin | WorldLib </title>
+      <title>Class WorldBoxMod&lt;TSelf&gt; | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Plugin | WorldLib ">
+      <meta name="title" content="Class WorldBoxMod&lt;TSelf&gt; | WorldLib ">
       
-      <meta name="description" content="The main entrypoint of WorldLib.">
+      <meta name="description" content="A simple and opinionated way to instantiate a mod. You must still apply your own BepInEx attributes above the plugin definition.">
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Plugin.md&amp;value=---%0Auid%3A%20WorldLib.Plugin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Utils_WorldBoxMod_1.md&amp;value=---%0Auid%3A%20WorldLib.Utils.WorldBoxMod%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,30 +84,36 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Plugin">
+        <article data-uid="WorldLib.Utils.WorldBoxMod`1">
 
 
 
-  <h1 id="WorldLib_Plugin" data-uid="WorldLib.Plugin" class="text-break">
-Class Plugin  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_Utils_WorldBoxMod_1" data-uid="WorldLib.Utils.WorldBoxMod`1" class="text-break">
+Class WorldBoxMod&lt;TSelf&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Utils.html">Utils</a></dd></dl>
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The main entrypoint of WorldLib.</p>
+  <div class="markdown summary"><p>A simple and opinionated way to instantiate a mod.
+You must still apply your own BepInEx attributes above the plugin definition.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BepInPlugin(&quot;Thorminate.WorldLib&quot;, &quot;WorldLib&quot;, &quot;0.0.1&quot;)]
-public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class WorldBoxMod&lt;TSelf&gt; : BaseUnityPlugin where TSelf : WorldBoxMod&lt;TSelf&gt;</code></pre>
   </div>
 
 
 
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSelf</code></dt>
+    <dd><p>The type of the class that is extending this</p>
+</dd>
+  </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
@@ -118,25 +124,21 @@ public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
       <div><span class="xref">Behaviour</span></div>
       <div><span class="xref">MonoBehaviour</span></div>
       <div><span class="xref">BaseUnityPlugin</span></div>
-      <div><a class="xref" href="WorldLib.Utils.WorldBoxMod-1.html">WorldBoxMod</a>&lt;<a class="xref" href="WorldLib.Plugin.html">Plugin</a>&gt;</div>
-      <div><span class="xref">Plugin</span></div>
+      <div><span class="xref">WorldBoxMod&lt;TSelf&gt;</span></div>
     </dd>
   </dl>
 
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="WorldLib.Plugin.html">Plugin</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="WorldLib.Utils.WorldBoxMod-1.html#WorldLib_Utils_WorldBoxMod_1_Instance">WorldBoxMod&lt;Plugin&gt;.Instance</a>
-    </div>
-    <div>
-      <a class="xref" href="WorldLib.Utils.WorldBoxMod-1.html#WorldLib_Utils_WorldBoxMod_1_Logger">WorldBoxMod&lt;Plugin&gt;.Logger</a>
-    </div>
-    <div>
-      <a class="xref" href="WorldLib.Utils.WorldBoxMod-1.html#WorldLib_Utils_WorldBoxMod_1_Awake">WorldBoxMod&lt;Plugin&gt;.Awake()</a>
-    </div>
     <div>
       <span class="xref">BaseUnityPlugin.Info</span>
     </div>
@@ -597,23 +599,93 @@ public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="WorldLib_Plugin_Begin_" data-uid="WorldLib.Plugin.Begin*"></a>
 
-  <h3 id="WorldLib_Plugin_Begin" data-uid="WorldLib.Plugin.Begin">
-  Begin()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_Instance" data-uid="WorldLib.Utils.WorldBoxMod`1.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This runs after the game is set up and initialized.</p>
+  <div class="markdown level1 summary"><p>A singleton instance referencing to the plugins active object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Begin()</code></pre>
+    <pre><code class="lang-csharp hljs">public static TSelf Instance</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TSelf</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Utils_WorldBoxMod_1_Logger_" data-uid="WorldLib.Utils.WorldBoxMod`1.Logger*"></a>
+
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_Logger" data-uid="WorldLib.Utils.WorldBoxMod`1.Logger">
+  Logger
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The public logger for this mod, should be used over <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Log(object)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ManualLogSource Logger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ManualLogSource</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Utils_WorldBoxMod_1_Awake_" data-uid="WorldLib.Utils.WorldBoxMod`1.Awake*"></a>
+
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_Awake" data-uid="WorldLib.Utils.WorldBoxMod`1.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Awake()</code></pre>
   </div>
 
 
@@ -628,11 +700,38 @@ public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
 
 
 
-  <a id="WorldLib_Plugin_Declaration_" data-uid="WorldLib.Plugin.Declaration*"></a>
+  <a id="WorldLib_Utils_WorldBoxMod_1_Begin_" data-uid="WorldLib.Utils.WorldBoxMod`1.Begin*"></a>
 
-  <h3 id="WorldLib_Plugin_Declaration" data-uid="WorldLib.Plugin.Declaration">
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_Begin" data-uid="WorldLib.Utils.WorldBoxMod`1.Begin">
+  Begin()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This runs after the game is set up and initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Begin()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Utils_WorldBoxMod_1_Declaration_" data-uid="WorldLib.Utils.WorldBoxMod`1.Declaration*"></a>
+
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_Declaration" data-uid="WorldLib.Utils.WorldBoxMod`1.Declaration">
   Declaration()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This runs directly after the mod is initially picked up by BepInEx,
@@ -641,7 +740,7 @@ world state is incomplete in this stage.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Declaration()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void Declaration()</code></pre>
   </div>
 
 
@@ -656,11 +755,11 @@ world state is incomplete in this stage.</p>
 
 
 
-  <a id="WorldLib_Plugin_GetGuid_" data-uid="WorldLib.Plugin.GetGuid*"></a>
+  <a id="WorldLib_Utils_WorldBoxMod_1_GetGuid_" data-uid="WorldLib.Utils.WorldBoxMod`1.GetGuid*"></a>
 
-  <h3 id="WorldLib_Plugin_GetGuid" data-uid="WorldLib.Plugin.GetGuid">
+  <h3 id="WorldLib_Utils_WorldBoxMod_1_GetGuid" data-uid="WorldLib.Utils.WorldBoxMod`1.GetGuid">
   GetGuid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the mod GUID for Harmony patching.</p>
@@ -668,7 +767,7 @@ world state is incomplete in this stage.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string GetGuid()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract string GetGuid()</code></pre>
   </div>
 
 
@@ -693,7 +792,7 @@ world state is incomplete in this stage.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/WorldBoxMod.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
 
