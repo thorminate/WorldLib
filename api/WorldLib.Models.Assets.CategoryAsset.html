@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class HistoryHudPatch | WorldLib </title>
+      <title>Class CategoryAsset | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class HistoryHudPatch | WorldLib ">
+      <meta name="title" content="Class CategoryAsset | WorldLib ">
       
-      
+      <meta name="description" content="Represents a category of things like traits.">
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Patches_HistoryHudPatch.md&amp;value=---%0Auid%3A%20WorldLib.Patches.HistoryHudPatch%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Assets_CategoryAsset.md&amp;value=---%0Auid%3A%20WorldLib.Models.Assets.CategoryAsset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Patches.HistoryHudPatch">
+        <article data-uid="WorldLib.Models.Assets.CategoryAsset">
 
 
 
-  <h1 id="WorldLib_Patches_HistoryHudPatch" data-uid="WorldLib.Patches.HistoryHudPatch" class="text-break">
-Class HistoryHudPatch  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Patches/HistoryHudPatch.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_Models_Assets_CategoryAsset" data-uid="WorldLib.Models.Assets.CategoryAsset" class="text-break">
+Class CategoryAsset  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/CategoryAsset.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Patches.html">Patches</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Assets.html">Assets</a></dd></dl>
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a category of things like traits.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HarmonyPatch]
-public static class HistoryHudPatch</code></pre>
+    <pre><code class="lang-csharp hljs">public class CategoryAsset : Asset&lt;BaseCategoryAsset&gt;, ILocalizedAsset</code></pre>
   </div>
 
 
@@ -112,15 +112,32 @@ public static class HistoryHudPatch</code></pre>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">HistoryHudPatch</span></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">BaseCategoryAsset</span>&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset</a>&lt;<span class="xref">BaseCategoryAsset</span>&gt;</div>
+      <div><span class="xref">CategoryAsset</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="WorldLib.Models.Assets.ILocalizedAsset.html">ILocalizedAsset</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Id">Asset&lt;BaseCategoryAsset&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Hash">Asset&lt;BaseCategoryAsset&gt;.Hash</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;BaseCategoryAsset&gt;.Raw</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
@@ -149,37 +166,66 @@ public static class HistoryHudPatch</code></pre>
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="WorldLib_Patches_HistoryHudPatch_Postfix_NewText_" data-uid="WorldLib.Patches.HistoryHudPatch.Postfix_NewText*"></a>
+  <a id="WorldLib_Models_Assets_CategoryAsset_Color_" data-uid="WorldLib.Models.Assets.CategoryAsset.Color*"></a>
 
-  <h3 id="WorldLib_Patches_HistoryHudPatch_Postfix_NewText_System_Object_WorldLogMessage_" data-uid="WorldLib.Patches.HistoryHudPatch.Postfix_NewText(System.Object,WorldLogMessage)">
-  Postfix_NewText(object, WorldLogMessage?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Patches/HistoryHudPatch.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h3 id="WorldLib_Models_Assets_CategoryAsset_Color" data-uid="WorldLib.Models.Assets.CategoryAsset.Color">
+  Color
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/CategoryAsset.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color this category uses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HarmonyPatch(typeof(HistoryHud), &quot;newText&quot;)]
-[HarmonyPostfix]
-public static void Postfix_NewText(object __instance, WorldLogMessage? pMessage)</code></pre>
+    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><code>__instance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>pMessage</code> <span class="xref">WorldLogMessage</span></dt>
+    <dt><span class="xref">Color</span></dt>
     <dd></dd>
   </dl>
 
 
 
 
+
+
+
+
+  <a id="WorldLib_Models_Assets_CategoryAsset_Localized_" data-uid="WorldLib.Models.Assets.CategoryAsset.Localized*"></a>
+
+  <h3 id="WorldLib_Models_Assets_CategoryAsset_Localized" data-uid="WorldLib.Models.Assets.CategoryAsset.Localized">
+  Localized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/CategoryAsset.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A localized text. Oftentimes used for primary names of stuff.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Localized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -192,7 +238,7 @@ public static void Postfix_NewText(object __instance, WorldLogMessage? pMessage)
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Patches/HistoryHudPatch.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/CategoryAsset.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

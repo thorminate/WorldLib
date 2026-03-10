@@ -161,8 +161,8 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
   <a id="WorldLib_Utils_DelegateBridge_2__ctor_" data-uid="WorldLib.Utils.DelegateBridge`2.#ctor*"></a>
 
-  <h3 id="WorldLib_Utils_DelegateBridge_2__ctor_System_Func__0__1__System_Action__1__System_Action__1__" data-uid="WorldLib.Utils.DelegateBridge`2.#ctor(System.Func{`0,`1},System.Action{`1},System.Action{`1})">
-  DelegateBridge(Func&lt;TPublic, TGame&gt;, Action&lt;TGame&gt;, Action&lt;TGame&gt;)
+  <h3 id="WorldLib_Utils_DelegateBridge_2__ctor_System_Func__0__1__System_Action__1__System_Action__1__System_Func_System_Delegate____" data-uid="WorldLib.Utils.DelegateBridge`2.#ctor(System.Func{`0,`1},System.Action{`1},System.Action{`1},System.Func{System.Delegate[]})">
+  DelegateBridge(Func&lt;TPublic, TGame&gt;, Action&lt;TGame&gt;, Action&lt;TGame&gt;, Func&lt;Delegate[]&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -171,7 +171,7 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateBridge(Func&lt;TPublic, TGame&gt; wrapToGame, Action&lt;TGame&gt; gameAdd, Action&lt;TGame&gt; gameRemove)</code></pre>
+    <pre><code class="lang-csharp hljs">public DelegateBridge(Func&lt;TPublic, TGame&gt; wrapToGame, Action&lt;TGame&gt; gameAdd, Action&lt;TGame&gt; gameRemove, Func&lt;Delegate[]&gt; getInvocList)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -185,6 +185,8 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
     <dt><code>gameRemove</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TGame&gt;</dt>
     <dd><p>Function to remove an invocation from the original delegate.</p>
 </dd>
+    <dt><code>getInvocList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Delegate</a>[]&gt;</dt>
+    <dd></dd>
   </dl>
 
 
@@ -206,7 +208,7 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
   <h3 id="WorldLib_Utils_DelegateBridge_2_Add__0_" data-uid="WorldLib.Utils.DelegateBridge`2.Add(`0)">
   Add(TPublic?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a new invocation to the invocation list of the underlying delegate.</p>
@@ -239,10 +241,11 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
   <h3 id="WorldLib_Utils_DelegateBridge_2_Clear" data-uid="WorldLib.Utils.DelegateBridge`2.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Clears all delegates applied through this delegate bridge.</p>
+  <div class="markdown level1 summary"><p>Clears all invocations applied through this delegate bridge. Does not remove game-added invocations, use
+<a class="xref" href="WorldLib.Utils.DelegateBridge-2.html#WorldLib_Utils_DelegateBridge_2_Wipe">Wipe()</a> for that.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -260,13 +263,19 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html#WorldLib_Utils_DelegateBridge_2_Wipe">Wipe()</a></div>
+    </dd>
+  </dl>
 
 
   <a id="WorldLib_Utils_DelegateBridge_2_Remove_" data-uid="WorldLib.Utils.DelegateBridge`2.Remove*"></a>
 
   <h3 id="WorldLib_Utils_DelegateBridge_2_Remove__0_" data-uid="WorldLib.Utils.DelegateBridge`2.Remove(`0)">
   Remove(TPublic?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes an invocation from the invocation list of the underlying delegate.</p>
@@ -293,6 +302,39 @@ Class DelegateBridge&lt;TPublic, TGame&gt;  <a class="header-action link-seconda
 
 
 
+
+
+  <a id="WorldLib_Utils_DelegateBridge_2_Wipe_" data-uid="WorldLib.Utils.DelegateBridge`2.Wipe*"></a>
+
+  <h3 id="WorldLib_Utils_DelegateBridge_2_Wipe" data-uid="WorldLib.Utils.DelegateBridge`2.Wipe">
+  Wipe()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/DelegateBridge.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all invocations on the delegate, including game invocations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Wipe()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html#WorldLib_Utils_DelegateBridge_2_Clear">Clear()</a></div>
+    </dd>
+  </dl>
 
 
 

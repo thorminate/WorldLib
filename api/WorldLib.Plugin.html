@@ -89,7 +89,7 @@
 
 
   <h1 id="WorldLib_Plugin" data-uid="WorldLib.Plugin" class="text-break">
-Class Plugin  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class Plugin  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -605,7 +605,7 @@ public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
 
   <h3 id="WorldLib_Plugin_Begin" data-uid="WorldLib.Plugin.Begin">
   Begin()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This runs after the game is set up and initialized.</p>
@@ -628,56 +628,23 @@ public class Plugin : WorldBoxMod&lt;Plugin&gt;</code></pre>
 
 
 
-  <a id="WorldLib_Plugin_Declaration_" data-uid="WorldLib.Plugin.Declaration*"></a>
+  <a id="WorldLib_Plugin_Load_" data-uid="WorldLib.Plugin.Load*"></a>
 
-  <h3 id="WorldLib_Plugin_Declaration" data-uid="WorldLib.Plugin.Declaration">
-  Declaration()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <h3 id="WorldLib_Plugin_Load" data-uid="WorldLib.Plugin.Load">
+  Load()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This runs directly after the mod is initially picked up by BepInEx,
-world state is incomplete in this stage.</p>
+world state is incomplete at this stage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Declaration()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Load()</code></pre>
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-  <a id="WorldLib_Plugin_GetGuid_" data-uid="WorldLib.Plugin.GetGuid*"></a>
-
-  <h3 id="WorldLib_Plugin_GetGuid" data-uid="WorldLib.Plugin.GetGuid">
-  GetGuid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the mod GUID for Harmony patching.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string GetGuid()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The mod GUID.</p>
-</dd>
-  </dl>
 
 
 
@@ -693,7 +660,7 @@ world state is incomplete in this stage.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Plugin.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

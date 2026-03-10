@@ -113,11 +113,21 @@ whenever the collection is structurally modified.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="WorldLib.Utils.Tooling.html">Tooling</a></dt>
-      <dd></dd>
+      <dd><p>Neat utils that I use to simplify development.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Utils.TransmutableHashSet-2.html">TransmutableHashSet&lt;TStorage, TExposed&gt;</a></dt>
+      <dd><p>Represents a live, transmutable view over an underlying unordered collection of serialized items
+with set semantics — no ordering, no duplicates.
+Each element is transformed via a codec between the storage representation
+(<code class="typeparamref">TStorage</code>) and the exposed runtime representation
+(<code class="typeparamref">TExposed</code>).</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList&lt;TStorage, TExposed&gt;</a></dt>
-      <dd><p>Represents a live, transmutable view over an underlying array of serialized items.
+      <dd><p>Represents a live, transmutable view over an underlying collection of serialized items.
 Each element is transformed via a codec between the storage representation
 (<code class="typeparamref">TStorage</code>) and the exposed runtime representation
 (<code class="typeparamref">TExposed</code>).</p>

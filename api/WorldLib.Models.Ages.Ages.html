@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Ages | WorldLib ">
       
-      <meta name="description" content="Provides access to all world ages in the game.">
+      
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="WorldLib_Models_Ages_Ages" data-uid="WorldLib.Models.Ages.Ages" class="text-break">
-Class Ages  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class Ages  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,11 @@ Class Ages  <a class="header-action link-secondary" title="View source" href="ht
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides access to all world ages in the game.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Ages : AbstractionOf&lt;WorldAgeManager&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Ages : AbstractionOf&lt;WorldAgeManager&gt;</code></pre>
   </div>
 
 
@@ -143,6 +142,9 @@ Class Ages  <a class="header-action link-secondary" title="View source" href="ht
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
@@ -158,7 +160,7 @@ Class Ages  <a class="header-action link-secondary" title="View source" href="ht
 
   <h3 id="WorldLib_Models_Ages_Ages_AgeStartedAt" data-uid="WorldLib.Models.Ages.Ages.AgeStartedAt">
   AgeStartedAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the timepoint at which the current world age originally began.</p>
@@ -191,111 +193,11 @@ the same age.</p>
 
 
 
-  <a id="WorldLib_Models_Ages_Ages_Ash_" data-uid="WorldLib.Models.Ages.Ages.Ash*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Ash" data-uid="WorldLib.Models.Ages.Ages.Ash">
-  Ash
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L215"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Ash.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Ash { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Ash era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Ash_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A bleak era filled with smoke and airborne sickness.
-    The air carries disease, and survival depends on endurance and fragile hope.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Chaos_" data-uid="WorldLib.Models.Ages.Ages.Chaos*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Chaos" data-uid="WorldLib.Models.Ages.Ages.Chaos">
-  Chaos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L149"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Chaos.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Chaos { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Chaos era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Chaos_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A violent era defined by instability, bloodshed, and power struggles.
-    War and destruction are commonplace, and survival becomes a daily challenge.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
   <a id="WorldLib_Models_Ages_Ages_CurrentAge_" data-uid="WorldLib.Models.Ages.Ages.CurrentAge*"></a>
 
   <h3 id="WorldLib_Models_Ages_Ages_CurrentAge" data-uid="WorldLib.Models.Ages.Ages.CurrentAge">
   CurrentAge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the currently active <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a>.</p>
@@ -328,7 +230,7 @@ the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_CurrentSlot" data-uid="WorldLib.Models.Ages.Ages.CurrentSlot">
   CurrentSlot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the index of the currently active age slot.</p>
@@ -357,212 +259,11 @@ the same age.</p>
 
 
 
-  <a id="WorldLib_Models_Ages_Ages_Dark_" data-uid="WorldLib.Models.Ages.Ages.Dark*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Dark" data-uid="WorldLib.Models.Ages.Ages.Dark">
-  Dark
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L83"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Dark.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Dark { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Dark era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Dark_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A time of overwhelming darkness where shadows dominate the world.
-    Dangerous creatures and nightmarish illusions thrive, testing the resilience of all who endure it.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Despair_" data-uid="WorldLib.Models.Ages.Ages.Despair*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Despair" data-uid="WorldLib.Models.Ages.Ages.Despair">
-  Despair
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L238"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Despair.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Despair { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Despair era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Despair_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A prolonged age of darkness and merciless cold.
-    Though life seems on the brink of extinction, resilience and faith persist,
-    sustaining the world until renewal becomes possible once more.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Hope_" data-uid="WorldLib.Models.Ages.Ages.Hope*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Hope" data-uid="WorldLib.Models.Ages.Ages.Hope">
-  Hope
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Hope.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Hope { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Hope era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Hope_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A time of promise and optimism where the world feels vibrant and full of possibility.
-    Life flourishes, and societies look toward the future with confidence.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Ice_" data-uid="WorldLib.Models.Ages.Ages.Ice*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Ice" data-uid="WorldLib.Models.Ages.Ages.Ice">
-  Ice
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L193"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Ice.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Ice { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Ice era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Ice_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A frigid era where ice and snow dominate the landscape.
-    The world endures relentless winter, and warmth becomes a scarce and precious resource.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
   <a id="WorldLib_Models_Ages_Ages_IsPaused_" data-uid="WorldLib.Models.Ages.Ages.IsPaused*"></a>
 
   <h3 id="WorldLib_Models_Ages_Ages_IsPaused" data-uid="WorldLib.Models.Ages.Ages.IsPaused">
   IsPaused
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the age progression is currently paused.</p>
@@ -590,61 +291,11 @@ the same age.</p>
 
 
 
-  <a id="WorldLib_Models_Ages_Ages_Moon_" data-uid="WorldLib.Models.Ages.Ages.Moon*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Moon" data-uid="WorldLib.Models.Ages.Ages.Moon">
-  Moon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L127"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Moon.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Moon { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Moon era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Moon_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A luminous era bathed in radiant moonlight.
-    The world feels enchanted, and arcane wonder fills the night as civilizations look skyward in awe.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
   <a id="WorldLib_Models_Ages_Ages_NextAge_" data-uid="WorldLib.Models.Ages.Ages.NextAge*"></a>
 
   <h3 id="WorldLib_Models_Ages_Ages_NextAge" data-uid="WorldLib.Models.Ages.Ages.NextAge">
   NextAge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the upcoming <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a>.</p>
@@ -677,7 +328,7 @@ the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_NextSlot" data-uid="WorldLib.Models.Ages.Ages.NextSlot">
   NextSlot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the index of the upcoming age slot.</p>
@@ -710,7 +361,7 @@ the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_RemainingMoons" data-uid="WorldLib.Models.Ages.Ages.RemainingMoons">
   RemainingMoons
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of moons remaining until the end of the current cycle.</p>
@@ -743,7 +394,7 @@ the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SlotStartedAt" data-uid="WorldLib.Models.Ages.Ages.SlotStartedAt">
   SlotStartedAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the timepoint at which the current world age started.</p>
@@ -783,7 +434,7 @@ even if the new slot references the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SpeedMultiplier" data-uid="WorldLib.Models.Ages.Ages.SpeedMultiplier">
   SpeedMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A multiplier to how fast ages pass.</p>
@@ -812,111 +463,11 @@ even if the new slot references the same age.</p>
 
 
 
-  <a id="WorldLib_Models_Ages_Ages_Sun_" data-uid="WorldLib.Models.Ages.Ages.Sun*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Sun" data-uid="WorldLib.Models.Ages.Ages.Sun">
-  Sun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L61"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Sun.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Sun { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Sun era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Sun_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A period of intense heat and relentless sunlight.
-    Survival becomes difficult as inhabitants struggle against harsh environmental conditions.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Tears_" data-uid="WorldLib.Models.Ages.Ages.Tears*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Tears" data-uid="WorldLib.Models.Ages.Ages.Tears">
-  Tears
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L105"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Tears.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Tears { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Tears era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Tears_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    An era of ceaseless rain and pervasive sorrow.
-    Though hope is difficult to sustain, some remain steadfast in their belief that brighter days will return.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
   <a id="WorldLib_Models_Ages_Ages_TimeTillNextAge_" data-uid="WorldLib.Models.Ages.Ages.TimeTillNextAge*"></a>
 
   <h3 id="WorldLib_Models_Ages_Ages_TimeTillNextAge" data-uid="WorldLib.Models.Ages.Ages.TimeTillNextAge">
   TimeTillNextAge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the time remaining until the next age starts, in weeks (years * 12 * 5).</p>
@@ -944,106 +495,6 @@ even if the new slot references the same age.</p>
 
 
 
-  <a id="WorldLib_Models_Ages_Ages_Unknown_" data-uid="WorldLib.Models.Ages.Ages.Unknown*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Unknown" data-uid="WorldLib.Models.Ages.Ages.Unknown">
-  Unknown
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L260"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents an unknown or undiscovered age.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Unknown { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing an unspecified era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Unknown_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A placeholder era used when the current world age cannot be determined
-    or when the underlying asset is unavailable. When this age is active, it selects a random age.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="WorldLib_Models_Ages_Ages_Wonders_" data-uid="WorldLib.Models.Ages.Ages.Wonders*"></a>
-
-  <h3 id="WorldLib_Models_Ages_Ages_Wonders" data-uid="WorldLib.Models.Ages.Ages.Wonders">
-  Wonders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L171"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Represents the Age of Wonders.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Age Wonders { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></dt>
-    <dd><p>A <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> representing the Wonders era.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="WorldLib_Models_Ages_Ages_Wonders_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-    A mystical period saturated with arcane energy.
-    Magic flourishes, and extraordinary feats reshape the boundaries of what is possible.
-</p>
-<p>
-    This value is memoized for performance. To clear the memoization cache and force a reload
-    on next access, invoke <a class="xref" href="WorldLib.Utils.Tooling.html#WorldLib_Utils_Tooling_MemoClear__1">MemoClear&lt;T&gt;()</a> with <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> as the generic type
-    argument.
-</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If you access this before the age gets initialized.</p>
-</dd>
-  </dl>
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -1052,7 +503,7 @@ even if the new slot references the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_AgeFromSlot_System_Int32_" data-uid="WorldLib.Models.Ages.Ages.AgeFromSlot(System.Int32)">
   AgeFromSlot(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> associated with a given slot index.</p>
@@ -1091,7 +542,7 @@ even if the new slot references the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SetAge_System_Int32_" data-uid="WorldLib.Models.Ages.Ages.SetAge(System.Int32)">
   SetAge(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the active age to a specific slot.</p>
@@ -1124,7 +575,7 @@ even if the new slot references the same age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SetAge_WorldLib_Models_Ages_Age_System_Boolean_" data-uid="WorldLib.Models.Ages.Ages.SetAge(WorldLib.Models.Ages.Age,System.Boolean)">
   SetAge(Age, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L477"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a>.</p>
@@ -1172,7 +623,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SetAgeToSlot_WorldLib_Models_Ages_Age_System_Int32_" data-uid="WorldLib.Models.Ages.Ages.SetAgeToSlot(WorldLib.Models.Ages.Age,System.Int32)">
   SetAgeToSlot(Age, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Assigns a specific <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a> to a given slot index.</p>
@@ -1215,7 +666,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SetDefaults" data-uid="WorldLib.Models.Ages.Ages.SetDefaults">
   SetDefaults()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L511"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Refreshes the active age slots in accordance with age rules.</p>
@@ -1248,7 +699,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SetSpeedMultiplier_System_Single_" data-uid="WorldLib.Models.Ages.Ages.SetSpeedMultiplier(System.Single)">
   SetSpeedMultiplier(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adjusts the speed multiplier for age progression.</p>
@@ -1280,7 +731,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_SlotFromAge_WorldLib_Models_Ages_Age_" data-uid="WorldLib.Models.Ages.Ages.SlotFromAge(WorldLib.Models.Ages.Age)">
   SlotFromAge(Age)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the slot index for a given <a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a>, if it exists.</p>
@@ -1319,7 +770,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_StartNextAge_System_Single_" data-uid="WorldLib.Models.Ages.Ages.StartNextAge(System.Single)">
   StartNextAge(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Immediately starts the next scheduled age, optionally at a custom progress point.</p>
@@ -1352,7 +803,7 @@ an existing slot associated with the requested age.</p>
 
   <h3 id="WorldLib_Models_Ages_Ages_TogglePaused_System_Boolean_" data-uid="WorldLib.Models.Ages.Ages.TogglePaused(System.Boolean)">
   TogglePaused(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Pauses or unpauses age progression.</p>
@@ -1385,7 +836,7 @@ an existing slot associated with the requested age.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Ages/Ages.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

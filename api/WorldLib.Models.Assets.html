@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IAsset | WorldLib </title>
+      <title>Namespace WorldLib.Models.Assets | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IAsset | WorldLib ">
+      <meta name="title" content="Namespace WorldLib.Models.Assets | WorldLib ">
       
       
       <link rel="icon" href="../images/icon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Generic_IAsset.md&amp;value=---%0Auid%3A%20WorldLib.Models.Generic.IAsset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,111 +84,59 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Models.Generic.IAsset">
+        <article data-uid="WorldLib.Models.Assets">
 
+  <h1 id="WorldLib_Models_Assets" data-uid="WorldLib.Models.Assets" class="text-break">Namespace WorldLib.Models.Assets</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
 
-
-  <h1 id="WorldLib_Models_Generic_IAsset" data-uid="WorldLib.Models.Generic.IAsset" class="text-break">
-Interface IAsset  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/IAsset.cs/#L3"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Generic.html">Generic</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAsset</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="WorldLib_Models_Generic_IAsset_Hash_" data-uid="WorldLib.Models.Generic.IAsset.Hash*"></a>
-
-  <h3 id="WorldLib_Models_Generic_IAsset_Hash" data-uid="WorldLib.Models.Generic.IAsset.Hash">
-  Hash
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/IAsset.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Hash code of the asset. Is used for equality checks with other assets.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Hash { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="WorldLib_Models_Generic_IAsset_Id_" data-uid="WorldLib.Models.Generic.IAsset.Id*"></a>
-
-  <h3 id="WorldLib_Models_Generic_IAsset_Id" data-uid="WorldLib.Models.Generic.IAsset.Id">
-  Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/IAsset.cs/#L8"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>ID of the asset. Is used as the primary identifier in internal libraries.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Id { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset&lt;TAbstraction&gt;</a></dt>
+      <dd><p>Represents the base asset in the game, is used for a variety of things like traits and status effects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html">AugmentationAsset&lt;TAbstraction&gt;</a></dt>
+      <dd><p>Represents an asset that augments another asset, like traits.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.CategoryAsset.html">CategoryAsset</a></dt>
+      <dd><p>Represents a category of things like traits.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html">UnlockableAsset&lt;TAbstraction&gt;</a></dt>
+      <dd><p>Represents an asset that is unlockable, like traits that have to be discovered.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.IDescription2Asset.html">IDescription2Asset</a></dt>
+      <dd><p>A bearer of 2 descriptions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.IDescriptionAsset.html">IDescriptionAsset</a></dt>
+      <dd><p>A bearer of a description.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="WorldLib.Models.Assets.ILocalizedAsset.html">ILocalizedAsset</a></dt>
+      <dd><p>A bearer of something localized.</p>
+</dd>
+    </dl>
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Generic/IAsset.cs/#L3" class="edit-link">Edit this page</a>
         </div>
 
 

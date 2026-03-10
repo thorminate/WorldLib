@@ -89,7 +89,7 @@
 
 
   <h1 id="WorldLib_Models_Statuses_StatusAsset" data-uid="WorldLib.Models.Statuses.StatusAsset" class="text-break">
-Class StatusAsset  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L16"><i class="bi bi-code-slash"></i></a>
+Class StatusAsset  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class StatusAsset  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatusAsset : AbstractionOf&lt;StatusAsset&gt;, IAsset</code></pre>
+    <pre><code class="lang-csharp hljs">public class StatusAsset : Asset&lt;StatusAsset&gt;</code></pre>
   </div>
 
 
@@ -113,21 +113,22 @@ Class StatusAsset  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">StatusAsset</span>&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset</a>&lt;<span class="xref">StatusAsset</span>&gt;</div>
       <div><span class="xref">StatusAsset</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="WorldLib.Models.Generic.IAsset.html">IAsset</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Id">Asset&lt;StatusAsset&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Hash">Asset&lt;StatusAsset&gt;.Hash</a>
+    </div>
     <div>
       <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;StatusAsset&gt;.Raw</a>
     </div>
@@ -166,7 +167,7 @@ Class StatusAsset  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSprite" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSprite">
   GetOverrideSprite
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the sprite rendered for this effect in world space.</p>
@@ -202,7 +203,7 @@ Returning <code>null</code> will allow the default sprite to be used.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSpritePosition" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSpritePosition">
   GetOverrideSpritePosition
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the world-space position of the effect sprite.</p>
@@ -237,7 +238,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSpritePositionUI" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSpritePositionUI">
   GetOverrideSpritePositionUI
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the UI-space position of the effect sprite.</p>
@@ -273,7 +274,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSpriteRotationZ" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSpriteRotationZ">
   GetOverrideSpriteRotationZ
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the Z-axis rotation of the effect sprite in world space.</p>
@@ -309,7 +310,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSpriteRotationZUI" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSpriteRotationZUI">
   GetOverrideSpriteRotationZUI
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the Z-axis rotation of the effect sprite in UI space.</p>
@@ -345,7 +346,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_GetOverrideSpriteUI" data-uid="WorldLib.Models.Statuses.StatusAsset.GetOverrideSpriteUI">
   GetOverrideSpriteUI
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows overriding the sprite rendered for this effect in UI space.</p>
@@ -381,7 +382,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OnAction" data-uid="WorldLib.Models.Statuses.StatusAsset.OnAction">
   OnAction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An action that runs at a fixed interval while the status effect remains active.</p>
@@ -421,7 +422,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OnDeath" data-uid="WorldLib.Models.Statuses.StatusAsset.OnDeath">
   OnDeath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when the actor bearing this status effect dies.</p>
@@ -455,7 +456,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OnFinish" data-uid="WorldLib.Models.Statuses.StatusAsset.OnFinish">
   OnFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when the status effect naturally ends or is removed.</p>
@@ -489,7 +490,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OnHit" data-uid="WorldLib.Models.Statuses.StatusAsset.OnHit">
   OnHit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when the actor bearing this status effect is hit by another actor.</p>
@@ -523,7 +524,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OnReceive" data-uid="WorldLib.Models.Statuses.StatusAsset.OnReceive">
   OnReceive
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when this status effect is first applied to an actor.</p>
@@ -557,7 +558,7 @@ in the multicast invocation chain will be used by the game.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_RenderCheck" data-uid="WorldLib.Models.Statuses.StatusAsset.RenderCheck">
   RenderCheck
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether this status effect should be visually rendered for a given actor.</p>
@@ -600,7 +601,7 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_ActionInterval" data-uid="WorldLib.Models.Statuses.StatusAsset.ActionInterval">
   ActionInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The interval at which the <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html#WorldLib_Models_Statuses_StatusAsset_OnAction">OnAction</a> delegate is triggered.</p>
@@ -632,7 +633,7 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_AffectsMind" data-uid="WorldLib.Models.Statuses.StatusAsset.AffectsMind">
   AffectsMind
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to not allow getting this status effect if the actor bears the StrongMind trait.</p>
@@ -664,10 +665,11 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_AllowTimerReset" data-uid="WorldLib.Models.Statuses.StatusAsset.AllowTimerReset">
   AllowTimerReset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to allow resetting the timer when <a class="xref" href="WorldLib.Models.Generic.SimObject.html#WorldLib_Models_Generic_SimObject_AddStatus_WorldLib_Models_Statuses_StatusAsset_System_Nullable_System_Single__System_Nullable_System_Boolean__">AddStatus(StatusAsset, float?, bool?)</a> is called.</p>
+  <div class="markdown level1 summary"><p>Whether to allow resetting the expiration timer when <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_AddStatus_WorldLib_Models_Statuses_StatusAsset_System_Nullable_System_Single__System_Nullable_System_Boolean__">AddStatus(StatusAsset, float?, bool?)</a> is called with
+this trait as its parameter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -696,7 +698,7 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Animated" data-uid="WorldLib.Models.Statuses.StatusAsset.Animated">
   Animated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If the sprite should be animated.</p>
@@ -728,7 +730,7 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_AnimationSpeed" data-uid="WorldLib.Models.Statuses.StatusAsset.AnimationSpeed">
   AnimationSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The speed of which the game advances through the animation. In seconds.</p>
@@ -760,7 +762,7 @@ but does not remove or disable the gameplay effect itself.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_AnimationSpeedRandom" data-uid="WorldLib.Models.Statuses.StatusAsset.AnimationSpeedRandom">
   AnimationSpeedRandom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Used to variate the time between each frame of the animation. Leave at 0 for a fixed interval.</p>
@@ -796,7 +798,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_CanBeCured" data-uid="WorldLib.Models.Statuses.StatusAsset.CanBeCured">
   CanBeCured
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether this status is curable</p>
@@ -828,7 +830,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_CanBeFlipped" data-uid="WorldLib.Models.Statuses.StatusAsset.CanBeFlipped">
   CanBeFlipped
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether the sprite can be flipped. If so, it copies the actor flip state. Will not work for non-actors.</p>
@@ -860,7 +862,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_CancelActorJob" data-uid="WorldLib.Models.Statuses.StatusAsset.CancelActorJob">
   CancelActorJob
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to cancel all actor behaviors when the effect is applied.</p>
@@ -892,7 +894,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Decision" data-uid="WorldLib.Models.Statuses.StatusAsset.Decision">
   Decision
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L479"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L493"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A decision asset to give an actor when they have this status effect active.</p>
@@ -924,7 +926,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_DoVisualRender" data-uid="WorldLib.Models.Statuses.StatusAsset.DoVisualRender">
   DoVisualRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L636"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L701"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to render the status effect at all.</p>
@@ -956,7 +958,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Duration" data-uid="WorldLib.Models.Statuses.StatusAsset.Duration">
   Duration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The duration of this effect.</p>
@@ -988,7 +990,7 @@ between 0 and 1.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_HasOverrideSprite" data-uid="WorldLib.Models.Statuses.StatusAsset.HasOverrideSprite">
   HasOverrideSprite
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L672"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to use the override sprite getter sprite instead of the animations for the sprite. Applies for both UI and
@@ -1021,7 +1023,7 @@ the world sprite.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_HasOverrideSpritePosition" data-uid="WorldLib.Models.Statuses.StatusAsset.HasOverrideSpritePosition">
   HasOverrideSpritePosition
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L682"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to use the override sprite position getter position instead of the normal position. Applies for both UI and
@@ -1054,7 +1056,7 @@ the world sprite position.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_HasOverrideSpriteRotationZ" data-uid="WorldLib.Models.Statuses.StatusAsset.HasOverrideSpriteRotationZ">
   HasOverrideSpriteRotationZ
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L627"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L692"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to use the override sprite rotation getter z value instead of the normal rotation. Applies for both UI and
@@ -1083,43 +1085,11 @@ the world sprite rotation.</p>
 
 
 
-  <a id="WorldLib_Models_Statuses_StatusAsset_Hash_" data-uid="WorldLib.Models.Statuses.StatusAsset.Hash*"></a>
-
-  <h3 id="WorldLib_Models_Statuses_StatusAsset_Hash" data-uid="WorldLib.Models.Statuses.StatusAsset.Hash">
-  Hash
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L650"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Hash code of the asset. Is used for equality checks with other assets.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Hash { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="WorldLib_Models_Statuses_StatusAsset_Icon_" data-uid="WorldLib.Models.Statuses.StatusAsset.Icon*"></a>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Icon" data-uid="WorldLib.Models.Statuses.StatusAsset.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L591"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L647"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The static icon of the status effect.</p>
@@ -1127,7 +1097,7 @@ the world sprite rotation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sprite Icon { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite Icon { get; set; }</code></pre>
   </div>
 
 
@@ -1147,43 +1117,11 @@ the world sprite rotation.</p>
 
 
 
-  <a id="WorldLib_Models_Statuses_StatusAsset_Id_" data-uid="WorldLib.Models.Statuses.StatusAsset.Id*"></a>
-
-  <h3 id="WorldLib_Models_Statuses_StatusAsset_Id" data-uid="WorldLib.Models.Statuses.StatusAsset.Id">
-  Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L643"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>ID of the asset. Is used as the primary identifier in internal libraries.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="WorldLib_Models_Statuses_StatusAsset_IlluminateArea_" data-uid="WorldLib.Models.Statuses.StatusAsset.IlluminateArea*"></a>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_IlluminateArea" data-uid="WorldLib.Models.Statuses.StatusAsset.IlluminateArea">
   IlluminateArea
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L485"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L499"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to illuminate the surrounding area when the status effect is active.</p>
@@ -1221,7 +1159,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_IlluminationSize" data-uid="WorldLib.Models.Statuses.StatusAsset.IlluminationSize">
   IlluminationSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L509"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How large of an area to illuminate. Is a scale and essentially a multiplier of the illuminated area.</p>
@@ -1259,7 +1197,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_IsAnimatedInPause" data-uid="WorldLib.Models.Statuses.StatusAsset.IsAnimatedInPause">
   IsAnimatedInPause
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to continue animating the sprite even if the world is paused.</p>
@@ -1291,7 +1229,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_LocalizedDescription" data-uid="WorldLib.Models.Statuses.StatusAsset.LocalizedDescription">
   LocalizedDescription
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L666"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the localized description of this status asset.</p>
@@ -1323,7 +1261,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_LocalizedName" data-uid="WorldLib.Models.Statuses.StatusAsset.LocalizedName">
   LocalizedName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L596"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L661"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the localized name of this status asset.</p>
@@ -1355,7 +1293,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Loop" data-uid="WorldLib.Models.Statuses.StatusAsset.Loop">
   Loop
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to loop the animation once the sprite pool index reaches its end.</p>
@@ -1387,7 +1325,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Material" data-uid="WorldLib.Models.Statuses.StatusAsset.Material">
   Material
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L478"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The material of the rendered sprite in the world.</p>
@@ -1419,7 +1357,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OffsetX" data-uid="WorldLib.Models.Statuses.StatusAsset.OffsetX">
   OffsetX
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The X offset of the sprite in world-space.</p>
@@ -1451,7 +1389,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OffsetXUi" data-uid="WorldLib.Models.Statuses.StatusAsset.OffsetXUi">
   OffsetXUi
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The X offset of the sprite in the actor inspector.</p>
@@ -1483,7 +1421,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OffsetY" data-uid="WorldLib.Models.Statuses.StatusAsset.OffsetY">
   OffsetY
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L406"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Y offset of the sprite in world-space.</p>
@@ -1515,7 +1453,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OffsetYUi" data-uid="WorldLib.Models.Statuses.StatusAsset.OffsetYUi">
   OffsetYUi
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L415"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Y offset of the sprite in the actor inspector.</p>
@@ -1547,7 +1485,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OppositeStatuses" data-uid="WorldLib.Models.Statuses.StatusAsset.OppositeStatuses">
   OppositeStatuses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L554"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L582"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the collection of statuses that prevent this status from being applied.</p>
@@ -1564,7 +1502,7 @@ the world sprite rotation.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">StatusAsset</span>&gt;</dt>
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1588,7 +1526,7 @@ the world sprite rotation.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OppositeTags" data-uid="WorldLib.Models.Statuses.StatusAsset.OppositeTags">
   OppositeTags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L567"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the collection of tags that prevent this status from being applied.</p>
@@ -1624,7 +1562,7 @@ the status will fail.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_OppositeTraits" data-uid="WorldLib.Models.Statuses.StatusAsset.OppositeTraits">
   OppositeTraits
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L521"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L535"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the collection of traits that prevent this status from being applied to an actor.</p>
@@ -1666,7 +1604,7 @@ the status application will fail.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_PositionZ" data-uid="WorldLib.Models.Statuses.StatusAsset.PositionZ">
   PositionZ
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L437"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Z position of the sprite.</p>
@@ -1698,7 +1636,7 @@ the status application will fail.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_RandomFrame" data-uid="WorldLib.Models.Statuses.StatusAsset.RandomFrame">
   RandomFrame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to start the animation on a random frame in the sprite pool. If <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html#WorldLib_Models_Statuses_StatusAsset_Animated">Animated</a> is false, it will
@@ -1731,7 +1669,7 @@ pick a random frame and stay like that.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_RemoveStatuses" data-uid="WorldLib.Models.Statuses.StatusAsset.RemoveStatuses">
   RemoveStatuses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L614"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the collection of statuses that will be removed from the actor
@@ -1749,7 +1687,7 @@ once this status is applied.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">StatusAsset</span>&gt;</dt>
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1770,7 +1708,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_RemovedOnDamage" data-uid="WorldLib.Models.Statuses.StatusAsset.RemovedOnDamage">
   RemovedOnDamage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L442"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes this status effect when the actor is hit.</p>
@@ -1802,7 +1740,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_RotationZ" data-uid="WorldLib.Models.Statuses.StatusAsset.RotationZ">
   RotationZ
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Rotation of the sprite in world-space.</p>
@@ -1834,7 +1772,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Scale" data-uid="WorldLib.Models.Statuses.StatusAsset.Scale">
   Scale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The scale of the sprite.</p>
@@ -1866,7 +1804,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_SpriteList" data-uid="WorldLib.Models.Statuses.StatusAsset.SpriteList">
   SpriteList
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L642"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An array of sprites representing each frame of the animation.</p>
@@ -1898,7 +1836,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Stats" data-uid="WorldLib.Models.Statuses.StatusAsset.Stats">
   Stats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L518"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Bonus stats the gets applied on top of a sim objects base stats.</p>
@@ -1930,7 +1868,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Texture" data-uid="WorldLib.Models.Statuses.StatusAsset.Texture">
   Texture
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L302"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The id of the texture of the bubble above the actor.</p>
@@ -1962,7 +1900,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_Tier" data-uid="WorldLib.Models.Statuses.StatusAsset.Tier">
   Tier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The tier of the status effect. Is used with ActorAsset.allowed_status_tiers</p>
@@ -1994,7 +1932,7 @@ once this status is applied.</p>
 
   <h3 id="WorldLib_Models_Statuses_StatusAsset_UseParentRotation" data-uid="WorldLib.Models.Statuses.StatusAsset.UseParentRotation">
   UseParentRotation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether to lock and base the rotation on the parent object.</p>
@@ -2026,7 +1964,7 @@ once this status is applied.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L16" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Statuses/StatusAsset.cs/#L18" class="edit-link">Edit this page</a>
         </div>
 
 

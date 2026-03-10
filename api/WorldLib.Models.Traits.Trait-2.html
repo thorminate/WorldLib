@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Trait&lt;TThis, TAbstracts&gt; | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Trait&lt;TThis, TAbstracts&gt; | WorldLib ">
+      
+      <meta name="description" content="Represents a generic trait that is used on things like actors, religions and subspecies.">
+      <link rel="icon" href="../images/icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Traits_Trait_2.md&amp;value=---%0Auid%3A%20WorldLib.Models.Traits.Trait%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/icon.png" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.Traits.Trait`2">
+
+
+
+  <h1 id="WorldLib_Models_Traits_Trait_2" data-uid="WorldLib.Models.Traits.Trait`2" class="text-break">
+Class Trait&lt;TThis, TAbstracts&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Traits.html">Traits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a generic trait that is used on things like actors, religions and subspecies.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Trait&lt;TThis, TAbstracts&gt; : AugmentationAsset&lt;TAbstracts&gt;, IDescription2Asset, IDescriptionAsset, ILocalizedAsset where TThis : Trait&lt;TThis, TAbstracts&gt; where TAbstracts : BaseTrait&lt;TAbstracts&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TThis</code></dt>
+    <dd><p>The type of whatever is extending this.</p>
+</dd>
+    <dt><code>TAbstracts</code></dt>
+    <dd><p>The type of the game-facing trait.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;TAbstracts&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset</a>&lt;TAbstracts&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html">UnlockableAsset</a>&lt;TAbstracts&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html">AugmentationAsset</a>&lt;TAbstracts&gt;</div>
+      <div><span class="xref">Trait&lt;TThis, TAbstracts&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="WorldLib.Models.Assets.IDescription2Asset.html">IDescription2Asset</a></div>
+      <div><a class="xref" href="WorldLib.Models.Assets.IDescriptionAsset.html">IDescriptionAsset</a></div>
+      <div><a class="xref" href="WorldLib.Models.Assets.ILocalizedAsset.html">ILocalizedAsset</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_OnAdd">AugmentationAsset&lt;TAbstracts&gt;.OnAdd</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_OnLoad">AugmentationAsset&lt;TAbstracts&gt;.OnLoad</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_OnObjectRemove">AugmentationAsset&lt;TAbstracts&gt;.OnObjectRemove</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_OnRemove">AugmentationAsset&lt;TAbstracts&gt;.OnRemove</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_SpecialEffects">AugmentationAsset&lt;TAbstracts&gt;.SpecialEffects</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_SpecialEffectInterval">AugmentationAsset&lt;TAbstracts&gt;.SpecialEffectInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_Spells">AugmentationAsset&lt;TAbstracts&gt;.Spells</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_Decisions">AugmentationAsset&lt;TAbstracts&gt;.Decisions</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_CombatActions">AugmentationAsset&lt;TAbstracts&gt;.CombatActions</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_AddDecision_DecisionAsset_">AugmentationAsset&lt;TAbstracts&gt;.AddDecision(DecisionAsset)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_AddCombatAction_CombatActionAsset_">AugmentationAsset&lt;TAbstracts&gt;.AddCombatAction(CombatActionAsset)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.AugmentationAsset-1.html#WorldLib_Models_Assets_AugmentationAsset_1_AddSpell_SpellAsset_">AugmentationAsset&lt;TAbstracts&gt;.AddSpell(SpellAsset)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Achievement">UnlockableAsset&lt;TAbstracts&gt;.Achievement</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Icon">UnlockableAsset&lt;TAbstracts&gt;.Icon</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Stats">UnlockableAsset&lt;TAbstracts&gt;.Stats</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Localized">UnlockableAsset&lt;TAbstracts&gt;.Localized</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_SetUnlockedWithAchievement_Achievement_">UnlockableAsset&lt;TAbstracts&gt;.SetUnlockedWithAchievement(Achievement)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Unlock_System_Boolean_">UnlockableAsset&lt;TAbstracts&gt;.Unlock(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_IsUnlocked">UnlockableAsset&lt;TAbstracts&gt;.IsUnlocked()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_IsAvailable">UnlockableAsset&lt;TAbstracts&gt;.IsAvailable()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_IsUnlockedByPlayer">UnlockableAsset&lt;TAbstracts&gt;.IsUnlockedByPlayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Id">Asset&lt;TAbstracts&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.Asset-1.html#WorldLib_Models_Assets_Asset_1_Hash">Asset&lt;TAbstracts&gt;.Hash</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;TAbstracts&gt;.Raw</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_LocalizedDescription_" data-uid="WorldLib.Models.Traits.Trait`2.LocalizedDescription*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_LocalizedDescription" data-uid="WorldLib.Models.Traits.Trait`2.LocalizedDescription">
+  LocalizedDescription
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A description, localized for your convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LocalizedDescription { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_LocalizedDescription2_" data-uid="WorldLib.Models.Traits.Trait`2.LocalizedDescription2*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_LocalizedDescription2" data-uid="WorldLib.Models.Traits.Trait`2.LocalizedDescription2">
+  LocalizedDescription2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A second description, localized for your convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LocalizedDescription2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_MetaStats_" data-uid="WorldLib.Models.Traits.Trait`2.MetaStats*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_MetaStats" data-uid="WorldLib.Models.Traits.Trait`2.MetaStats">
+  MetaStats
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stats applied to the object itself, so for clans, LimitClanMembers, would be modifiable.
+<a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Stats">Stats</a> only applies to the actors that have said object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseStats MetaStats { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BaseStats</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html#WorldLib_Models_Assets_UnlockableAsset_1_Stats">Stats</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_MobOwnerAmount_" data-uid="WorldLib.Models.Traits.Trait`2.MobOwnerAmount*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_MobOwnerAmount" data-uid="WorldLib.Models.Traits.Trait`2.MobOwnerAmount">
+  MobOwnerAmount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many mobs have this trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MobOwnerAmount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_OnBirth_" data-uid="WorldLib.Models.Traits.Trait`2.OnBirth*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_OnBirth" data-uid="WorldLib.Models.Traits.Trait`2.OnBirth">
+  OnBirth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called every time an actor gets birthed within a subspecies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateBridge&lt;WorldAction, WorldAction&gt; OnBirth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html">DelegateBridge</a>&lt;<a class="xref" href="WorldLib.Models.Delegates.WorldAction.html">WorldAction</a>, <span class="xref">WorldAction</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_OnDeath_" data-uid="WorldLib.Models.Traits.Trait`2.OnDeath*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_OnDeath" data-uid="WorldLib.Models.Traits.Trait`2.OnDeath">
+  OnDeath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called every time an actor dies with this trait on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateBridge&lt;WorldAction, WorldAction&gt; OnDeath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html">DelegateBridge</a>&lt;<a class="xref" href="WorldLib.Models.Delegates.WorldAction.html">WorldAction</a>, <span class="xref">WorldAction</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_OnGrowth_" data-uid="WorldLib.Models.Traits.Trait`2.OnGrowth*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_OnGrowth" data-uid="WorldLib.Models.Traits.Trait`2.OnGrowth">
+  OnGrowth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called every time an actor goes up in age and their subspecies has this trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateBridge&lt;WorldAction, WorldAction&gt; OnGrowth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html">DelegateBridge</a>&lt;<a class="xref" href="WorldLib.Models.Delegates.WorldAction.html">WorldAction</a>, <span class="xref">WorldAction</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_OnHit_" data-uid="WorldLib.Models.Traits.Trait`2.OnHit*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_OnHit" data-uid="WorldLib.Models.Traits.Trait`2.OnHit">
+  OnHit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets called when an actor bearing the trait gets hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateBridge&lt;GetHitAction, GetHitAction&gt; OnHit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.DelegateBridge-2.html">DelegateBridge</a>&lt;<a class="xref" href="WorldLib.Models.Delegates.GetHitAction.html">GetHitAction</a>, <span class="xref">GetHitAction</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_OppositeTraits_" data-uid="WorldLib.Models.Traits.Trait`2.OppositeTraits*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_OppositeTraits" data-uid="WorldLib.Models.Traits.Trait`2.OppositeTraits">
+  OppositeTraits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the collection of traits that prevent this trait from being applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransmutableList&lt;string, Trait&lt;TThis, TAbstracts&gt;&gt; OppositeTraits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="WorldLib.Models.Traits.Trait-2.html">Trait</a>&lt;TThis, TAbstracts&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="WorldLib_Models_Traits_Trait_2_OppositeTraits_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If an actor currently has any trait in this list, applying this trait will fail.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>Thrown if a trait ID stored internally cannot be resolved in the trait asset library.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_Owners_" data-uid="WorldLib.Models.Traits.Trait`2.Owners*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_Owners" data-uid="WorldLib.Models.Traits.Trait`2.Owners">
+  Owners
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A readonly list of all metaobjects (cultures, religions, actors) who have this trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ITraitsOwner&lt;TThis, TAbstracts&gt;&gt; Owners { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html">ITraitsOwner</a>&lt;TThis, TAbstracts&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_Plot_" data-uid="WorldLib.Models.Traits.Trait`2.Plot*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_Plot" data-uid="WorldLib.Models.Traits.Trait`2.Plot">
+  Plot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The plot asset that this trait unlocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlotAsset Plot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PlotAsset</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_RandomlySpawnTrait_" data-uid="WorldLib.Models.Traits.Trait`2.RandomlySpawnTrait*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_RandomlySpawnTrait" data-uid="WorldLib.Models.Traits.Trait`2.RandomlySpawnTrait">
+  RandomlySpawnTrait
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this trait can randomly be applied to actors in the world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RandomlySpawnTrait { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Traits.Trait-2.html#WorldLib_Models_Traits_Trait_2_SpawnRate">SpawnRate</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_RemoveTraits_" data-uid="WorldLib.Models.Traits.Trait`2.RemoveTraits*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_RemoveTraits" data-uid="WorldLib.Models.Traits.Trait`2.RemoveTraits">
+  RemoveTraits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the collection of traits that will be removed from the actor
+once this trait is applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransmutableList&lt;string, Trait&lt;TThis, TAbstracts&gt;&gt; RemoveTraits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableList-2.html">TransmutableList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="WorldLib.Models.Traits.Trait-2.html">Trait</a>&lt;TThis, TAbstracts&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>Thrown if a trait ID stored internally cannot be resolved in the status asset library.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_SapientOwnerAmount_" data-uid="WorldLib.Models.Traits.Trait`2.SapientOwnerAmount*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_SapientOwnerAmount" data-uid="WorldLib.Models.Traits.Trait`2.SapientOwnerAmount">
+  SapientOwnerAmount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many sapient beings have this trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SapientOwnerAmount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_SpawnRate_" data-uid="WorldLib.Models.Traits.Trait`2.SpawnRate*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_SpawnRate" data-uid="WorldLib.Models.Traits.Trait`2.SpawnRate">
+  SpawnRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How often this trait appears in actors across the world. Depends on <a class="xref" href="WorldLib.Models.Traits.Trait-2.html#WorldLib_Models_Traits_Trait_2_RandomlySpawnTrait">RandomlySpawnTrait</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpawnRate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Traits.Trait-2.html#WorldLib_Models_Traits_Trait_2_RandomlySpawnTrait">RandomlySpawnTrait</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_TotalOwnerAmount_" data-uid="WorldLib.Models.Traits.Trait`2.TotalOwnerAmount*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_TotalOwnerAmount" data-uid="WorldLib.Models.Traits.Trait`2.TotalOwnerAmount">
+  TotalOwnerAmount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many actors have this trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalOwnerAmount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Models_Traits_Trait_2_HasPlot_" data-uid="WorldLib.Models.Traits.Trait`2.HasPlot*"></a>
+
+  <h3 id="WorldLib_Models_Traits_Trait_2_HasPlot" data-uid="WorldLib.Models.Traits.Trait`2.HasPlot">
+  HasPlot()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the trait has an associated plot with it. This is used in-game for rites in ReligionTrait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPlot()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the trait has an associated plot.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Traits/Trait.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Actor | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Actor | WorldLib ">
+      
+      <meta name="description" content="Represents a living object in the world, like a human.">
+      <link rel="icon" href="../images/icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Actors_Actor.md&amp;value=---%0Auid%3A%20WorldLib.Models.Actors.Actor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/icon.png" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.Actors.Actor">
+
+
+
+  <h1 id="WorldLib_Models_Actors_Actor" data-uid="WorldLib.Models.Actors.Actor" class="text-break">
+Class Actor  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Actors.html">Actors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a living object in the world, like a human.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Actor : SimObject&lt;Actor&gt;, IEquatable&lt;NanoObject&lt;Actor&gt;&gt;, ITraitsOwner&lt;ActorTrait, ActorTrait&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;<span class="xref">Actor</span>&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject</a>&lt;<span class="xref">Actor</span>&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;<span class="xref">Actor</span>&gt;</div>
+      <div><span class="xref">Actor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject</a>&lt;<span class="xref">Actor</span>&gt;&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html">ITraitsOwner</a>&lt;<a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a>, <span class="xref">ActorTrait</span>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Tile">SimObject&lt;Actor&gt;.Tile</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Pos">SimObject&lt;Actor&gt;.Pos</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Scale">SimObject&lt;Actor&gt;.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Rotation">SimObject&lt;Actor&gt;.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Kingdom">SimObject&lt;Actor&gt;.Kingdom</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Stats">SimObject&lt;Actor&gt;.Stats</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_MapObjectType">SimObject&lt;Actor&gt;.MapObjectType</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_StatusDict">SimObject&lt;Actor&gt;.StatusDict</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_TotalStatuses">SimObject&lt;Actor&gt;.TotalStatuses</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Height">SimObject&lt;Actor&gt;.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_StatsDirty">SimObject&lt;Actor&gt;.StatsDirty</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Chunk">SimObject&lt;Actor&gt;.Chunk</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Equals_WorldLib_Models_Objects_SimObject__0__">SimObject&lt;Actor&gt;.Equals(SimObject&lt;Actor&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_AddStatus_WorldLib_Models_Statuses_StatusAsset_System_Nullable_System_Single__System_Nullable_System_Boolean__">SimObject&lt;Actor&gt;.AddStatus(StatusAsset, float?, bool?)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_FinishAllStatuses">SimObject&lt;Actor&gt;.FinishAllStatuses()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_FinishStatus_WorldLib_Models_Statuses_StatusAsset_">SimObject&lt;Actor&gt;.FinishStatus(StatusAsset)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_HasStatus_WorldLib_Models_Statuses_StatusAsset_">SimObject&lt;Actor&gt;.HasStatus(StatusAsset)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_HasAnyStatus">SimObject&lt;Actor&gt;.HasAnyStatus()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsActor">SimObject&lt;Actor&gt;.IsActor()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsBuilding">SimObject&lt;Actor&gt;.IsBuilding()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsOnLiquid">SimObject&lt;Actor&gt;.IsOnLiquid()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsOnWater">SimObject&lt;Actor&gt;.IsOnWater()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsTouchingLiquid">SimObject&lt;Actor&gt;.IsTouchingLiquid()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsInAir">SimObject&lt;Actor&gt;.IsInAir()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IsFlying">SimObject&lt;Actor&gt;.IsFlying()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Hit_System_Single_System_Boolean_AttackType_WorldLib_Models_Objects_SimObject__0__System_Boolean_System_Boolean_System_Boolean_">SimObject&lt;Actor&gt;.Hit(float, bool, AttackType, SimObject&lt;Actor&gt;, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_HitFullHealth_AttackType_">SimObject&lt;Actor&gt;.HitFullHealth(AttackType)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_FindEnemyTarget_System_Boolean_">SimObject&lt;Actor&gt;.FindEnemyTarget(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_IgnoreTarget_WorldLib_Models_Objects_SimObject_BaseSimObject__">SimObject&lt;Actor&gt;.IgnoreTarget(SimObject&lt;BaseSimObject&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_ShouldIgnoreTarget_WorldLib_Models_Objects_SimObject__0__">SimObject&lt;Actor&gt;.ShouldIgnoreTarget(SimObject&lt;Actor&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_ClearIgnoredTargets">SimObject&lt;Actor&gt;.ClearIgnoredTargets()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_CanAttackTarget_WorldLib_Models_Objects_SimObject__0__System_Boolean_System_Boolean_">SimObject&lt;Actor&gt;.CanAttackTarget(SimObject&lt;Actor&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_AreFoes_WorldLib_Models_Objects_SimObject__0__">SimObject&lt;Actor&gt;.AreFoes(SimObject&lt;Actor&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_SetHealth_System_Int32_System_Boolean_">SimObject&lt;Actor&gt;.SetHealth(int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_SetHealthToMaxHealth">SimObject&lt;Actor&gt;.SetHealthToMaxHealth()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_AddHealth_System_Int32_">SimObject&lt;Actor&gt;.AddHealth(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_GetHealth">SimObject&lt;Actor&gt;.GetHealth()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_GetMaxHealth">SimObject&lt;Actor&gt;.GetMaxHealth()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_GetHealthFromPercentOfMaxHealth_System_Single_">SimObject&lt;Actor&gt;.GetHealthFromPercentOfMaxHealth(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_HasHealth">SimObject&lt;Actor&gt;.HasHealth()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_HasKingdom">SimObject&lt;Actor&gt;.HasKingdom()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_GetCreatedTimestamp">SimObject&lt;Actor&gt;.GetCreatedTimestamp()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Alive">NanoObject&lt;Actor&gt;.Alive</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Exists">NanoObject&lt;Actor&gt;.Exists</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Name">NanoObject&lt;Actor&gt;.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Hash">NanoObject&lt;Actor&gt;.Hash</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Color">NanoObject&lt;Actor&gt;.Color</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Type">NanoObject&lt;Actor&gt;.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Equals_WorldLib_Models_Objects_NanoObject__0__">NanoObject&lt;Actor&gt;.Equals(NanoObject&lt;Actor&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_SetDefaults">NanoObject&lt;Actor&gt;.SetDefaults()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_HasDied">NanoObject&lt;Actor&gt;.HasDied()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_IsRekt">NanoObject&lt;Actor&gt;.IsRekt()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;Actor&gt;.Raw</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_Actors_Actor_TargetsToIgnore_" data-uid="WorldLib.Models.Actors.Actor.TargetsToIgnore*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_TargetsToIgnore" data-uid="WorldLib.Models.Actors.Actor.TargetsToIgnore">
+  TargetsToIgnore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A hash set of all actors to ignore in combat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransmutableHashSet&lt;long, Actor&gt; TargetsToIgnore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableHashSet-2.html">TransmutableHashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="WorldLib.Models.Actors.Actor.html">Actor</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Actors_Actor_Traits_" data-uid="WorldLib.Models.Actors.Actor.Traits*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_Traits" data-uid="WorldLib.Models.Actors.Actor.Traits">
+  Traits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A <a class="xref" href="WorldLib.Utils.TransmutableHashSet-2.html">TransmutableHashSet&lt;TStorage, TExposed&gt;</a> of all the traits this trait owner has.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransmutableHashSet&lt;ActorTrait, ActorTrait&gt; Traits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Utils.TransmutableHashSet-2.html">TransmutableHashSet</a>&lt;<span class="xref">ActorTrait</span>, <a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_HasTrait__0_">HasTrait</a>(TPublic)</div>
+    <div><a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_HasAnyTrait">HasAnyTrait</a>()</div>
+    <div><a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_AddTrait__0_System_Boolean_">AddTrait</a>(TPublic, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>)</div>
+    <div><a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_RemoveTrait__0_">RemoveTrait</a>(TPublic)</div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Models_Actors_Actor_AddTrait_" data-uid="WorldLib.Models.Actors.Actor.AddTrait*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_AddTrait_WorldLib_Models_Traits_ActorTrait_System_Boolean_" data-uid="WorldLib.Models.Actors.Actor.AddTrait(WorldLib.Models.Traits.ActorTrait,System.Boolean)">
+  AddTrait(ActorTrait, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a trait to the <a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_Traits">Traits</a> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddTrait(ActorTrait trait, bool removeOpposites = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trait</code> <a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a></dt>
+    <dd><p>The trait to add.</p>
+</dd>
+    <dt><code>removeOpposites</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to remove the opposite traits upon applying this trait.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the method succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Actors_Actor_HasAnyTrait_" data-uid="WorldLib.Models.Actors.Actor.HasAnyTrait*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_HasAnyTrait" data-uid="WorldLib.Models.Actors.Actor.HasAnyTrait">
+  HasAnyTrait()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the <a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_Traits">Traits</a> list has any trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAnyTrait()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the <a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_Traits">Traits</a> list has any trait.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Actors_Actor_HasTrait_" data-uid="WorldLib.Models.Actors.Actor.HasTrait*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_HasTrait_WorldLib_Models_Traits_ActorTrait_" data-uid="WorldLib.Models.Actors.Actor.HasTrait(WorldLib.Models.Traits.ActorTrait)">
+  HasTrait(ActorTrait)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this trait owner has a specific trait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasTrait(ActorTrait trait)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trait</code> <a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a></dt>
+    <dd><p>The trait to check for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the trait exists.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Actors_Actor_RemoveTrait_" data-uid="WorldLib.Models.Actors.Actor.RemoveTrait*"></a>
+
+  <h3 id="WorldLib_Models_Actors_Actor_RemoveTrait_WorldLib_Models_Traits_ActorTrait_" data-uid="WorldLib.Models.Actors.Actor.RemoveTrait(WorldLib.Models.Traits.ActorTrait)">
+  RemoveTrait(ActorTrait)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a trait from the <a class="xref" href="WorldLib.Models.Traits.ITraitsOwner-2.html#WorldLib_Models_Traits_ITraitsOwner_2_Traits">Traits</a> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveTrait(ActorTrait trait)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trait</code> <a class="xref" href="WorldLib.Models.Traits.ActorTrait.html">ActorTrait</a></dt>
+    <dd><p>The trait to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the method succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Actors/Actor.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

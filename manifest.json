@@ -11,6 +11,26 @@
       }
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "WorldLib.SourceGen/AnalyzerReleases.Shipped.md",
+      "output": {
+        ".html": {
+          "relative_path": "WorldLib.SourceGen/AnalyzerReleases.Shipped.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "WorldLib.SourceGen/AnalyzerReleases.Unshipped.md",
+      "output": {
+        ".html": {
+          "relative_path": "WorldLib.SourceGen/AnalyzerReleases.Unshipped.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Core.Events.yml",
       "output": {
@@ -22,7 +42,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Core.Events",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Core.Events.yml\" sourcestartlinenumber=\"1\">Events that mods can hook into to add functionality at specific moments.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,30 +88,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Actor.Actor.yml",
+      "source_relative_path": "api/WorldLib.Models.Actors.Actor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Models.Actor.Actor.html"
+          "relative_path": "api/WorldLib.Models.Actors.Actor.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Models.Actor.Actor",
-      "Summary": null
+      "Title": "WorldLib.Models.Actors.Actor",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Actors.Actor.yml\" sourcestartlinenumber=\"1\">Represents a living object in the world, like a human.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Actor.yml",
+      "source_relative_path": "api/WorldLib.Models.Actors.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Models.Actor.html"
+          "relative_path": "api/WorldLib.Models.Actors.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Models.Actor",
+      "Title": "WorldLib.Models.Actors",
       "Summary": null
     },
     {
@@ -110,20 +130,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Ages.AgeAction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WorldLib.Models.Ages.AgeAction.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "WorldLib.Models.Ages.AgeAction",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Models.Ages.Ages.yml",
       "output": {
         ".html": {
@@ -134,7 +140,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Ages.Ages",
-      "Summary": "<p sourcefile=\"api/WorldLib.Models.Ages.Ages.yml\" sourcestartlinenumber=\"1\">Provides access to all world ages in the game.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -152,6 +158,132 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.Asset-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.Asset-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.Asset<TAbstraction>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.Asset-1.yml\" sourcestartlinenumber=\"1\">Represents the base asset in the game, is used for a variety of things like traits and status effects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.AugmentationAsset-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.AugmentationAsset-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.AugmentationAsset<TAbstraction>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.AugmentationAsset-1.yml\" sourcestartlinenumber=\"1\">Represents an asset that augments another asset, like traits.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.CategoryAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.CategoryAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.CategoryAsset",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.CategoryAsset.yml\" sourcestartlinenumber=\"1\">Represents a category of things like traits.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.IDescription2Asset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.IDescription2Asset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.IDescription2Asset",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.IDescription2Asset.yml\" sourcestartlinenumber=\"1\">A bearer of 2 descriptions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.IDescriptionAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.IDescriptionAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.IDescriptionAsset",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.IDescriptionAsset.yml\" sourcestartlinenumber=\"1\">A bearer of a description.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.ILocalizedAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.ILocalizedAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.ILocalizedAsset",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.ILocalizedAsset.yml\" sourcestartlinenumber=\"1\">A bearer of something localized.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.UnlockableAsset-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.UnlockableAsset-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets.UnlockableAsset<TAbstraction>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Assets.UnlockableAsset-1.yml\" sourcestartlinenumber=\"1\">Represents an asset that is unlockable, like traits that have to be discovered.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Assets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Assets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Assets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Delegates.AgeAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Delegates.AgeAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Delegates.AgeAction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Models.Delegates.GetEffectSprite.yml",
       "output": {
         ".html": {
@@ -162,7 +294,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSprite",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSprite.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting an effect sprite.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -176,7 +308,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSpritePosition",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSpritePosition.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting the position of a sprite effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -190,7 +322,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSpritePositionUI",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSpritePositionUI.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting the position of a sprite effect in UI space.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -204,7 +336,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSpriteRotationZ",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSpriteRotationZ.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting the z rotation of a sprite effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +350,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSpriteRotationZUI",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSpriteRotationZUI.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting the z rotation of a sprite effect in UI space.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -232,7 +364,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetEffectSpriteUI",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetEffectSpriteUI.yml\" sourcestartlinenumber=\"1\">Represents a delegate for getting an effect sprite in UI space.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -246,7 +378,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.GetHitAction",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.GetHitAction.yml\" sourcestartlinenumber=\"1\">Represents a delegate that is run upon a sim object getting hit.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -260,7 +392,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.RenderEffectCheck",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.RenderEffectCheck.yml\" sourcestartlinenumber=\"1\">Represents a delegate that determines whether something should be visually rendered for a given actor.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -274,7 +406,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Delegates.WorldAction",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.WorldAction.yml\" sourcestartlinenumber=\"1\">Represents an action that occurs in the world somewhere, like an actor dying.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Delegates.WorldActionTrait.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Delegates.WorldActionTrait.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Delegates.WorldActionTrait",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Delegates.WorldActionTrait.yml\" sourcestartlinenumber=\"1\">Represents a delegate that is used in conjunction to events relating to augmentations,\nlike when adding a trait to an actor.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -316,62 +462,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Events.History",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Generic.IAsset.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WorldLib.Models.Generic.IAsset.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "WorldLib.Models.Generic.IAsset",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Generic.INanoObject.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WorldLib.Models.Generic.INanoObject.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "WorldLib.Models.Generic.INanoObject",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Generic.SimObject.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WorldLib.Models.Generic.SimObject.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "WorldLib.Models.Generic.SimObject",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Models.Generic.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WorldLib.Models.Generic.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "WorldLib.Models.Generic",
       "Summary": null
     },
     {
@@ -446,6 +536,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Objects.IFavoritableObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Objects.IFavoritableObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Objects.IFavoritableObject",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Objects.IFavoritableObject.yml\" sourcestartlinenumber=\"1\">Represents an object that can be favorited</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Objects.NanoObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Objects.NanoObject-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Objects.NanoObject<TAbstracts>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Objects.NanoObject-1.yml\" sourcestartlinenumber=\"1\">Represents any physical object in the world.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Objects.SimObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Objects.SimObject-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Objects.SimObject<TAbstracts>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Objects.SimObject-1.yml\" sourcestartlinenumber=\"1\">Represents a physical object with special data like positioning and sprites.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Objects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Objects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Models.Options.WorldCreationOptions.WorldSize.yml",
       "output": {
         ".html": {
@@ -502,6 +648,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Progress.Progress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Progress.Progress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Progress.Progress",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Progress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Progress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Progress",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Models.Statuses.StatusAsset.yml",
       "output": {
         ".html": {
@@ -526,7 +700,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Models.Statuses.StatusTier",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Statuses.StatusTier.yml\" sourcestartlinenumber=\"1\">Represents the tier of a status effect, used to filter which statuses can be applied to a sim object.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -586,44 +760,58 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Patches.HistoryHudPatch.yml",
+      "source_relative_path": "api/WorldLib.Models.Traits.ActorTrait.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Patches.HistoryHudPatch.html"
+          "relative_path": "api/WorldLib.Models.Traits.ActorTrait.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Patches.HistoryHudPatch",
-      "Summary": null
+      "Title": "WorldLib.Models.Traits.ActorTrait",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Traits.ActorTrait.yml\" sourcestartlinenumber=\"1\">Represents a trait that can be directly applied to actors.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Patches.MapBoxPatch.yml",
+      "source_relative_path": "api/WorldLib.Models.Traits.ITraitsOwner-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Patches.MapBoxPatch.html"
+          "relative_path": "api/WorldLib.Models.Traits.ITraitsOwner-2.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Patches.MapBoxPatch",
-      "Summary": null
+      "Title": "WorldLib.Models.Traits.ITraitsOwner<TPublic, TGame>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Traits.ITraitsOwner-2.yml\" sourcestartlinenumber=\"1\">Represents an owner of traits.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WorldLib.Patches.yml",
+      "source_relative_path": "api/WorldLib.Models.Traits.Trait-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WorldLib.Patches.html"
+          "relative_path": "api/WorldLib.Models.Traits.Trait-2.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "WorldLib.Patches",
+      "Title": "WorldLib.Models.Traits.Trait<TThis, TAbstracts>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Models.Traits.Trait-2.yml\" sourcestartlinenumber=\"1\">Represents a generic trait that is used on things like actors, religions and subspecies.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Models.Traits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Models.Traits.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Models.Traits",
       "Summary": null
     },
     {
@@ -656,6 +844,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Registries.Sprites.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Registries.Sprites.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Registries.Sprites",
+      "Summary": "<p sourcefile=\"api/WorldLib.Registries.Sprites.yml\" sourcestartlinenumber=\"1\">Provides centralized management for sprites registered by mods or patches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WorldLib.Registries.yml",
       "output": {
         ".html": {
@@ -666,6 +868,62 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Registries",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.SourceGen.DocEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.SourceGen.DocEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.SourceGen.DocEntry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.SourceGen.DocException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.SourceGen.DocException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.SourceGen.DocException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.SourceGen.LibraryGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.SourceGen.LibraryGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.SourceGen.LibraryGenerator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.SourceGen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.SourceGen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.SourceGen",
       "Summary": null
     },
     {
@@ -722,7 +980,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Utils.Tooling",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/WorldLib.Utils.Tooling.yml\" sourcestartlinenumber=\"1\">Neat utils that I use to simplify development.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldLib.Utils.TransmutableHashSet-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldLib.Utils.TransmutableHashSet-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "WorldLib.Utils.TransmutableHashSet<TStorage, TExposed>",
+      "Summary": "<p sourcefile=\"api/WorldLib.Utils.TransmutableHashSet-2.yml\" sourcestartlinenumber=\"1\">Represents a live, transmutable view over an underlying unordered collection of serialized items\nwith set semantics — no ordering, no duplicates.\nEach element is transformed via a codec between the storage representation\n(<code class=\"typeparamref\">TStorage</code>) and the exposed runtime representation\n(<code class=\"typeparamref\">TExposed</code>).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -736,7 +1008,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "WorldLib.Utils.TransmutableList<TStorage, TExposed>",
-      "Summary": "<p sourcefile=\"api/WorldLib.Utils.TransmutableList-2.yml\" sourcestartlinenumber=\"1\">Represents a live, transmutable view over an underlying array of serialized items.\nEach element is transformed via a codec between the storage representation\n(<code class=\"typeparamref\">TStorage</code>) and the exposed runtime representation\n(<code class=\"typeparamref\">TExposed</code>).</p>\n"
+      "Summary": "<p sourcefile=\"api/WorldLib.Utils.TransmutableList-2.yml\" sourcestartlinenumber=\"1\">Represents a live, transmutable view over an underlying collection of serialized items.\nEach element is transformed via a codec between the storage representation\n(<code class=\"typeparamref\">TStorage</code>) and the exposed runtime representation\n(<code class=\"typeparamref\">TExposed</code>).</p>\n"
     },
     {
       "type": "ManagedReference",

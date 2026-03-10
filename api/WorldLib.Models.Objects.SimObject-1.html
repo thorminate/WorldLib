@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SimObject&lt;TAbstracts&gt; | WorldLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SimObject&lt;TAbstracts&gt; | WorldLib ">
+      
+      <meta name="description" content="Represents a physical object with special data like positioning and sprites.">
+      <link rel="icon" href="../images/icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Objects_SimObject_1.md&amp;value=---%0Auid%3A%20WorldLib.Models.Objects.SimObject%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/icon.png" alt="WorldLib">
+            WorldLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="WorldLib.Models.Objects.SimObject`1">
+
+
+
+  <h1 id="WorldLib_Models_Objects_SimObject_1" data-uid="WorldLib.Models.Objects.SimObject`1" class="text-break">
+Class SimObject&lt;TAbstracts&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Objects.html">Objects</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a physical object with special data like positioning and sprites.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SimObject&lt;TAbstracts&gt; : NanoObject&lt;TAbstracts&gt;, IEquatable&lt;NanoObject&lt;TAbstracts&gt;&gt; where TAbstracts : BaseSimObject</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAbstracts</code></dt>
+    <dd><p>The type of Raw, is used for parent classes</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;TAbstracts&gt;</div>
+      <div><a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject</a>&lt;TAbstracts&gt;</div>
+      <div><span class="xref">SimObject&lt;TAbstracts&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject</a>&lt;TAbstracts&gt;&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="WorldLib.Models.Actors.Actor.html">Actor</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Alive">NanoObject&lt;TAbstracts&gt;.Alive</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Exists">NanoObject&lt;TAbstracts&gt;.Exists</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Name">NanoObject&lt;TAbstracts&gt;.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Hash">NanoObject&lt;TAbstracts&gt;.Hash</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Color">NanoObject&lt;TAbstracts&gt;.Color</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Type">NanoObject&lt;TAbstracts&gt;.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_Equals_WorldLib_Models_Objects_NanoObject__0__">NanoObject&lt;TAbstracts&gt;.Equals(NanoObject&lt;TAbstracts&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_SetDefaults">NanoObject&lt;TAbstracts&gt;.SetDefaults()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_HasDied">NanoObject&lt;TAbstracts&gt;.HasDied()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html#WorldLib_Models_Objects_NanoObject_1_IsRekt">NanoObject&lt;TAbstracts&gt;.IsRekt()</a>
+    </div>
+    <div>
+      <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;TAbstracts&gt;.Raw</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Chunk_" data-uid="WorldLib.Models.Objects.SimObject`1.Chunk*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Chunk" data-uid="WorldLib.Models.Objects.SimObject`1.Chunk">
+  Chunk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The chunk that this object currently resides in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapChunk Chunk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MapChunk</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Height_" data-uid="WorldLib.Models.Objects.SimObject`1.Height*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Height" data-uid="WorldLib.Models.Objects.SimObject`1.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Height of the object on the map, used for things like floating above the ground. 0 by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Height { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Kingdom_" data-uid="WorldLib.Models.Objects.SimObject`1.Kingdom*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Kingdom" data-uid="WorldLib.Models.Objects.SimObject`1.Kingdom">
+  Kingdom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The SimObjects associated Kingdom.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Kingdom Kingdom { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Kingdom</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_MapObjectType_" data-uid="WorldLib.Models.Objects.SimObject`1.MapObjectType*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_MapObjectType" data-uid="WorldLib.Models.Objects.SimObject`1.MapObjectType">
+  MapObjectType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of the object in map's context. Like a building or actor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapObjectType MapObjectType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MapObjectType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Pos_" data-uid="WorldLib.Models.Objects.SimObject`1.Pos*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Pos" data-uid="WorldLib.Models.Objects.SimObject`1.Pos">
+  Pos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The 2-dimensional position on the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Pos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Rotation_" data-uid="WorldLib.Models.Objects.SimObject`1.Rotation*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Rotation" data-uid="WorldLib.Models.Objects.SimObject`1.Rotation">
+  Rotation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The rotation of the rendered asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Rotation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Scale_" data-uid="WorldLib.Models.Objects.SimObject`1.Scale*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Scale" data-uid="WorldLib.Models.Objects.SimObject`1.Scale">
+  Scale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scale of the rendered asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Scale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Stats_" data-uid="WorldLib.Models.Objects.SimObject`1.Stats*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Stats" data-uid="WorldLib.Models.Objects.SimObject`1.Stats">
+  Stats
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stats of the sim object, like &quot;health&quot; or &quot;lifespan.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseStats Stats { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BaseStats</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_StatsDirty_" data-uid="WorldLib.Models.Objects.SimObject`1.StatsDirty*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_StatsDirty" data-uid="WorldLib.Models.Objects.SimObject`1.StatsDirty">
+  StatsDirty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the stats have been modified since the last frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StatsDirty { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_StatusDict_" data-uid="WorldLib.Models.Objects.SimObject`1.StatusDict*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_StatusDict" data-uid="WorldLib.Models.Objects.SimObject`1.StatusDict">
+  StatusDict
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A dictionary of all the statuses in this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, Status&gt; StatusDict { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">Status</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Tile_" data-uid="WorldLib.Models.Objects.SimObject`1.Tile*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Tile" data-uid="WorldLib.Models.Objects.SimObject`1.Tile">
+  Tile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current WorldTile this object resides on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WorldTile Tile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">WorldTile</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_TotalStatuses_" data-uid="WorldLib.Models.Objects.SimObject`1.TotalStatuses*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_TotalStatuses" data-uid="WorldLib.Models.Objects.SimObject`1.TotalStatuses">
+  TotalStatuses
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total amount of statuses in this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalStatuses { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_AddHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.AddHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_AddHealth_System_Int32_" data-uid="WorldLib.Models.Objects.SimObject`1.AddHealth(System.Int32)">
+  AddHealth(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds health and clamps it to the maximum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddHealth(int val)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The amount of health to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_AddStatus_" data-uid="WorldLib.Models.Objects.SimObject`1.AddStatus*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_AddStatus_WorldLib_Models_Statuses_StatusAsset_System_Nullable_System_Single__System_Nullable_System_Boolean__" data-uid="WorldLib.Models.Objects.SimObject`1.AddStatus(WorldLib.Models.Statuses.StatusAsset,System.Nullable{System.Single},System.Nullable{System.Boolean})">
+  AddStatus(StatusAsset, float?, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a status effect to the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddStatus(StatusAsset status, float? resetTimer, bool? colorEffect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a></dt>
+    <dd><p>The status asset to add.</p>
+</dd>
+    <dt><code>resetTimer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Whether to reset the timer if the status effect is already applied.</p>
+</dd>
+    <dt><code>colorEffect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>Whether to apply a white flash to the object receiving this status effect.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this operation succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_AreFoes_" data-uid="WorldLib.Models.Objects.SimObject`1.AreFoes*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_AreFoes_WorldLib_Models_Objects_SimObject__0__" data-uid="WorldLib.Models.Objects.SimObject`1.AreFoes(WorldLib.Models.Objects.SimObject{`0})">
+  AreFoes(SimObject&lt;TAbstracts&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the target object's kingdom and this object's kingdom are at war.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreFoes(SimObject&lt;TAbstracts&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;TAbstracts&gt;</dt>
+    <dd><p>The sim object to check for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_CanAttackTarget_" data-uid="WorldLib.Models.Objects.SimObject`1.CanAttackTarget*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_CanAttackTarget_WorldLib_Models_Objects_SimObject__0__System_Boolean_System_Boolean_" data-uid="WorldLib.Models.Objects.SimObject`1.CanAttackTarget(WorldLib.Models.Objects.SimObject{`0},System.Boolean,System.Boolean)">
+  CanAttackTarget(SimObject&lt;TAbstracts&gt;, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the sim object can attack another sim object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanAttackTarget(SimObject&lt;TAbstracts&gt; target, bool checkFactions = true, bool attackBuildings = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;TAbstracts&gt;</dt>
+    <dd><p>The sim object to check for.</p>
+</dd>
+    <dt><code>checkFactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to check if the target is similar in beliefs and not attack them if so.</p>
+</dd>
+    <dt><code>attackBuildings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to allow attacking buildings.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_ClearIgnoredTargets_" data-uid="WorldLib.Models.Objects.SimObject`1.ClearIgnoredTargets*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_ClearIgnoredTargets" data-uid="WorldLib.Models.Objects.SimObject`1.ClearIgnoredTargets">
+  ClearIgnoredTargets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all ignored targets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearIgnoredTargets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Equals_" data-uid="WorldLib.Models.Objects.SimObject`1.Equals*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Equals_WorldLib_Models_Objects_SimObject__0__" data-uid="WorldLib.Models.Objects.SimObject`1.Equals(WorldLib.Models.Objects.SimObject{`0})">
+  Equals(SimObject&lt;TAbstracts&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this sim object wrapper wraps the same sim object as another sim object wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(SimObject&lt;TAbstracts&gt; other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;TAbstracts&gt;</dt>
+    <dd><p>The other sim object wrapper.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_FindEnemyTarget_" data-uid="WorldLib.Models.Objects.SimObject`1.FindEnemyTarget*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_FindEnemyTarget_System_Boolean_" data-uid="WorldLib.Models.Objects.SimObject`1.FindEnemyTarget(System.Boolean)">
+  FindEnemyTarget(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a sim object to target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimObject&lt;BaseSimObject&gt; FindEnemyTarget(bool attackBuildings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attackBuildings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to attack buildings as well.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;<span class="xref">BaseSimObject</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_FinishAllStatuses_" data-uid="WorldLib.Models.Objects.SimObject`1.FinishAllStatuses*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_FinishAllStatuses" data-uid="WorldLib.Models.Objects.SimObject`1.FinishAllStatuses">
+  FinishAllStatuses()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finishes all statuses at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FinishAllStatuses()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_FinishStatus_" data-uid="WorldLib.Models.Objects.SimObject`1.FinishStatus*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_FinishStatus_WorldLib_Models_Statuses_StatusAsset_" data-uid="WorldLib.Models.Objects.SimObject`1.FinishStatus(WorldLib.Models.Statuses.StatusAsset)">
+  FinishStatus(StatusAsset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finishes a status, does nothing if the status asset has no asset represinting it in the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FinishStatus(StatusAsset status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a></dt>
+    <dd><p>The status asset to finish the status for.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_GetCreatedTimestamp_" data-uid="WorldLib.Models.Objects.SimObject`1.GetCreatedTimestamp*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_GetCreatedTimestamp" data-uid="WorldLib.Models.Objects.SimObject`1.GetCreatedTimestamp">
+  GetCreatedTimestamp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When this sim object was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WorldTime GetCreatedTimestamp()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="WorldLib.Models.Time.WorldTime.html">WorldTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_GetHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.GetHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_GetHealth" data-uid="WorldLib.Models.Objects.SimObject`1.GetHealth">
+  GetHealth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current health this object is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHealth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_GetHealthFromPercentOfMaxHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.GetHealthFromPercentOfMaxHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_GetHealthFromPercentOfMaxHealth_System_Single_" data-uid="WorldLib.Models.Objects.SimObject`1.GetHealthFromPercentOfMaxHealth(System.Single)">
+  GetHealthFromPercentOfMaxHealth(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a health integer based on a percentage from the max health.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHealthFromPercentOfMaxHealth(float percent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>percent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The percent amount of the max health.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_GetMaxHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.GetMaxHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_GetMaxHealth" data-uid="WorldLib.Models.Objects.SimObject`1.GetMaxHealth">
+  GetMaxHealth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum health of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMaxHealth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_HasAnyStatus_" data-uid="WorldLib.Models.Objects.SimObject`1.HasAnyStatus*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_HasAnyStatus" data-uid="WorldLib.Models.Objects.SimObject`1.HasAnyStatus">
+  HasAnyStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object has any status at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAnyStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_HasHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.HasHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_HasHealth" data-uid="WorldLib.Models.Objects.SimObject`1.HasHealth">
+  HasHealth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the actor has health above 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasHealth()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_HasKingdom_" data-uid="WorldLib.Models.Objects.SimObject`1.HasKingdom*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_HasKingdom" data-uid="WorldLib.Models.Objects.SimObject`1.HasKingdom">
+  HasKingdom()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object has a kingdom associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasKingdom()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_HasStatus_" data-uid="WorldLib.Models.Objects.SimObject`1.HasStatus*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_HasStatus_WorldLib_Models_Statuses_StatusAsset_" data-uid="WorldLib.Models.Objects.SimObject`1.HasStatus(WorldLib.Models.Statuses.StatusAsset)">
+  HasStatus(StatusAsset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object has a status representing that status asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasStatus(StatusAsset status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a></dt>
+    <dd><p>The status asset to check against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_Hit_" data-uid="WorldLib.Models.Objects.SimObject`1.Hit*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_Hit_System_Single_System_Boolean_AttackType_WorldLib_Models_Objects_SimObject__0__System_Boolean_System_Boolean_System_Boolean_" data-uid="WorldLib.Models.Objects.SimObject`1.Hit(System.Single,System.Boolean,AttackType,WorldLib.Models.Objects.SimObject{`0},System.Boolean,System.Boolean,System.Boolean)">
+  Hit(float, bool, AttackType, SimObject&lt;TAbstracts&gt;?, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a hit to the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Hit(float damage, bool flash = true, AttackType attackType = AttackType.Other, SimObject&lt;TAbstracts&gt;? attacker = null, bool skipIfShake = true, bool playClang = false, bool damageReduction = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>damage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The damage to apply.</p>
+</dd>
+    <dt><code>flash</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this attack causes a red flash.</p>
+</dd>
+    <dt><code>attackType</code> <span class="xref">AttackType</span></dt>
+    <dd><p>How the damage was applied (e.g. weapon, fire, acid)</p>
+</dd>
+    <dt><code>attacker</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;TAbstracts&gt;</dt>
+    <dd><p>SimObject of the attacker.</p>
+</dd>
+    <dt><code>skipIfShake</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to prevent any damage if the world is shaking.</p>
+</dd>
+    <dt><code>playClang</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to play a clang sound on hit, often used for metallic weapons.</p>
+</dd>
+    <dt><code>damageReduction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to apply damage reduction from things like stats.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_HitFullHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.HitFullHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_HitFullHealth_AttackType_" data-uid="WorldLib.Models.Objects.SimObject`1.HitFullHealth(AttackType)">
+  HitFullHealth(AttackType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html#WorldLib_Models_Objects_SimObject_1_Hit_System_Single_System_Boolean_AttackType_WorldLib_Models_Objects_SimObject__0__System_Boolean_System_Boolean_System_Boolean_">Hit(float, bool, AttackType, SimObject&lt;TAbstracts&gt;?, bool, bool, bool)</a> with the current health.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HitFullHealth(AttackType attackType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attackType</code> <span class="xref">AttackType</span></dt>
+    <dd><p>How the damage was applied (e.g. weapon, fire, acid)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IgnoreTarget_" data-uid="WorldLib.Models.Objects.SimObject`1.IgnoreTarget*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IgnoreTarget_WorldLib_Models_Objects_SimObject_BaseSimObject__" data-uid="WorldLib.Models.Objects.SimObject`1.IgnoreTarget(WorldLib.Models.Objects.SimObject{BaseSimObject})">
+  IgnoreTarget(SimObject&lt;BaseSimObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ignores a sim object and prevents them from being targeted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IgnoreTarget(SimObject&lt;BaseSimObject&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;<span class="xref">BaseSimObject</span>&gt;</dt>
+    <dd><p>The sim object to ignore.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsActor_" data-uid="WorldLib.Models.Objects.SimObject`1.IsActor*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsActor" data-uid="WorldLib.Models.Objects.SimObject`1.IsActor">
+  IsActor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this sim object is an actor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsBuilding_" data-uid="WorldLib.Models.Objects.SimObject`1.IsBuilding*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsBuilding" data-uid="WorldLib.Models.Objects.SimObject`1.IsBuilding">
+  IsBuilding()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this sim object is a building.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBuilding()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsFlying_" data-uid="WorldLib.Models.Objects.SimObject`1.IsFlying*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsFlying" data-uid="WorldLib.Models.Objects.SimObject`1.IsFlying">
+  IsFlying()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object is actively flying above the ground. Like butterflies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFlying()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsInAir_" data-uid="WorldLib.Models.Objects.SimObject`1.IsInAir*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsInAir" data-uid="WorldLib.Models.Objects.SimObject`1.IsInAir">
+  IsInAir()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object is not on the ground. Like being thrown up in the air.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInAir()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsOnLiquid_" data-uid="WorldLib.Models.Objects.SimObject`1.IsOnLiquid*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsOnLiquid" data-uid="WorldLib.Models.Objects.SimObject`1.IsOnLiquid">
+  IsOnLiquid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object in currently on a liquid tile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnLiquid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsOnWater_" data-uid="WorldLib.Models.Objects.SimObject`1.IsOnWater*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsOnWater" data-uid="WorldLib.Models.Objects.SimObject`1.IsOnWater">
+  IsOnWater()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object is currently on a water tile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnWater()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_IsTouchingLiquid_" data-uid="WorldLib.Models.Objects.SimObject`1.IsTouchingLiquid*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_IsTouchingLiquid" data-uid="WorldLib.Models.Objects.SimObject`1.IsTouchingLiquid">
+  IsTouchingLiquid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this object is currently submerged in a liquid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTouchingLiquid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_SetHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.SetHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_SetHealth_System_Int32_System_Boolean_" data-uid="WorldLib.Models.Objects.SimObject`1.SetHealth(System.Int32,System.Boolean)">
+  SetHealth(int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets health to an arbitrary value. This does not kill the object if set at 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHealth(int val, bool clamp = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The value to set the health to</p>
+</dd>
+    <dt><code>clamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to clamp the health to its upper and lower limits</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_SetHealthToMaxHealth_" data-uid="WorldLib.Models.Objects.SimObject`1.SetHealthToMaxHealth*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_SetHealthToMaxHealth" data-uid="WorldLib.Models.Objects.SimObject`1.SetHealthToMaxHealth">
+  SetHealthToMaxHealth()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the object's health to max health.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHealthToMaxHealth()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Objects_SimObject_1_ShouldIgnoreTarget_" data-uid="WorldLib.Models.Objects.SimObject`1.ShouldIgnoreTarget*"></a>
+
+  <h3 id="WorldLib_Models_Objects_SimObject_1_ShouldIgnoreTarget_WorldLib_Models_Objects_SimObject__0__" data-uid="WorldLib.Models.Objects.SimObject`1.ShouldIgnoreTarget(WorldLib.Models.Objects.SimObject{`0})">
+  ShouldIgnoreTarget(SimObject&lt;TAbstracts&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a specific sim object is ignored and should not be targeted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldIgnoreTarget(SimObject&lt;TAbstracts&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="WorldLib.Models.Objects.SimObject-1.html">SimObject</a>&lt;TAbstracts&gt;</dt>
+    <dd><p>The sim object to check for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Objects/SimObject.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

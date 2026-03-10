@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class AbstractionOf&lt;TStore&gt; | WorldLib </title>
+      <title>Class Asset&lt;TAbstraction&gt; | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class AbstractionOf&lt;TStore&gt; | WorldLib ">
+      <meta name="title" content="Class Asset&lt;TAbstraction&gt; | WorldLib ">
       
-      <meta name="description" content="Provides a lightweight abstraction layer over an underlying store instance, exposing controlled access to the wrapped object.">
+      <meta name="description" content="Represents the base asset in the game, is used for a variety of things like traits and status effects.">
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Utils_AbstractionOf_1.md&amp;value=---%0Auid%3A%20WorldLib.Utils.AbstractionOf%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Assets_Asset_1.md&amp;value=---%0Auid%3A%20WorldLib.Models.Assets.Asset%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,34 +84,33 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Utils.AbstractionOf`1">
+        <article data-uid="WorldLib.Models.Assets.Asset`1">
 
 
 
-  <h1 id="WorldLib_Utils_AbstractionOf_1" data-uid="WorldLib.Utils.AbstractionOf`1" class="text-break">
-Class AbstractionOf&lt;TStore&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_Models_Assets_Asset_1" data-uid="WorldLib.Models.Assets.Asset`1" class="text-break">
+Class Asset&lt;TAbstraction&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/Asset.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Utils.html">Utils</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Assets.html">Assets</a></dd></dl>
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a lightweight abstraction layer over an underlying store instance,
-exposing controlled access to the wrapped object.</p>
+  <div class="markdown summary"><p>Represents the base asset in the game, is used for a variety of things like traits and status effects.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AbstractionOf&lt;TStore&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Asset&lt;TAbstraction&gt; : AbstractionOf&lt;TAbstraction&gt; where TAbstraction : Asset</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TStore</code></dt>
-    <dd><p>The type of the underlying object being abstracted.</p>
+    <dt><code>TAbstraction</code></dt>
+    <dd><p>The type of Raw, is used for parent classes</p>
 </dd>
   </dl>
 
@@ -119,7 +118,8 @@ exposing controlled access to the wrapped object.</p>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">AbstractionOf&lt;TStore&gt;</span></div>
+      <div><a class="xref" href="WorldLib.Utils.AbstractionOf-1.html">AbstractionOf</a>&lt;TAbstraction&gt;</div>
+      <div><span class="xref">Asset&lt;TAbstraction&gt;</span></div>
     </dd>
   </dl>
 
@@ -127,20 +127,18 @@ exposing controlled access to the wrapped object.</p>
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></div>
-      <div><a class="xref" href="WorldLib.Models.Ages.Ages.html">Ages</a></div>
-      <div><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset&lt;TAbstraction&gt;</a></div>
-      <div><a class="xref" href="WorldLib.Models.History.History.html">History</a></div>
-      <div><a class="xref" href="WorldLib.Models.History.HistoryEntry.html">HistoryEntry</a></div>
-      <div><a class="xref" href="WorldLib.Models.Laws.Laws.html">Laws</a></div>
-      <div><a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject&lt;TAbstracts&gt;</a></div>
-      <div><a class="xref" href="WorldLib.Models.Progress.Progress.html">Progress</a></div>
+      <div><a class="xref" href="WorldLib.Models.Assets.CategoryAsset.html">CategoryAsset</a></div>
+      <div><a class="xref" href="WorldLib.Models.Assets.UnlockableAsset-1.html">UnlockableAsset&lt;TAbstraction&gt;</a></div>
+      <div><a class="xref" href="WorldLib.Models.Statuses.StatusAsset.html">StatusAsset</a></div>
     </dd>
   </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="WorldLib.Utils.AbstractionOf-1.html#WorldLib_Utils_AbstractionOf_1_Raw">AbstractionOf&lt;TAbstraction&gt;.Raw</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
@@ -167,35 +165,25 @@ exposing controlled access to the wrapped object.</p>
 
 
 
-  <h2 id="WorldLib_Utils_AbstractionOf_1_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The underlying store is resolved through a delegate and is recomputed
-on every access to <code>Base</code>. This allows the abstraction to reflect
-dynamic or externally replaced instances instead of capturing a fixed reference.</p>
-</div>
 
 
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="WorldLib_Utils_AbstractionOf_1_Raw_" data-uid="WorldLib.Utils.AbstractionOf`1.Raw*"></a>
+  <a id="WorldLib_Models_Assets_Asset_1_Hash_" data-uid="WorldLib.Models.Assets.Asset`1.Hash*"></a>
 
-  <h3 id="WorldLib_Utils_AbstractionOf_1_Raw" data-uid="WorldLib.Utils.AbstractionOf`1.Raw">
-  Raw
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <h3 id="WorldLib_Models_Assets_Asset_1_Hash" data-uid="WorldLib.Models.Assets.Asset`1.Hash">
+  Hash
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/Asset.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>
-    Raw access to the internal class that this is representing.
-</p>
-<p>
-    For advanced users who need complete access to the game domain.
-</p>
+  <div class="markdown level1 summary"><p>Hash code of the asset. Is used for equality checks with other assets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TStore Raw { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Hash { get; set; }</code></pre>
   </div>
 
 
@@ -204,7 +192,39 @@ dynamic or externally replaced instances instead of capturing a fixed reference.
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">TStore</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="WorldLib_Models_Assets_Asset_1_Id_" data-uid="WorldLib.Models.Assets.Asset`1.Id*"></a>
+
+  <h3 id="WorldLib_Models_Assets_Asset_1_Id" data-uid="WorldLib.Models.Assets.Asset`1.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/Asset.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ID of the asset. Is used as the primary identifier in internal libraries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -219,7 +239,7 @@ dynamic or externally replaced instances instead of capturing a fixed reference.
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/Asset.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

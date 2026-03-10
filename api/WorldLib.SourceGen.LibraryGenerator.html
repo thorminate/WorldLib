@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class AbstractionOf&lt;TStore&gt; | WorldLib </title>
+      <title>Class LibraryGenerator | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class AbstractionOf&lt;TStore&gt; | WorldLib ">
+      <meta name="title" content="Class LibraryGenerator | WorldLib ">
       
-      <meta name="description" content="Provides a lightweight abstraction layer over an underlying store instance, exposing controlled access to the wrapped object.">
+      
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Utils_AbstractionOf_1.md&amp;value=---%0Auid%3A%20WorldLib.Utils.AbstractionOf%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_SourceGen_LibraryGenerator.md&amp;value=---%0Auid%3A%20WorldLib.SourceGen.LibraryGenerator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,74 +84,54 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Utils.AbstractionOf`1">
+        <article data-uid="WorldLib.SourceGen.LibraryGenerator">
 
 
 
-  <h1 id="WorldLib_Utils_AbstractionOf_1" data-uid="WorldLib.Utils.AbstractionOf`1" class="text-break">
-Class AbstractionOf&lt;TStore&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_SourceGen_LibraryGenerator" data-uid="WorldLib.SourceGen.LibraryGenerator" class="text-break">
+Class LibraryGenerator  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib.SourceGen/LibraryGenerator.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Utils.html">Utils</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.SourceGen.html">SourceGen</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>WorldLib.SourceGen.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a lightweight abstraction layer over an underlying store instance,
-exposing controlled access to the wrapped object.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AbstractionOf&lt;TStore&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Generator]
+public sealed class LibraryGenerator : IIncrementalGenerator</code></pre>
   </div>
 
 
 
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TStore</code></dt>
-    <dd><p>The type of the underlying object being abstracted.</p>
-</dd>
-  </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">AbstractionOf&lt;TStore&gt;</span></div>
+      <div><span class="xref">LibraryGenerator</span></div>
     </dd>
   </dl>
 
-
-  <dl class="typelist derived">
-    <dt>Derived</dt>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="WorldLib.Models.Ages.Age.html">Age</a></div>
-      <div><a class="xref" href="WorldLib.Models.Ages.Ages.html">Ages</a></div>
-      <div><a class="xref" href="WorldLib.Models.Assets.Asset-1.html">Asset&lt;TAbstraction&gt;</a></div>
-      <div><a class="xref" href="WorldLib.Models.History.History.html">History</a></div>
-      <div><a class="xref" href="WorldLib.Models.History.HistoryEntry.html">HistoryEntry</a></div>
-      <div><a class="xref" href="WorldLib.Models.Laws.Laws.html">Laws</a></div>
-      <div><a class="xref" href="WorldLib.Models.Objects.NanoObject-1.html">NanoObject&lt;TAbstracts&gt;</a></div>
-      <div><a class="xref" href="WorldLib.Models.Progress.Progress.html">Progress</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iincrementalgenerator">IIncrementalGenerator</a></div>
     </dd>
   </dl>
+
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -160,53 +140,48 @@ exposing controlled access to the wrapped object.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </dd></dl>
 
 
 
 
-  <h2 id="WorldLib_Utils_AbstractionOf_1_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The underlying store is resolved through a delegate and is recomputed
-on every access to <code>Base</code>. This allows the abstraction to reflect
-dynamic or externally replaced instances instead of capturing a fixed reference.</p>
-</div>
 
 
-  <h2 class="section" id="properties">Properties
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="WorldLib_Utils_AbstractionOf_1_Raw_" data-uid="WorldLib.Utils.AbstractionOf`1.Raw*"></a>
+  <a id="WorldLib_SourceGen_LibraryGenerator_Initialize_" data-uid="WorldLib.SourceGen.LibraryGenerator.Initialize*"></a>
 
-  <h3 id="WorldLib_Utils_AbstractionOf_1_Raw" data-uid="WorldLib.Utils.AbstractionOf`1.Raw">
-  Raw
-  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <h3 id="WorldLib_SourceGen_LibraryGenerator_Initialize_Microsoft_CodeAnalysis_IncrementalGeneratorInitializationContext_" data-uid="WorldLib.SourceGen.LibraryGenerator.Initialize(Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext)">
+  Initialize(IncrementalGeneratorInitializationContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib.SourceGen/LibraryGenerator.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>
-    Raw access to the internal class that this is representing.
-</p>
-<p>
-    For advanced users who need complete access to the game domain.
-</p>
+  <div class="markdown level1 summary"><p>Called to initialize the generator and register generation steps via callbacks
+on the <code class="paramref">context</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TStore Raw { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize(IncrementalGeneratorInitializationContext context)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><span class="xref">TStore</span></dt>
-    <dd></dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.incrementalgeneratorinitializationcontext">IncrementalGeneratorInitializationContext</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.incrementalgeneratorinitializationcontext">IncrementalGeneratorInitializationContext</a> to register callbacks on</p>
+</dd>
   </dl>
+
+
+
+
 
 
 
@@ -219,7 +194,7 @@ dynamic or externally replaced instances instead of capturing a fixed reference.
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Utils/AbstractionOf.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib.SourceGen/LibraryGenerator.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

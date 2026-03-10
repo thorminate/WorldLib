@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Delegate RenderEffectCheck | WorldLib </title>
+      <title>Interface IDescriptionAsset | WorldLib </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Delegate RenderEffectCheck | WorldLib ">
+      <meta name="title" content="Interface IDescriptionAsset | WorldLib ">
       
-      <meta name="description" content="Represents a delegate that determines whether something should be visually rendered for a given actor.">
+      <meta name="description" content="A bearer of a description.">
       <link rel="icon" href="../images/icon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Delegates_RenderEffectCheck.md&amp;value=---%0Auid%3A%20WorldLib.Models.Delegates.RenderEffectCheck%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Thorminate/WorldLib/new/main/docs/new?filename=WorldLib_Models_Assets_IDescriptionAsset.md&amp;value=---%0Auid%3A%20WorldLib.Models.Assets.IDescriptionAsset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,41 +84,74 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="WorldLib.Models.Delegates.RenderEffectCheck">
+        <article data-uid="WorldLib.Models.Assets.IDescriptionAsset">
 
 
 
-  <h1 id="WorldLib_Models_Delegates_RenderEffectCheck" data-uid="WorldLib.Models.Delegates.RenderEffectCheck" class="text-break">
-Delegate RenderEffectCheck  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Delegates/RenderEffectCheck.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="WorldLib_Models_Assets_IDescriptionAsset" data-uid="WorldLib.Models.Assets.IDescriptionAsset" class="text-break">
+Interface IDescriptionAsset  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/IDescriptionAsset.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Delegates.html">Delegates</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="WorldLib.html">WorldLib</a>.<a class="xref" href="WorldLib.Models.html">Models</a>.<a class="xref" href="WorldLib.Models.Assets.html">Assets</a></dd></dl>
   <dl><dt>Assembly</dt><dd>WorldLib.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a delegate that determines whether something should be visually rendered for a given actor.</p>
+  <div class="markdown summary"><p>A bearer of a description.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate bool RenderEffectCheck(ActorAsset asset)</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IDescriptionAsset : ILocalizedAsset</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="WorldLib.Models.Assets.ILocalizedAsset.html#WorldLib_Models_Assets_ILocalizedAsset_Localized">ILocalizedAsset.Localized</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="WorldLib_Models_Assets_IDescriptionAsset_LocalizedDescription_" data-uid="WorldLib.Models.Assets.IDescriptionAsset.LocalizedDescription*"></a>
+
+  <h3 id="WorldLib_Models_Assets_IDescriptionAsset_LocalizedDescription" data-uid="WorldLib.Models.Assets.IDescriptionAsset.LocalizedDescription">
+  LocalizedDescription
+  <a class="header-action link-secondary" title="View source" href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/IDescriptionAsset.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A description, localized for your convenience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LocalizedDescription { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><code>asset</code> <span class="xref">ActorAsset</span></dt>
-    <dd>Represents a delegate that determines whether something should be visually rendered for a given actor.</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd>Represents a delegate that determines whether something should be visually rendered for a given actor.</dd>
-  </dl>
-
-
-
 
 
 
@@ -131,7 +164,7 @@ Delegate RenderEffectCheck  <a class="header-action link-secondary" title="View 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Delegates/RenderEffectCheck.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/thorminate/WorldLib/blob/main/WorldLib/Models/Assets/IDescriptionAsset.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
