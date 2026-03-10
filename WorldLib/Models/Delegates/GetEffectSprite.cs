@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
-using WorldLib.Models.Generic;
+using WorldLib.Models.Objects;
 
 namespace WorldLib.Models.Delegates;
 
-public delegate Sprite GetEffectSprite(SimObject obj, int idx);
+extern alias GameAsm;
+
+/// <summary>
+///     Represents a delegate for getting an effect sprite.
+/// </summary>
+public delegate Sprite GetEffectSprite(SimObject<GameAsm::BaseSimObject> obj, int idx);

@@ -2,6 +2,7 @@
 using WorldLib.Models.History;
 using WorldLib.Models.Laws;
 using WorldLib.Models.Options;
+using WorldLib.Models.Progress;
 using WorldLib.Models.Time;
 
 namespace WorldLib.Core;
@@ -78,7 +79,7 @@ public static class World
     ///     Provides access to all world ages in the game.
     /// </summary>
     /// <returns>
-    ///     A <see cref="Models.Ages.Ages" /> instance.
+    ///     A <see cref="Ages" /> instance.
     /// </returns>
     public static Ages Ages()
     {
@@ -89,11 +90,22 @@ public static class World
     ///     Provides access to the history log of the game (otherwise known as the WorldLog)
     /// </summary>
     /// <returns>
-    ///     A <see cref="Models.History.History" /> instance.
+    ///     A <see cref="History" /> instance.
     /// </returns>
     public static History History()
     {
         return new History();
+    }
+
+    /// <summary>
+    ///     Provides access to the game progression like unlocked traits and such.
+    /// </summary>
+    /// <returns>
+    ///     A <see cref="Progress" /> instance.
+    /// </returns>
+    public static Progress Progress()
+    {
+        return new Progress();
     }
 
     #region Info

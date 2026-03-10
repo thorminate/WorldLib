@@ -15,7 +15,8 @@ namespace WorldLib.Utils;
 public sealed class DelegateBridge<TPublic, TGame>(
     Func<TPublic, TGame> wrapToGame,
     Action<TGame> gameAdd,
-    Action<TGame> gameRemove)
+    Action<TGame> gameRemove,
+    Func<Delegate[]> getInvocList)
     where TPublic : Delegate
     where TGame : Delegate
 {
@@ -52,12 +53,26 @@ public sealed class DelegateBridge<TPublic, TGame>(
     }
 
     /// <summary>
-    ///     Clears all delegates applied through this delegate bridge.
+    ///     Clears all invocations applied through this delegate bridge. Does not remove game-added invocations, use
+    ///     <see cref="Wipe" /> for that.
     /// </summary>
+    /// <seealso cref="Wipe" />
     public void Clear()
     {
         foreach (var wrapped in _map.Values.ToArray())
             gameRemove(wrapped);
+
+        _map.Clear();
+    }
+
+    /// <summary>
+    ///     Clears all invocations on the delegate, including game invocations.
+    /// </summary>
+    /// <seealso cref="Clear" />
+    public void Wipe()
+    {
+        foreach (var del in getInvocList())
+            gameRemove((TGame)del);
 
         _map.Clear();
     }

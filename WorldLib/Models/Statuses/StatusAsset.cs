@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using WorldLib.Models.Assets;
 using WorldLib.Models.Delegates;
-using WorldLib.Models.Generic;
+using WorldLib.Models.Objects;
 using WorldLib.Registries;
 using WorldLib.Utils;
 
@@ -13,11 +15,11 @@ extern alias GameAsm;
 /// <summary>
 ///     Represents a static asset for a type of status. This is global.
 /// </summary>
-public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
+public class StatusAsset : Asset<GameAsm::StatusAsset>
 {
-    private TransmutableList<string, GameAsm::StatusAsset>? _oppositeStatuses;
+    private TransmutableList<string, StatusAsset>? _oppositeStatuses;
     private TransmutableList<string, GameAsm::ActorTrait>? _oppositeTraits;
-    private TransmutableList<string, GameAsm::StatusAsset>? _removeStatuses;
+    private TransmutableList<string, StatusAsset>? _removeStatuses;
 
 
     /// <summary>
@@ -149,42 +151,48 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
                 wrapped => { Raw.action_finish += wrapped; },
-                wrapped => { Raw.action_finish -= wrapped; })
+                wrapped => { Raw.action_finish -= wrapped; },
+                () => Raw.action_finish?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException($"Failed to create OnFinish DelegateBridge for Base id {Raw.id}");
 
         OnDeath = Tooling.Memoized(Raw.id + "_on_death", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
                 wrapped => { Raw.action_death += wrapped; },
-                wrapped => { Raw.action_death -= wrapped; })
+                wrapped => { Raw.action_death -= wrapped; },
+                () => Raw.action_death?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException($"Failed to create OnDeath DelegateBridge for Base id {Raw.id}");
 
         OnAction = Tooling.Memoized(Raw.id + "_on_action", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
                 wrapped => { Raw.action += wrapped; },
-                wrapped => { Raw.action -= wrapped; })
+                wrapped => { Raw.action -= wrapped; },
+                () => Raw.action?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException($"Failed to create OnAction DelegateBridge for Base id {Raw.id}");
 
         OnHit = Tooling.Memoized(Raw.id + "_on_hit", () =>
             new DelegateBridge<GetHitAction, GameAsm::GetHitAction>(
                 DelegateAdapter.HitActionToGame,
                 wrapped => { Raw.action_get_hit += wrapped; },
-                wrapped => { Raw.action_get_hit -= wrapped; })
+                wrapped => { Raw.action_get_hit -= wrapped; },
+                () => Raw.action_get_hit?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException($"Failed to create OnHit DelegateBridge for Base id {Raw.id}");
 
         OnReceive = Tooling.Memoized(Raw.id + "_on_receive", () =>
             new DelegateBridge<WorldAction, GameAsm::WorldAction>(
                 DelegateAdapter.WorldActionToGame,
                 wrapped => { Raw.action_on_receive += wrapped; },
-                wrapped => { Raw.action_on_receive -= wrapped; })
+                wrapped => { Raw.action_on_receive -= wrapped; },
+                () => Raw.action_on_receive?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException($"Failed to create OnReceive DelegateBridge for Base id {Raw.id}");
 
         GetOverrideSprite = Tooling.Memoized(Raw.id + "_get_override_sprite", () =>
             new DelegateBridge<GetEffectSprite, GameAsm::GetEffectSprite>(
                 DelegateAdapter.GetEffectSpriteToGame,
                 wrapped => { Raw.get_override_sprite += wrapped; },
-                wrapped => { Raw.get_override_sprite -= wrapped; })
+                wrapped => { Raw.get_override_sprite -= wrapped; },
+                () => Raw.get_override_sprite?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSprite DelegateBridge for Base id {Raw.id}");
 
@@ -192,7 +200,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<GetEffectSpriteUI, GameAsm::GetEffectSpriteUI>(
                 DelegateAdapter.GetEffectSpriteUIToGame,
                 wrapped => { Raw.get_override_sprite_ui += wrapped; },
-                wrapped => { Raw.get_override_sprite_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_ui -= wrapped; },
+                () => Raw.get_override_sprite_ui?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSpriteUI DelegateBridge for Base id {Raw.id}");
 
@@ -200,7 +209,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<GetEffectSpritePosition, GameAsm::GetEffectSpritePosition>(
                 DelegateAdapter.GetEffectSpritePositionToGame,
                 wrapped => { Raw.get_override_sprite_position += wrapped; },
-                wrapped => { Raw.get_override_sprite_position -= wrapped; })
+                wrapped => { Raw.get_override_sprite_position -= wrapped; },
+                () => Raw.get_override_sprite_position?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSpritePosition DelegateBridge for Base id {Raw.id}");
 
@@ -208,7 +218,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<GetEffectSpritePositionUI, GameAsm::GetEffectSpritePositionUI>(
                 DelegateAdapter.GetEffectSpritePositionUIToGame,
                 wrapped => { Raw.get_override_sprite_position_ui += wrapped; },
-                wrapped => { Raw.get_override_sprite_position_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_position_ui -= wrapped; },
+                () => Raw.get_override_sprite_position_ui?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSpritePositionUI DelegateBridge for Base id {Raw.id}");
 
@@ -216,7 +227,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<GetEffectSpriteRotationZ, GameAsm::GetEffectSpriteRotationZ>(
                 DelegateAdapter.GetEffectSpriteRotationZToGame,
                 wrapped => { Raw.get_override_sprite_rotation_z += wrapped; },
-                wrapped => { Raw.get_override_sprite_rotation_z -= wrapped; })
+                wrapped => { Raw.get_override_sprite_rotation_z -= wrapped; },
+                () => Raw.get_override_sprite_rotation_z?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSpriteRotationZ DelegateBridge for Base id {Raw.id}");
 
@@ -224,7 +236,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<GetEffectSpriteRotationZUI, GameAsm::GetEffectSpriteRotationZUI>(
                 DelegateAdapter.GetEffectSpriteRotationZUIToGame,
                 wrapped => { Raw.get_override_sprite_rotation_z_ui += wrapped; },
-                wrapped => { Raw.get_override_sprite_rotation_z_ui -= wrapped; })
+                wrapped => { Raw.get_override_sprite_rotation_z_ui -= wrapped; },
+                () => Raw.get_override_sprite_rotation_z_ui?.GetInvocationList() ?? Array.Empty<Delegate>())
         ) ?? throw new InvalidOperationException(
             $"Failed to create GetOverrideSpriteRotationZUI DelegateBridge for Base id {Raw.id}");
 
@@ -232,9 +245,9 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
             new DelegateBridge<RenderEffectCheck, GameAsm::RenderEffectCheck>(
                 DelegateAdapter.RenderEffectCheckToGame,
                 wrapped => { Raw.render_check += wrapped; },
-                wrapped => { Raw.render_check -= wrapped; })
-        ) ?? throw new InvalidOperationException(
-            $"Failed to create RenderCheck DelegateBridge for Base id {Raw.id}");
+                wrapped => { Raw.render_check -= wrapped; },
+                () => Raw.render_check?.GetInvocationList() ?? Array.Empty<Delegate>())
+        ) ?? throw new InvalidOperationException($"Failed to create RenderCheck DelegateBridge for Base id {Raw.id}");
     }
 
     /// <summary>
@@ -274,7 +287,8 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     }
 
     /// <summary>
-    ///     Whether to allow resetting the timer when <see cref="SimObject.AddStatus" /> is called.
+    ///     Whether to allow resetting the expiration timer when <see cref="SimObject{TAbstracts}.AddStatus" /> is called with
+    ///     this trait as its parameter.
     /// </summary>
     public bool AllowTimerReset
     {
@@ -520,8 +534,22 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     // TODO: Abstract ActorTrait.
     public TransmutableList<string, GameAsm::ActorTrait> OppositeTraits =>
         _oppositeTraits ??= new TransmutableList<string, GameAsm::ActorTrait>(
-            () => Raw.opposite_traits ?? Array.Empty<string>(),
-            v => Raw.opposite_traits = v,
+            () => Raw.opposite_traits?.Length ?? 0,
+            i => Raw.opposite_traits[i],
+            (i, id) => Raw.opposite_traits[i] = id,
+            (i, id) =>
+            {
+                List<string> list = Raw.opposite_traits?.ToList() ?? [];
+                list.Insert(i, id);
+                Raw.opposite_traits = list.ToArray();
+            },
+            i =>
+            {
+                List<string> list = Raw.opposite_traits.ToList();
+                list.RemoveAt(i);
+                Raw.opposite_traits = list.ToArray();
+            },
+            () => Raw.opposite_traits = [],
             id => GameAsm::AssetManager.traits.dict.TryGetValue(id, out var trait)
                 ? trait
                 : throw new KeyNotFoundException(
@@ -551,15 +579,29 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <exception cref="KeyNotFoundException">
     ///     Thrown if a status ID stored internally cannot be resolved in the status asset library.
     /// </exception>
-    public TransmutableList<string, GameAsm::StatusAsset> OppositeStatuses =>
-        _oppositeStatuses ??= new TransmutableList<string, GameAsm::StatusAsset>(
-            () => Raw.opposite_status ?? Array.Empty<string>(),
-            v => Raw.opposite_status = v,
+    public TransmutableList<string, StatusAsset> OppositeStatuses =>
+        _oppositeStatuses ??= new TransmutableList<string, StatusAsset>(
+            () => Raw.opposite_status?.Length ?? 0,
+            i => Raw.opposite_status[i],
+            (i, id) => Raw.opposite_status[i] = id,
+            (i, id) =>
+            {
+                List<string> list = Raw.opposite_status?.ToList() ?? new List<string>();
+                list.Insert(i, id);
+                Raw.opposite_status = list.ToArray();
+            },
+            i =>
+            {
+                List<string> list = Raw.opposite_status.ToList();
+                list.RemoveAt(i);
+                Raw.opposite_status = list.ToArray();
+            },
+            () => Raw.opposite_status = [],
             id => GameAsm::AssetManager.status.dict.TryGetValue(id, out var status)
-                ? status
+                ? new StatusAsset(status)
                 : throw new KeyNotFoundException(
                     $"Status with id '{id}' in opposite_status does not exist in the status library."),
-            status => status.id
+            status => status.Id
         );
 
     /// <summary>
@@ -569,15 +611,29 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <exception cref="KeyNotFoundException">
     ///     Thrown if a status ID stored internally cannot be resolved in the status asset library.
     /// </exception>
-    public TransmutableList<string, GameAsm::StatusAsset> RemoveStatuses =>
-        _removeStatuses ??= new TransmutableList<string, GameAsm::StatusAsset>(
-            () => Raw.remove_status ?? Array.Empty<string>(),
-            v => Raw.remove_status = v,
-            id => GameAsm::AssetManager.status.dict.TryGetValue(id, out var value)
-                ? value
+    public TransmutableList<string, StatusAsset> RemoveStatuses =>
+        _removeStatuses ??= new TransmutableList<string, StatusAsset>(
+            () => Raw.remove_status?.Length ?? 0,
+            i => Raw.remove_status[i],
+            (i, id) => Raw.remove_status[i] = id,
+            (i, id) =>
+            {
+                List<string> list = Raw.remove_status?.ToList() ?? new List<string>();
+                list.Insert(i, id);
+                Raw.remove_status = list.ToArray();
+            },
+            i =>
+            {
+                List<string> list = Raw.remove_status.ToList();
+                list.RemoveAt(i);
+                Raw.remove_status = list.ToArray();
+            },
+            () => Raw.remove_status = [],
+            id => GameAsm::AssetManager.status.dict.TryGetValue(id, out var status)
+                ? new StatusAsset(status)
                 : throw new KeyNotFoundException(
                     $"Status with id '{id}' in remove_status does not exist in the status library."),
-            status => status.id
+            status => status.Id
         );
 
     /// <summary>
@@ -588,7 +644,16 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     /// <summary>
     ///     The static icon of the status effect.
     /// </summary>
-    public Sprite Icon => Raw.getSprite();
+    public Sprite Icon
+    {
+        get => Raw.getSprite();
+        set
+        {
+            Raw.cached_sprite = value;
+            Raw.path_icon = value.name;
+            Sprites.Register(value);
+        }
+    }
 
     /// <summary>
     ///     Represents the localized name of this status asset.
@@ -637,19 +702,5 @@ public class StatusAsset : AbstractionOf<GameAsm::StatusAsset>, IAsset
     {
         get => Raw.need_visual_render;
         set => Raw.need_visual_render = value;
-    }
-
-    /// <inheritdoc />
-    public string Id
-    {
-        get => Raw.id;
-        set => Raw.id = value;
-    }
-
-    /// <inheritdoc />
-    public int Hash
-    {
-        get => Raw.GetHashCode();
-        set => Raw.setHash(value);
     }
 }

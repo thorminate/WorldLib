@@ -1,0 +1,162 @@
+﻿{
+  "_class": {
+    "summary": "Provides static access to all age assets in the game.",
+    "remarks": [
+      "All properties are resolved directly from the game's asset manager at access time."
+    ]
+  },
+  "age_hope": {
+    "summary": "Represents the Age of Hope.",
+    "remarks": [
+      "A time of promise and optimism where the world feels vibrant and full of possibility. Life flourishes, and societies look toward the future with confidence.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Hope era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_sun": {
+    "summary": "Represents the Age of Sun.",
+    "remarks": [
+      "A period of intense heat and relentless sunlight. Survival becomes difficult as inhabitants struggle against harsh environmental conditions.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Sun era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_dark": {
+    "summary": "Represents the Age of Dark.",
+    "remarks": [
+      "A time of overwhelming darkness where shadows dominate the world. Dangerous creatures and nightmarish illusions thrive, testing the resilience of all who endure it.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Dark era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_tears": {
+    "summary": "Represents the Age of Tears.",
+    "remarks": [
+      "An era of ceaseless rain and pervasive sorrow. Though hope is difficult to sustain, some remain steadfast in their belief that brighter days will return.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Tears era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_moon": {
+    "summary": "Represents the Age of Moon.",
+    "remarks": [
+      "A luminous era bathed in radiant moonlight. The world feels enchanted, and arcane wonder fills the night as civilizations look skyward in awe.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Moon era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_chaos": {
+    "summary": "Represents the Age of Chaos.",
+    "remarks": [
+      "A violent era defined by instability, bloodshed, and power struggles. War and destruction are commonplace, and survival becomes a daily challenge.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Chaos era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_wonders": {
+    "summary": "Represents the Age of Wonders.",
+    "remarks": [
+      "A mystical period saturated with arcane energy. Magic flourishes, and extraordinary feats reshape the boundaries of what is possible.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Wonders era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_ice": {
+    "summary": "Represents the Age of Ice.",
+    "remarks": [
+      "A frigid era where ice and snow dominate the landscape. The world endures relentless winter, and warmth becomes a scarce and precious resource.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Ice era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_ash": {
+    "summary": "Represents the Age of Ash.",
+    "remarks": [
+      "A bleak era filled with smoke and airborne sickness. The air carries disease, and survival depends on endurance and fragile hope.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Ash era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_despair": {
+    "summary": "Represents the Age of Despair.",
+    "remarks": [
+      "A prolonged age of darkness and merciless cold. Though life seems on the brink of extinction, resilience and faith persist, sustaining the world until renewal becomes possible once more.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing the Despair era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  },
+  "age_unknown": {
+    "summary": "Represents an unknown or undiscovered age.",
+    "remarks": [
+      "A placeholder era used when the current world age cannot be determined or when the underlying asset is unavailable. When this age is active, it selects a random age.",
+      "This value is memoized for performance. To clear the memoization cache and force a reload on next access, invoke <see cref=\"WorldLib.Utils.Tooling.MemoClear{T}()\"/> with <see cref=\"WorldLib.Models.Ages.Age\"/> as the generic type argument."
+    ],
+    "value": "An <see cref=\"WorldLib.Models.Ages.Age\"/> representing an unspecified era.",
+    "exceptions": [
+      {
+        "type": "InvalidOperationException",
+        "description": "If you access this before the age gets initialized."
+      }
+    ]
+  }
+}

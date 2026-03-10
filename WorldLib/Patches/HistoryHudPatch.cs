@@ -7,14 +7,13 @@ namespace WorldLib.Patches;
 
 extern alias GameAsm;
 
-[HarmonyPatch]
-public static class HistoryHudPatch
+[HarmonyPatch(typeof(GameAsm::HistoryHud))]
+internal static class HistoryHudPatch
 {
-    [HarmonyPatch(typeof(GameAsm::HistoryHud), "newText")]
+    [HarmonyPatch(nameof(GameAsm::HistoryHud.newText))]
     [HarmonyPostfix]
-
     // ReSharper disable once InconsistentNaming
-    public static void Postfix_NewText(object __instance, GameAsm::WorldLogMessage? pMessage)
+    private static void Postfix_NewText(object __instance, GameAsm::WorldLogMessage? pMessage)
     {
         if (pMessage == null) return;
 

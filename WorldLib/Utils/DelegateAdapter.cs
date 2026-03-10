@@ -1,6 +1,9 @@
 ﻿extern alias GameAsm;
+using WorldLib.Models.Assets;
 using WorldLib.Models.Delegates;
-using WorldLib.Models.Generic;
+using WorldLib.Models.Objects;
+using BaseAugmentationAsset = GameAsm::BaseAugmentationAsset;
+using BaseSimObject = GameAsm::BaseSimObject;
 
 namespace WorldLib.Utils;
 
@@ -10,7 +13,7 @@ internal static class DelegateAdapter
     {
         return (target, tile) =>
         {
-            var wrapped = target != null ? new SimObject(target) : null;
+            SimObject<BaseSimObject>? wrapped = target != null ? new SimObject<BaseSimObject>(target) : null;
             return wrapped != null
                    && action(wrapped, tile);
         };
@@ -18,15 +21,35 @@ internal static class DelegateAdapter
 
     internal static WorldAction WorldActionToLib(GameAsm::WorldAction action)
     {
-        return (target, tile) => action(target?.Raw, tile);
+        return (target, tile) => action(target.Raw, tile);
+    }
+
+    internal static GameAsm::WorldActionTrait WorldActionTraitToGame(WorldActionTrait action)
+    {
+        return (target, augmentation) =>
+        {
+            NanoObject<GameAsm::NanoObject>? wrappedTarget =
+                target != null ? new NanoObject<GameAsm::NanoObject>(target) : null;
+            AugmentationAsset<BaseAugmentationAsset>? wrappedAsset = augmentation != null
+                ? new AugmentationAsset<BaseAugmentationAsset>(augmentation)
+                : null;
+            return wrappedTarget != null && wrappedAsset != null
+                                         && action(wrappedTarget, wrappedAsset);
+        };
+    }
+
+    internal static WorldActionTrait WorldActionTraitToLib(GameAsm::WorldActionTrait action)
+    {
+        return (target, augmentation) => action(target.Raw, augmentation.Raw);
     }
 
     internal static GameAsm::GetHitAction HitActionToGame(GetHitAction action)
     {
         return (target, attacker, tile) =>
         {
-            var wrappedTarget = target != null ? new SimObject(target) : null;
-            var wrappedAttacker = attacker != null ? new SimObject(attacker) : null;
+            SimObject<BaseSimObject>? wrappedTarget = target != null ? new SimObject<BaseSimObject>(target) : null;
+            SimObject<BaseSimObject>? wrappedAttacker =
+                attacker != null ? new SimObject<BaseSimObject>(attacker) : null;
             return
                 wrappedAttacker != null
                 && wrappedTarget != null
@@ -36,19 +59,19 @@ internal static class DelegateAdapter
 
     internal static GetHitAction HitActionToLib(GameAsm::GetHitAction action)
     {
-        return (target, attacker, tile) => action(target?.Raw, attacker?.Raw, tile);
+        return (target, attacker, tile) => action(target.Raw, attacker.Raw, tile);
     }
 
     internal static GameAsm::GetEffectSprite GetEffectSpriteToGame(GetEffectSprite action)
     {
         return (target, idx) =>
-            action(target != null ? new SimObject(target) : null!, idx);
+            action(target != null ? new SimObject<BaseSimObject>(target) : null!, idx);
     }
 
     internal static GetEffectSprite GetEffectSpriteToLib(GameAsm::GetEffectSprite action)
     {
         return (target, idx) =>
-            action(target?.Raw, idx);
+            action(target.Raw, idx);
     }
 
     internal static GameAsm::GetEffectSpriteUI GetEffectSpriteUIToGame(GetEffectSpriteUI action)
@@ -66,13 +89,13 @@ internal static class DelegateAdapter
     internal static GameAsm::GetEffectSpritePosition GetEffectSpritePositionToGame(GetEffectSpritePosition action)
     {
         return (target, idx) =>
-            action(target != null ? new SimObject(target) : null!, idx);
+            action(target != null ? new SimObject<BaseSimObject>(target) : null!, idx);
     }
 
     internal static GetEffectSpritePosition GetEffectSpritePositionToLib(GameAsm::GetEffectSpritePosition action)
     {
         return (target, idx) =>
-            action(target?.Raw, idx);
+            action(target.Raw, idx);
     }
 
     internal static GameAsm::GetEffectSpritePositionUI GetEffectSpritePositionUIToGame(GetEffectSpritePositionUI action)
@@ -90,13 +113,13 @@ internal static class DelegateAdapter
     internal static GameAsm::GetEffectSpriteRotationZ GetEffectSpriteRotationZToGame(GetEffectSpriteRotationZ action)
     {
         return (target, idx) =>
-            action(target != null ? new SimObject(target) : null!, idx);
+            action(target != null ? new SimObject<BaseSimObject>(target) : null!, idx);
     }
 
     internal static GetEffectSpriteRotationZ GetEffectSpriteRotationZToLib(GameAsm::GetEffectSpriteRotationZ action)
     {
         return (target, idx) =>
-            action(target?.Raw, idx);
+            action(target.Raw, idx);
     }
 
     // ReSharper disable InconsistentNaming

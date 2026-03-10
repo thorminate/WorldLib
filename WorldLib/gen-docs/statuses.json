@@ -1,0 +1,265 @@
+﻿{
+  "_class": {
+    "summary": "Provides static access to all status assets in the game.",
+    "remarks": [
+      "All properties are resolved directly from the game's asset manager at access time."
+    ]
+  },
+  "handsome_migrant": {
+    "summary": "Represents an unusually attractive migrant who may appear near bonfires when the population drops.",
+    "remarks": [
+      "These migrants only appear naturally if the world law <see cref=\"Laws.HandsomeMigrants\"/> is enabled."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a handsome migrant."
+  },
+  "recovery_plot": {
+    "summary": "This status is given after an actor finishes a plot.",
+    "remarks": [
+      "Works as a cooldown for plots; plots cannot naturally get created while this status effect is active."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing plot recovery."
+  },
+  "voices_in_my_head": {
+    "summary": "Used on actors recently modified by the player.",
+    "remarks": [
+      "Examples include modifying a king's plots or giving a country inspiration."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing direct player influence."
+  },
+  "recovery_spell": {
+    "summary": "This status is given after an actor finishes casting a spell.",
+    "remarks": [
+      "Works as a cooldown for spells; spells cannot be cast while this effect is active."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing spell recovery."
+  },
+  "recovery_social": {
+    "summary": "This status is given after an actor finishes socializing.",
+    "remarks": [
+      "Works as a cooldown for socializing; actors cannot socialize while this effect is active."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing social recovery."
+  },
+  "recovery_combat_action": {
+    "summary": "This status is given after an actor finishes an advanced combat action.",
+    "remarks": [
+      "Works as a cooldown for combat actions; actors cannot attack while this effect is active."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing combat action recovery."
+  },
+  "starving": {
+    "summary": "Indicates severe hunger.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing starvation."
+  },
+  "drowning": {
+    "summary": "Indicates the actor is drowning.",
+    "remarks": [
+      "Causes health loss over time through <see cref=\"StatusAsset.OnAction\"/>.",
+      "If an actor dies while having this effect, a drowning effect appears at their death location."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing drowning."
+  },
+  "sleeping": {
+    "summary": "Indicates the actor is asleep.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing sleep."
+  },
+  "laughing": {
+    "summary": "The actor is laughing.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing laughter."
+  },
+  "singing": {
+    "summary": "The actor is singing.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing singing."
+  },
+  "swearing": {
+    "summary": "The actor is swearing.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing swearing."
+  },
+  "possessed": {
+    "summary": "The actor is possessed.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing possession."
+  },
+  "possessed_follower": {
+    "summary": "A follower is possessed.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing follower possession."
+  },
+  "strange_urge": {
+    "summary": "The actor feels a strange urge, compelling them to take unpredictable or irrational actions.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a strange urge."
+  },
+  "tantrum": {
+    "summary": "The actor is having a tantrum.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a tantrum."
+  },
+  "egg": {
+    "summary": "The actor is in an egg state (e.g., for creatures that hatch).",
+    "remarks": [
+      "May be immobile and protected until hatched."
+    ],
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing an egg state."
+  },
+  "cursed": {
+    "summary": "The actor is cursed.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a curse."
+  },
+  "spell_silence": {
+    "summary": "The actor cannot cast spells temporarily.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing spell silence."
+  },
+  "spell_boost": {
+    "summary": "The actor has a temporary spell boost.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing spell boost."
+  },
+  "inspired": {
+    "summary": "The actor is inspired.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing inspiration."
+  },
+  "confused": {
+    "summary": "The actor is confused.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing confusion."
+  },
+  "soul_harvested": {
+    "summary": "The actor's soul has been harvested.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a harvested soul."
+  },
+  "magnetized": {
+    "summary": "The actor is magnetized.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing magnetization."
+  },
+  "rage": {
+    "summary": "The actor is in a rage.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing rage."
+  },
+  "surprised": {
+    "summary": "The actor is surprised.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing surprise."
+  },
+  "on_guard": {
+    "summary": "The actor is on guard.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being on guard."
+  },
+  "angry": {
+    "summary": "The actor is angry.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing anger."
+  },
+  "just_ate": {
+    "summary": "The actor has just eaten.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing having just eaten."
+  },
+  "festive_spirit": {
+    "summary": "The actor has festive spirit.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing festive spirit."
+  },
+  "being_suspicious": {
+    "summary": "The actor is suspicious.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing suspicion."
+  },
+  "had_good_dream": {
+    "summary": "The actor had a good dream.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a good dream."
+  },
+  "had_bad_dream": {
+    "summary": "The actor had a bad dream.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a bad dream."
+  },
+  "had_nightmare": {
+    "summary": "The actor had a nightmare.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a nightmare."
+  },
+  "stunned": {
+    "summary": "The actor is stunned.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being stunned."
+  },
+  "afterglow": {
+    "summary": "The actor experiences afterglow.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing afterglow."
+  },
+  "fell_in_love": {
+    "summary": "The actor has fallen in love.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing falling in love."
+  },
+  "pregnant": {
+    "summary": "The actor is pregnant.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing pregnancy."
+  },
+  "pregnant_parthenogenesis": {
+    "summary": "The actor is pregnant via parthenogenesis.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing parthenogenesis pregnancy."
+  },
+  "powerup": {
+    "summary": "The actor has a temporary powerup.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing a powerup."
+  },
+  "enchanted": {
+    "summary": "The actor is enchanted.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing enchantment."
+  },
+  "slowness": {
+    "summary": "The actor is slowed.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing slowness."
+  },
+  "motivated": {
+    "summary": "The actor is motivated.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing motivation."
+  },
+  "cough": {
+    "summary": "The actor is coughing.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing coughing."
+  },
+  "ash_fever": {
+    "summary": "The actor has ash fever.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing ash fever."
+  },
+  "caffeinated": {
+    "summary": "The actor is caffeinated.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being caffeinated."
+  },
+  "frozen": {
+    "summary": "The actor is frozen.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being frozen."
+  },
+  "shield": {
+    "summary": "The actor is shielded.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being shielded."
+  },
+  "burning": {
+    "summary": "The actor is burning.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being on fire."
+  },
+  "poisoned": {
+    "summary": "The actor is poisoned.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing poisoning."
+  },
+  "invincible": {
+    "summary": "The actor is invincible.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing invincibility."
+  },
+  "dodge": {
+    "summary": "The actor can dodge attacks.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing dodging."
+  },
+  "dash": {
+    "summary": "The actor can dash.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing dashing."
+  },
+  "taking_roots": {
+    "summary": "The actor is taking roots.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing taking roots."
+  },
+  "uprooting": {
+    "summary": "The actor is uprooting.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing uprooting."
+  },
+  "flicked": {
+    "summary": "The actor is flicked.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing being flicked."
+  },
+  "crying": {
+    "summary": "The actor is crying.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing crying."
+  },
+  "budding": {
+    "summary": "The actor is budding.",
+    "value": "A <see cref=\"WorldLib.Models.Statuses.StatusAsset\"/> representing budding."
+  }
+}

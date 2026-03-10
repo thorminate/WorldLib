@@ -1,0 +1,178 @@
+﻿{
+  "_class": {
+    "summary": "Provides access to the game's world law system.",
+    "remarks": [
+      "Changes to properties immediately propagate to the underlying game engine state, so external caching or copying is generally unnecessary."
+    ]
+  },
+  "world_law_evolution_events": {
+    "summary": "Allows monoliths to evolve and mutate nearby creatures."
+  },
+  "world_law_civ_limit_population_100": {
+    "summary": "Limits the maximum population in settlements to 100 inhabitants.",
+    "propertyName": "OneHundredPeople"
+  },
+  "world_law_gaias_covenant": {
+    "summary": "Prevents environmental destruction from explosions, fires, and disasters."
+  },
+  "world_law_diplomacy": {
+    "summary": "Alliances forged, betrayals planned, and wars will erupt."
+  },
+  "world_law_rites": {
+    "summary": "Clan members can start rites based on their religion."
+  },
+  "world_law_rebellions": {
+    "summary": "Cities can rebel when they have low loyalty. Only works if diplomacy is enabled."
+  },
+  "world_law_border_stealing": {
+    "summary": "Rulers can steal the borders of other cities."
+  },
+  "world_law_glitched_noosphere": {
+    "summary": "Religions, languages and cultures go off the rails with random traits."
+  },
+  "world_law_terramorphing": {
+    "summary": "Structures spread their species' natural biome over time."
+  },
+  "world_law_kingdom_expansion": {
+    "summary": "Kingdoms will send settlers to establish new villagers."
+  },
+  "world_law_angry_civilians": {
+    "summary": "Villagers will also participate in same-race wars.",
+    "propertyName": "AngryVillagers"
+  },
+  "world_law_civ_babies": {
+    "summary": "Children will be born in villages.",
+    "propertyName": "CivBabies"
+  },
+  "world_law_civ_migrants": {
+    "summary": "Unreasonably attractive migrants may appear near bonfires when the population drops.",
+    "propertyName": "HandsomeMigrants"
+  },
+  "world_law_civ_army": {
+    "summary": "Civilisations have armies.",
+    "propertyName": "Armies"
+  },
+  "world_law_gene_spaghetti": {
+    "summary": "New subspecies are born with a tangled mess of random genes."
+  },
+  "world_law_mutant_box": {
+    "summary": "New subspecies are created with a mix of random traits."
+  },
+  "world_law_hunger": {
+    "summary": "Everyone needs food to live."
+  },
+  "world_law_old_age": {
+    "summary": "Creatures can die from old age."
+  },
+  "world_law_peaceful_monsters": {
+    "summary": "Animals and other creatures will not attack anyone."
+  },
+  "world_law_animals_babies": {
+    "summary": "Baby animals will be born.",
+    "propertyName": "AnimalBabies"
+  },
+  "world_law_forever_tumor_creep": {
+    "summary": "Creep tiles like tumor, pumpkin, biomass, etc — will stay even after the base structure is gone.",
+    "propertyName": "ForeverCreep"
+  },
+  "world_law_drop_of_thoughts": {
+    "summary": "Sapient beings now fall gently via the Clouds of Life."
+  },
+  "world_law_animals_spawn": {
+    "summary": "Animals can randomly appear in your world.",
+    "propertyName": "AnimalSpawn"
+  },
+  "world_law_clouds": {
+    "summary": "Clouds carry pollen, spores and aeroplankton, seeding life across the land.",
+    "propertyName": "CloudsOfLife"
+  },
+  "world_law_spread_density_high": {
+    "summary": "The world is densely packed with trees, plants and fungi.",
+    "propertyName": "HighFloraDensity"
+  },
+  "world_law_vegetation_random_seeds": {
+    "summary": "Trees and plants will appear randomly in biomes.",
+    "propertyName": "RandomSeeds"
+  },
+  "world_law_roots_without_borders": {
+    "summary": "Plants and trees can spread in any biome."
+  },
+  "world_law_grow_minerals": {
+    "summary": "Minerals will spawn in biomes randomly from the underground.",
+    "propertyName": "Minerals"
+  },
+  "world_law_erosion": {
+    "summary": "Tiles have a chance to turn into sand when near water."
+  },
+  "world_law_spread_trees": {
+    "summary": "Allow trees to naturally grow and spread.",
+    "propertyName": "TreeGrowth"
+  },
+  "world_law_spread_fast_trees": {
+    "summary": "Trees grow and spread at increased speeds.",
+    "propertyName": "FastTreeGrowth"
+  },
+  "world_law_entanglewood": {
+    "summary": "Trees reduce the movement speed of nearby creatures."
+  },
+  "world_law_bark_bites_back": {
+    "summary": "Trees have a chance to retaliate when damaged."
+  },
+  "world_law_spread_plants": {
+    "summary": "Allow plants to naturally grow and spread.",
+    "propertyName": "PlantGrowth"
+  },
+  "world_law_spread_fast_plants": {
+    "summary": "Plants multiply and expand at maximum speed.",
+    "propertyName": "FastPlantGrowth"
+  },
+  "world_law_plants_tickles": {
+    "summary": "Plants will irritate or distract nearby creatures."
+  },
+  "world_law_root_pranks": {
+    "summary": "Roots occasionally trip passing creatures."
+  },
+  "world_law_nectar_nap": {
+    "summary": "Flowers release sleep-inducing pollen when disturbed."
+  },
+  "world_law_spread_fungi": {
+    "summary": "Allow fungal growth in this world.",
+    "propertyName": "FungiGrowth"
+  },
+  "world_law_spread_fast_fungi": {
+    "summary": "Fungi grow at an incredible rate.",
+    "propertyName": "FastFungiGrowth"
+  },
+  "world_law_exploding_mushrooms": {
+    "summary": "Mushrooms explode when disturbed."
+  },
+  "world_law_grow_grass": {
+    "summary": "Grass will grow by itself.",
+    "propertyName": "GrowGrass"
+  },
+  "world_law_biome_overgrowth": {
+    "summary": "Biomes will try to overgrow other biomes."
+  },
+  "world_law_forever_lava": {
+    "summary": "Lava stays forever and does not cool off into rock.",
+    "propertyName": "EternalLava"
+  },
+  "world_law_forever_cold": {
+    "summary": "Ice and snow stay forever and do not melt."
+  },
+  "world_law_disasters_nature": {
+    "summary": "Natural disasters will happen randomly from time to time.",
+    "propertyName": "NaturalDisasters"
+  },
+  "world_law_disasters_other": {
+    "summary": "Invasions and other fun stuff may happen randomly from time to time.",
+    "propertyName": "OtherDisasters"
+  },
+  "world_law_rat_plague": {
+    "summary": "A swarm of rats can spark a devastating plague.",
+    "propertyName": "RatKing"
+  },
+  "world_law_cursed_world": {
+    "summary": "The world is cursed "
+  }
+}

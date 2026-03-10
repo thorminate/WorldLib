@@ -3,10 +3,24 @@ using System;
 
 namespace WorldLib.Models.Statuses;
 
+/// <summary>
+///     Represents the tier of a status effect, used to filter which statuses can be applied to a sim object.
+/// </summary>
 public enum StatusTier
 {
+    /// <summary>
+    ///     No tier, the sim object doesn't accept any status effects.
+    /// </summary>
     None,
+
+    /// <summary>
+    ///     A basic-tier status. General stuff like <see cref="Statuses.Magnetized" />
+    /// </summary>
     Basic,
+
+    /// <summary>
+    ///     An advanced-tier status. Stuff like <see cref="Statuses.Starving" /> and other actor-like needs.
+    /// </summary>
     Advanced
 }
 

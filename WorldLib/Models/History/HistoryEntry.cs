@@ -42,19 +42,19 @@ public sealed class HistoryEntry : AbstractionOf<GameAsm::WorldLogMessage>
     ///     Gets the color for the first special field.
     /// </summary>
     /// <seealso cref="Special1" />
-    public Color ColorSpecial1 => ParseHex(Raw.color_special_1);
+    public Color ColorSpecial1 => Tooling.ParseHex(Raw.color_special_1);
 
     /// <summary>
     ///     Gets the color for the second special field.
     /// </summary>
     /// <seealso cref="Special2" />
-    public Color ColorSpecial2 => ParseHex(Raw.color_special_2);
+    public Color ColorSpecial2 => Tooling.ParseHex(Raw.color_special_2);
 
     /// <summary>
     ///     Gets the color for the third special field.
     /// </summary>
     /// <seealso cref="Special3" />
-    public Color ColorSpecial3 => ParseHex(Raw.color_special_3);
+    public Color ColorSpecial3 => Tooling.ParseHex(Raw.color_special_3);
 
     /// <summary>
     ///     Gets the location associated with this event.
@@ -87,13 +87,4 @@ public sealed class HistoryEntry : AbstractionOf<GameAsm::WorldLogMessage>
     ///     Returns true if this log entry is associated with a kingdom.
     /// </summary>
     public bool HasKingdom => Raw.kingdom_id != -1;
-
-    private static Color ParseHex(string hex)
-    {
-        if (!hex.StartsWith("#"))
-            hex = "#" + hex;
-
-        ColorUtility.TryParseHtmlString(hex, out var color);
-        return color;
-    }
 }

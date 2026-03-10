@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿extern alias GameAsm;
+using BepInEx;
 using WorldLib.Utils;
 using static WorldLib.Info;
 
@@ -13,18 +14,12 @@ extern alias GameAsm;
 public class Plugin : WorldBoxMod<Plugin>
 {
     /// <inheritdoc />
-    protected override string GetGuid()
-    {
-        return Guid;
-    }
-
-    /// <inheritdoc />
     protected override void Begin()
     {
     }
 
     /// <inheritdoc />
-    protected override void Declaration()
+    protected override void Load()
     {
     }
 }

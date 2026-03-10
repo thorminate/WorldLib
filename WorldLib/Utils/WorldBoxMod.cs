@@ -39,12 +39,13 @@ public abstract class WorldBoxMod<TSelf>
         gameObject.transform.parent = null;
         gameObject.hideFlags = HideFlags.HideAndDontSave;
 
-        string guid = GetGuid();
-        Patch(guid);
+        Patch(Instance.Info.Metadata.GUID);
 
-        Declaration();
+        Load();
 
         Events.GameStarted += Begin;
+
+        Logger.LogInfo($"{Instance.Info.Metadata.Name} loaded!");
     }
 
     /// <summary>
@@ -54,18 +55,9 @@ public abstract class WorldBoxMod<TSelf>
 
     /// <summary>
     ///     This runs directly after the mod is initially picked up by BepInEx,
-    ///     world state is incomplete in this stage.
+    ///     world state is incomplete at this stage.
     /// </summary>
-    protected abstract void Declaration();
-
-
-    /// <summary>
-    ///     Gets the mod GUID for Harmony patching.
-    /// </summary>
-    /// <returns>
-    ///     The mod GUID.
-    /// </returns>
-    protected abstract string GetGuid();
+    protected abstract void Load();
 
     private void Patch(string guid)
     {

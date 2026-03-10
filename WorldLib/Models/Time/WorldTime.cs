@@ -11,22 +11,22 @@ namespace WorldLib.Models.Time;
 /// </remarks>
 public class WorldTime
 {
-    internal readonly Func<double> Getter;
+    private readonly Func<double> _getter;
 
     /// <param name="value">The week <see langword="double" /> ascertaining to the timepoint.</param>
     public WorldTime(double value)
     {
-        Getter = () => value;
+        _getter = () => value;
     }
 
     /// <inheritdoc cref="WorldTime" />
     /// <param name="getter">A getter that will be used on every access to this object.</param>
     public WorldTime(Func<double> getter)
     {
-        Getter = getter;
+        _getter = getter;
     }
 
-    private double Cur => Getter();
+    private double Cur => _getter();
 
     /// <summary>
     ///     Returns a <see langword="double" /> for the timepoint converted to years.

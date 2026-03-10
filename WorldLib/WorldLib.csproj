@@ -12,6 +12,9 @@
         <Version>0.0.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <PackageId>WorldLib</PackageId>
+        <DebugType>portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <Optimize>false</Optimize>
         <!-- REMOVE THIS IF YOU ARE CONTRUBUTING -->
         <PackageOutputPath>C:\dev\LocalNuget</PackageOutputPath>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -68,6 +71,17 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\WorldLib.SourceGen\WorldLib.SourceGen.csproj"
+                          OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"
+                          SetTargetFramework="TargetFramework=netstandard2.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="gen-docs\*.json"/>
+    </ItemGroup>
+
+    <ItemGroup>
         <Publicize Include="Assembly-CSharp"/>
     </ItemGroup>
 
@@ -77,9 +91,11 @@
 
     <Target Name="PostBuildDeploy" AfterTargets="Build">
         <PropertyGroup>
-            <GameModsDir>C:\Program Files (x86)\Steam\steamapps\common\worldbox\BepInEx\plugins</GameModsDir>
+            <GameModsDir>C:\Program Files (x86)\Steam\steamapps\common\worldbox\BepInEx\plugins\WorldLib</GameModsDir>
         </PropertyGroup>
 
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModsDir)" SkipUnchangedFiles="true"/>
+        <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(GameModsDir)" SkipUnchangedFiles="true"/>
+
     </Target>
 </Project>

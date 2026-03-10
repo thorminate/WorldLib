@@ -7,257 +7,13 @@ namespace WorldLib.Models.Ages;
 
 extern alias GameAsm;
 
-/// <summary>
-///     Provides access to all world ages in the game.
-/// </summary>
-public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
+// Docs are from the generator, so we leave this empty.
+///
+public partial class Ages : AbstractionOf<GameAsm::WorldAgeManager>
 {
     internal Ages() : base(() => GameAsm::World.world.era_manager)
     {
     }
-
-    /// <summary>
-    ///     Represents the Age of Hope.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A time of promise and optimism where the world feels vibrant and full of possibility.
-    ///         Life flourishes, and societies look toward the future with confidence.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Hope era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Hope => GetAge(Keys.Hope);
-
-    /// <summary>
-    ///     Represents the Age of Sun.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A period of intense heat and relentless sunlight.
-    ///         Survival becomes difficult as inhabitants struggle against harsh environmental conditions.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Sun era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Sun => GetAge(Keys.Sun);
-
-    /// <summary>
-    ///     Represents the Age of Dark.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A time of overwhelming darkness where shadows dominate the world.
-    ///         Dangerous creatures and nightmarish illusions thrive, testing the resilience of all who endure it.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Dark era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Dark => GetAge(Keys.Dark);
-
-    /// <summary>
-    ///     Represents the Age of Tears.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         An era of ceaseless rain and pervasive sorrow.
-    ///         Though hope is difficult to sustain, some remain steadfast in their belief that brighter days will return.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Tears era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Tears => GetAge(Keys.Tears);
-
-    /// <summary>
-    ///     Represents the Age of Moon.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A luminous era bathed in radiant moonlight.
-    ///         The world feels enchanted, and arcane wonder fills the night as civilizations look skyward in awe.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Moon era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Moon => GetAge(Keys.Moon);
-
-    /// <summary>
-    ///     Represents the Age of Chaos.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A violent era defined by instability, bloodshed, and power struggles.
-    ///         War and destruction are commonplace, and survival becomes a daily challenge.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Chaos era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Chaos => GetAge(Keys.Chaos);
-
-    /// <summary>
-    ///     Represents the Age of Wonders.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A mystical period saturated with arcane energy.
-    ///         Magic flourishes, and extraordinary feats reshape the boundaries of what is possible.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Wonders era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Wonders => GetAge(Keys.Wonders);
-
-    /// <summary>
-    ///     Represents the Age of Ice.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A frigid era where ice and snow dominate the landscape.
-    ///         The world endures relentless winter, and warmth becomes a scarce and precious resource.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Ice era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Ice => GetAge(Keys.Ice);
-
-    /// <summary>
-    ///     Represents the Age of Ash.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A bleak era filled with smoke and airborne sickness.
-    ///         The air carries disease, and survival depends on endurance and fragile hope.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Ash era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Ash => GetAge(Keys.Ash);
-
-    /// <summary>
-    ///     Represents the Age of Despair.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A prolonged age of darkness and merciless cold.
-    ///         Though life seems on the brink of extinction, resilience and faith persist,
-    ///         sustaining the world until renewal becomes possible once more.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing the Despair era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Despair => GetAge(Keys.Despair);
-
-    /// <summary>
-    ///     Represents an unknown or undiscovered age.
-    /// </summary>
-    /// <remarks>
-    ///     <para>
-    ///         A placeholder era used when the current world age cannot be determined
-    ///         or when the underlying asset is unavailable. When this age is active, it selects a random age.
-    ///     </para>
-    ///     <para>
-    ///         This value is memoized for performance. To clear the memoization cache and force a reload
-    ///         on next access, invoke <see cref="Tooling.MemoClear{T}()" /> with <see cref="Age" /> as the generic type
-    ///         argument.
-    ///     </para>
-    /// </remarks>
-    /// <value>
-    ///     A <see cref="Age" /> representing an unspecified era.
-    /// </value>
-    /// <exception cref="InvalidOperationException">
-    ///     If you access this before the age gets initialized.
-    /// </exception>
-    public static Age Unknown => GetAge(Keys.Unknown);
 
     /// <summary>
     ///     Gets the index of the upcoming age slot.
@@ -521,7 +277,8 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private static Age GetAge(string key)
+    // ReSharper disable once MemberCanBePrivate.Global
+    internal static Age GetAge(string key)
     {
         return Tooling.Memoized(key, () =>
             new Age(
@@ -531,7 +288,8 @@ public sealed class Ages : AbstractionOf<GameAsm::WorldAgeManager>
     }
 
 
-    private static class Keys
+    // ReSharper disable once InconsistentNaming
+    internal static class S_Ages
     {
         // ReSharper disable MemberHidesStaticFromOuterClass
 
